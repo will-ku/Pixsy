@@ -1,2 +1,2 @@
 # Etsy-clone
-Clone of popular global online marketplace, Etsy. Ruby on Rails backend. React/Redux frontend.
+Zesty is a clone of popular e-commerce platform, Etsy. Ruby on Rails backend. React/Redux frontend.
