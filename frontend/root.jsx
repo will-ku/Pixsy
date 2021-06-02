@@ -1,7 +1,7 @@
 import React from "react";
+import App from "./app";
 // import { Provider } from 'react-redux';
 // import { HashRouter } from 'react-router-dom';
-// import App from './app';
 
 // export default ({ store }) => (
 //   <Provider store={store}>
@@ -11,6 +11,8 @@ import React from "react";
 //   </Provider>
 // );
 
-export default () => <div>herRRRRro
-  this is sick
-</div>;
+export default () => (
+  <div>
+    <App />
+  </div>
+);

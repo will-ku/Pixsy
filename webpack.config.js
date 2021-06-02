@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname,
   entry: './frontend/pixsy.jsx',
   output: {
-    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'), // (name of current directory, ie. projects/app/assets/js and create the bundle file there)
+    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'), 
     filename: 'bundle.js'
   },
   module: {
