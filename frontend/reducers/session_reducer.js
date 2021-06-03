@@ -9,7 +9,7 @@ const sessionReducer = (state = _nullUser, action) => {
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      return Object.assign({}, action.currentUser);
+      return Object.assign({}, { currentUser });
     default:
       return state;
   }

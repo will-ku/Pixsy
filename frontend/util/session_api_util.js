@@ -5,12 +5,13 @@ export const login = (user) =>
     data: { user },
   });
 
-export const signup = (user) =>
-  $.ajax({
-    method: "POST",
+export const signup = (user) => {
+  return $.ajax({
     url: "/api/user",
+    method: "POST",
     data: { user },
   });
+};
 
 export const logout = () =>
   $.ajax({

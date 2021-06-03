@@ -2,15 +2,21 @@ import React from "react";
 
 const UserSessionNav = ({ currentUser, logout, openModal }) => {
   const loginLink = () => (
-    <nav className="login-signup">
+    <nav className="sign-in">
       <button onClick={() => openModal("login")}>Sign in</button>
     </nav>
   );
   const userSessionNavMenu = () => (
-    <div className="header-group">
-      <button className="header-button" onClick={logout}>
-        Log Out
-      </button>
+    <div className="user-nav-global">
+      <div className="user-nav-menu">
+        <button className="header-button" onClick={logout}>
+          Log Out
+        </button>
+
+        <nav className="navbar">
+          <ul className="navbar-nav"></ul>
+        </nav>
+      </div>
     </div>
   );
 
@@ -18,3 +24,9 @@ const UserSessionNav = ({ currentUser, logout, openModal }) => {
 };
 
 export default UserSessionNav;
+
+/*
+
+
+
+*/

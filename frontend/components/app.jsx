@@ -9,15 +9,16 @@ import {
 } from "react-router-dom";
 import Modal from "./modal/modal";
 import UserSessionNav from "./nav_bar/user_session_nav_container";
+import Search from "../components/nav_bar/search";
 
 const App = () => (
   <div>
     <Modal />
-    <header>
-      <Link to="/" className="header-link">
+    <header className="nav-bar">
+      <Link to="/" style={{ textDecoration: "none" }} className="header-link">
         <h1>Pixsy</h1>
       </Link>
-      <h3 className="search-bar">Search Bar</h3>
+      <Search />
       <UserSessionNav />
     </header>
   </div>

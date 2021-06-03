@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   validates :first_name, :email, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true
+  validates_format_of :email, with: URI::MailTo::EMAIL_REGEXP
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   after_initialize :ensure_session_token
@@ -33,6 +34,10 @@ class User < ApplicationRecord
 
   def ensure_session_token
     generate_unique_session_token unless self.session_token
+  end
+
+  def valid_email
+
   end
 
   def new_session_token
