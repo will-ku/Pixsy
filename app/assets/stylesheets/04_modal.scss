@@ -17,9 +17,18 @@
 
 .close-x {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -52px;
+  right: 2px;
   cursor: pointer;
+  padding: 9px 9px 7px 9px;
+  color: white;
+  text-align: center;
+}
+
+.close-x:hover {
+  background-color: rgba(248, 248, 248, 0.164);
+  border-radius: 50%;
+  transition: all 0.4s ease 0s;
 }
 
 .session-submit {

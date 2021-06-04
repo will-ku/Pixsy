@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MdPerson, MdKeyboardArrowDown } from "react-icons/md";
+import { TiArrowSortedDown } from "react-icons/ti";
+import { receiveCurrentUser } from "../../actions/session_actions";
 
 class UserDropdown extends React.Component {
   constructor(props) {
@@ -39,11 +41,17 @@ class UserDropdown extends React.Component {
           <div id="user-drop-btn-wrapper">
             <MdPerson size={20} />
           </div>
+          <div>
+            <TiArrowSortedDown />
+          </div>
         </button>
 
         {this.state.showMenu ? (
           <div className="user-drop-content">
-            <button>User Details</button>
+            <button id="current-user-drop">
+              Hi {this.props.currentUser.firstName}!
+            </button>
+            {/* <button>User Details</button> */}
             <button onClick={this.props.logout}>Logout</button>
           </div>
         ) : null}

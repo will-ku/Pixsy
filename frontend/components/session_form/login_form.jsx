@@ -1,4 +1,5 @@
 import React from "react";
+import { MdClose } from "react-icons/md";
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -53,13 +54,14 @@ class SessionForm extends React.Component {
             {this.props.otherForm}
           </div>
           <div onClick={this.props.closeModal} className="close-x">
-            X
+            <MdClose size={28} />
           </div>
           {this.renderErrors()}
           <div className="login-form">
             <br />
             <label>
-              <p>Email address</p>
+              Email address
+              <br />
               <input
                 type="text"
                 value={this.state.email}
@@ -70,6 +72,7 @@ class SessionForm extends React.Component {
             <br />
             <label>
               Password:
+              <br />
               <input
                 type="password"
                 value={this.state.password}
@@ -78,11 +81,9 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input
-              className="session-submit"
-              type="submit"
-              value={this.props.formType}
-            />
+            <button className="session-submit" type="submit" value="submit">
+              {this.props.formType}
+            </button>
 
             <button className="demo-submit" onClick={(e) => this.demoUser(e)}>
               Demo Login

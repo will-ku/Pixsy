@@ -1,4 +1,5 @@
 import React from "react";
+import { MdClose } from "react-icons/md";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class SignupForm extends React.Component {
           <h3>Registration is easy.</h3>
           <br />
           <div onClick={this.props.closeModal} className="close-x">
-            X
+            <MdClose size={28} />
           </div>
           {this.renderErrors()}
           <div className="login-form">
