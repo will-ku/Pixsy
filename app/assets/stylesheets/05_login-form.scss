@@ -6,12 +6,15 @@ $opensans400: "Open Sans", sans-serif;
 $opensans600: "Open Sans", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 $opensans300: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+$opensans700: "Open Sans", sans-serif;
 
 .login-form-container {
   display: flex;
   justify-content: flex-end;
-  font-family: $opensans600;
+  font-family: $opensans700;
   font-size: 13px;
+  font-weight: 550;
 }
 
 .login-form-header h1 {
@@ -44,6 +47,7 @@ $opensans300: "Open Sans", sans-serif;
   border: 1.5px solid lightgrey;
   border-radius: 5px;
   font-size: 16px;
+  padding-left: 10px;
 }
 
 .login-form-box {
@@ -53,7 +57,7 @@ $opensans300: "Open Sans", sans-serif;
   position: relative;
   border-radius: 30px;
   width: 288px;
-  height: 400px;
+  height: 388px;
 }
 
 .register-button {
@@ -81,20 +85,6 @@ $opensans300: "Open Sans", sans-serif;
   background-color: black;
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 22px;
-  border-radius: 50px;
-  border: 0px;
-  padding: 5px 0px 8px 0px;
-  width: 283px;
-  margin-top: 20px;
-  height: 52px;
-}
-
-.session-submit {
-  width: auto;
-  background-color: black;
-  color: white;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   border-radius: 50px;
   border: 0px;
@@ -114,7 +104,6 @@ $opensans300: "Open Sans", sans-serif;
   background-color: rgba(236, 236, 236, 0.753);
   color: gray;
   font-family: $opensans300;
-  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   border-radius: 50px;
   border: 1px solid lightgrey;
@@ -130,6 +119,8 @@ $opensans300: "Open Sans", sans-serif;
 }
 
 .errors-ul {
+  min-height: 0px;
+  height: auto;
   padding-top: 10px;
   margin-left: 22px;
   color: rgb(216, 5, 5);

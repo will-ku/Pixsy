@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+$redhat: "Red Hat Display", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+$opensans400: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+$opensans600: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+$opensans300: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+$opensans700: "Open Sans", sans-serif;
+
+.signup-form-container {
+  display: flex;
+  justify-content: flex-end;
+  font-family: $opensans700;
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.login-form-header h1 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.login-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-top: 4px;
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -8px;
+}
+
+.signup-required-fields {
+  display: flex;
+}
+
+.asterisk {
+  margin-left: 3px;
+  color: #cc0000;
+  // background-color: red;
+}
+
+
+.signup-form-box {
+  // outline: 1px solid black;
+  padding: 20px;
+  background: white;
+  position: relative;
+  border-radius: 30px;
+  width: 288px;
+  min-height: 400px;
+  height: auto;
+}
+
+.signup-form-box h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 3px;
+  margin-top: 10px;
+}
+
+.signup-form-box h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 16px;
+}

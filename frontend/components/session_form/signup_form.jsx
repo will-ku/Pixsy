@@ -39,8 +39,8 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className="signup-form-container">
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
           <h2>Create your account</h2>
           <h3>Registration is easy.</h3>
           <br />
@@ -48,10 +48,14 @@ class SignupForm extends React.Component {
             <MdClose size={28} />
           </div>
           {this.renderErrors()}
-          <div className="login-form">
+          <div className="signup-form">
             <br />
             <label>
-              Email:
+              <div className="signup-required-fields">
+                <p>Email </p>
+                <p className="asterisk">*</p>
+              </div>
+              <br />
               <input
                 type="text"
                 value={this.state.email}
@@ -61,7 +65,11 @@ class SignupForm extends React.Component {
             </label>
             <br />
             <label>
-              First Name:
+              <div className="signup-required-fields">
+                <p>First Name</p>
+                <p className="asterisk">*</p>
+              </div>
+              <br />
               <input
                 type="text"
                 value={this.state.first_name}
@@ -71,7 +79,11 @@ class SignupForm extends React.Component {
             </label>
             <br />
             <label>
-              Password:
+              <div className="signup-required-fields">
+                <p>Password </p>
+                <p className="asterisk">*</p>
+              </div>
+              <br />
               <input
                 type="password"
                 value={this.state.password}
