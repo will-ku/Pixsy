@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+$redhat: "Red Hat Display", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+$mont700: "Montserrat", sans-serif;
+
+.user-drop-btn {
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  background: white;
+  padding: 10px;
+  height: 48px;
+  width: 65px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+#user-drop-btn-wrapper {
+  background: rgb(219, 219, 219);
+  width: 30px;
+  padding: 4px 0 4px 0;
+  border-radius: 50px;
+}
+
+.user-drop-btn:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  transition: all 0.4s ease 0s;
+  background-color: rgba(236, 236, 236, 0.753);
+}
+
+.user-drop-container {
+  width: 300;
+  position: flex;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+}
+
+.user-drop-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 12px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 160px;
+  right: 30px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.user-drop-content button {
+  color: black;
+  padding-left: 8px;
+  font-family: $redhat;
+  padding: 8px 9px 8px 25px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  width: 100%;
+  background-color: white;
+  text-align: left;
+}
+
+#current-user-drop {
+  font-family: $mont700;
+  font-size: 16px;
+}
+
+.user-drop-content button:hover {
+  background-color: rgba(236, 236, 236, 0.753);
+}

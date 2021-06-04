@@ -1,4 +1,5 @@
 import React from "react";
+import { MdClose } from "react-icons/md";
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class SessionForm extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
   }
 
   update(field) {
@@ -23,13 +25,14 @@ class SessionForm extends React.Component {
     this.props.processForm(user).then(this.props.closeModal);
   }
 
-  handleSubmit(e) {
+  demoUser(e) {
     e.preventDefault();
-    const user = {
-      email: "guest@abc.com",
-      password: "abc123",
-    };
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props
+      .processForm({
+        email: "guest@abc.com",
+        password: "abc123",
+      })
+      .then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -51,13 +54,14 @@ class SessionForm extends React.Component {
             {this.props.otherForm}
           </div>
           <div onClick={this.props.closeModal} className="close-x">
-            X
+            <MdClose size={28} />
           </div>
           {this.renderErrors()}
           <div className="login-form">
             <br />
             <label>
-              <p>Email address</p>
+              Email address
+              <br />
               <input
                 type="text"
                 value={this.state.email}
@@ -68,6 +72,7 @@ class SessionForm extends React.Component {
             <br />
             <label>
               Password:
+              <br />
               <input
                 type="password"
                 value={this.state.password}
@@ -76,17 +81,11 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input
-              className="session-submit"
-              type="submit"
-              value={this.props.formType}
-            />
+            <button className="session-submit" type="submit" value="submit">
+              {this.props.formType}
+            </button>
 
-            <button
-              className="demo-submit"
-              type="submit"
-              onClick={this.handleDemoSubmit}
-            >
+            <button className="demo-submit" onClick={(e) => this.demoUser(e)}>
               Demo Login
             </button>
           </div>

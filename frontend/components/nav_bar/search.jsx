@@ -1,4 +1,5 @@
 import React from "react";
+import { MdSearch } from "react-icons/md";
 
 class Search extends React.Component {
   render() {
@@ -7,12 +8,14 @@ class Search extends React.Component {
         <div className="search-bar">
           <input
             type="text"
-            size="88"
+            size="30"
             placeholder="Search bar under construction"
           />
         </div>
         <div>
-          <button className="search-button">S</button>
+          <button className="search-button">
+            <MdSearch size={24} />
+          </button>
         </div>
       </div>
     );

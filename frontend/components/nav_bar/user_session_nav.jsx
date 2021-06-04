@@ -1,32 +1,32 @@
 import React from "react";
+import UserDropdown from "./user_dropdown";
 
-const UserSessionNav = ({ currentUser, logout, openModal }) => {
-  const loginLink = () => (
-    <nav className="sign-in">
-      <button onClick={() => openModal("login")}>Sign in</button>
-    </nav>
-  );
-  const userSessionNavMenu = () => (
-    <div className="user-nav-global">
-      <div className="user-nav-menu">
-        <button className="header-button" onClick={logout}>
-          Log Out
-        </button>
+class UserSessionNav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.loginLink = this.loginLink.bind(this);
+    this.dropdownMenu = this.dropdownMenu.bind(this);
+  }
 
-        <nav className="navbar">
-          <ul className="navbar-nav"></ul>
-        </nav>
-      </div>
-    </div>
-  );
+  loginLink() {
+    return (
+      <nav className="sign-in">
+        <button onClick={() => this.props.openModal("login")}>Sign in</button>
+      </nav>
+    );
+  }
 
-  return currentUser ? userSessionNavMenu(currentUser, logout) : loginLink();
-};
+  dropdownMenu() {
+    const { currentUser, logout } = this.props;
+    return (
+      <UserDropdown currentUser={currentUser} logout={logout}></UserDropdown>
+    );
+  }
+
+  render() {
+    return this.props.currentUser ? this.dropdownMenu() : this.loginLink();
+  }
+}
 
 export default UserSessionNav;
 
-/*
-
-
-
-*/
