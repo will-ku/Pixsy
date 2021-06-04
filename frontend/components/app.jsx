@@ -23,6 +23,9 @@ const App = () => (
         <UserSessionNav />
       </div>
     </header>
+    <Switch>
+      <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+    </Switch>
   </div>
 );
 

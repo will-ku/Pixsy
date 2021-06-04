@@ -3,7 +3,7 @@ import {
   RECEIVE_CURRENT_USER,
 } from "../actions/session_actions";
 
-import { CLOSE_MODAL } from "../actions/modal_actions";
+import { OPEN_MODAL, CLOSE_MODAL } from "../actions/modal_actions";
 
 export default (state = [], action) => {
   Object.freeze(state);
@@ -13,6 +13,8 @@ export default (state = [], action) => {
     case RECEIVE_CURRENT_USER:
       return [];
     case CLOSE_MODAL:
+      return [];
+    case OPEN_MODAL:
       return [];
     default:
       return state;
