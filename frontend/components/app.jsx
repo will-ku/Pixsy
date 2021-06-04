@@ -14,12 +14,14 @@ import Search from "../components/nav_bar/search";
 const App = () => (
   <div>
     <Modal />
-    <header className="nav-bar">
-      <Link to="/" style={{ textDecoration: "none" }} className="header-link">
-        <h1>Pixsy</h1>
-      </Link>
-      <Search />
-      <UserSessionNav />
+    <header>
+      <div className="nav-bar">
+        <Link to="/" style={{ textDecoration: "none" }} className="header-link">
+          <h1>Pixsy</h1>
+        </Link>
+        <Search />
+        <UserSessionNav />
+      </div>
     </header>
   </div>
 );

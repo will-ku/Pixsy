@@ -1,3 +1,9 @@
+:root {
+}
+
+$header-height: 72px;
+$text-size: 13px;
+
 // button {
 //   color: black;
 //   text-decoration: none;
@@ -14,4 +20,19 @@
 button:hover {
   cursor: pointer;
   transition: all 0.4s ease 0s;
+}
+
+a:hover {
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.page-content {
+  display: flex;
+  width: auto;
+  height: calc(100% - 72px);
+}
+
+.left-sidebar {
+  height: 100%;
 }

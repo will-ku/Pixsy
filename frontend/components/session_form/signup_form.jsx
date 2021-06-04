@@ -41,7 +41,6 @@ class SignupForm extends React.Component {
           <h2>Create your account</h2>
           <h3>Registration is easy.</h3>
           <br />
-          {/* Please {this.props.formType} or {this.props.otherForm} */}
           <div onClick={this.props.closeModal} className="close-x">
             X
           </div>
