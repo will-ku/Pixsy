@@ -15,7 +15,10 @@ const mapDispatchToProps = (dispatch) => ({
     <button
       type="button"
       className="register-button"
-      onClick={() => dispatch(openModal("signup"))}
+      onClick={(e) => {
+        e.preventDefault();
+        dispatch(openModal("signup"));
+      }}
     >
       Register
     </button>
