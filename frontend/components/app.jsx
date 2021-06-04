@@ -10,6 +10,7 @@ import {
 import Modal from "./modal/modal";
 import UserSessionNav from "./nav_bar/user_session_nav_container";
 import Search from "../components/nav_bar/search";
+import ProductIndexContainer from "../components/products/product_index_container";
 
 const App = () => (
   <div>
@@ -24,7 +25,8 @@ const App = () => (
       </div>
     </header>
     <Switch>
-      <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+      <Route exact path="/" component={ProductIndexContainer} />
+      <Redirect to="/" />
     </Switch>
   </div>
 );
