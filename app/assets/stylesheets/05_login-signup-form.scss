@@ -95,7 +95,7 @@ $opensans300: "Open Sans", sans-serif;
   background-color: black;
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   border-radius: 50px;
   border: 0px;
   padding: 5px 0px 8px 0px;
@@ -112,10 +112,10 @@ $opensans300: "Open Sans", sans-serif;
 .demo-submit {
   width: auto;
   background-color: rgba(236, 236, 236, 0.753);
-  color: rgb(167, 167, 167);
+  color: gray;
   font-family: $opensans300;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   border-radius: 50px;
   border: 1px solid lightgrey;
   padding: 5px 0px 8px 0px;
@@ -127,4 +127,11 @@ $opensans300: "Open Sans", sans-serif;
 .demo-submit button:hover {
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   transition: all 0.4s ease 0s;
+}
+
+.errors-ul {
+  padding-top: 10px;
+  margin-left: 22px;
+  color: rgb(216, 5, 5);
+  list-style-type: disc;
 }
