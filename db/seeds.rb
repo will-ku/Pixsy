@@ -23,7 +23,8 @@ aseventhree = Product.create!(
   seller_id: will.id
 )
 
-aseventhree.photos.attach(io: File.open('app/assets/images/cameras/sonya7iii_1.png'), filename: 'sonya7iii_1.png')
+aseventhree.photos.attach(io: File.open('app/assets/images/seed_cameras/sonya7iii_1.png'), filename: 'sonya7iii_1.png')
+aseventhree.photos.attach(io: File.open('app/assets/images/seed_cameras/sonya7iii_2.png'), filename: 'sonya7iii_2.png')
 
 # PRODUCTS
 =begin
