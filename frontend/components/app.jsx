@@ -10,7 +10,8 @@ import {
 import Modal from "./modal/modal";
 import UserSessionNav from "./nav_bar/user_session_nav_container";
 import Search from "../components/nav_bar/search";
-import ProductIndexContainer from "../components/products/product_index_container";
+import SplashContainer from "./products/splash_container";
+import ProductShowContainer from "./products/product_show_container";
 
 const App = () => (
   <div>
@@ -25,7 +26,12 @@ const App = () => (
       </div>
     </header>
     <Switch>
-      <Route exact path="/" component={ProductIndexContainer} />
+      <Route exact path="/" component={SplashContainer} />
+      <Route
+        exact
+        path="/products/:productId"
+        component={ProductShowContainer}
+      />
       <Redirect to="/" />
     </Switch>
   </div>
