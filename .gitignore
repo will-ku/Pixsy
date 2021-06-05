@@ -8,3 +8,5 @@ bundle.js
 bundle.js.map
 vendor/
 temp/*
+# Ignore master key for decrypting credentials and more.
+/config/master.key

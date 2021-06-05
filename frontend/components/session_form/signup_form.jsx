@@ -6,7 +6,7 @@ class SignupForm extends React.Component {
     super(props);
     this.state = {
       email: "",
-      first_name: "",
+      firstName: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -72,8 +72,8 @@ class SignupForm extends React.Component {
               <br />
               <input
                 type="text"
-                value={this.state.first_name}
-                onChange={this.update("first_name")}
+                value={this.state.firstName}
+                onChange={this.update("firstName")}
                 className="login-input"
               />
             </label>
