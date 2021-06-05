@@ -12435,3 +12435,16 @@ FOREIGN KEY ("blob_id")
 [ActiveJob] [ActiveStorage::AnalyzeJob] [bcabed59-e966-48c4-93b8-c70d361dc3ea]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
 [ActiveJob] [ActiveStorage::AnalyzeJob] [bcabed59-e966-48c4-93b8-c70d361dc3ea]   [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
 [ActiveJob] [ActiveStorage::AnalyzeJob] [bcabed59-e966-48c4-93b8-c70d361dc3ea] Performed ActiveStorage::AnalyzeJob (Job ID: bcabed59-e966-48c4-93b8-c70d361dc3ea) from Async(default) in 518.43ms
+Started GET "/" for ::1 at 2021-06-04 22:08:38 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (40.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "pug4C6bihCI4Cpdq31TBhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered static_pages/root.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 6817ms (Views: 6771.3ms | ActiveRecord: 41.5ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
