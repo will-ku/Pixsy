@@ -1,7 +1,7 @@
 import React from "react";
 import UserDropdown from "./user_dropdown";
 
-class UserSessionNav extends React.Component {
+class UserSession extends React.Component {
   constructor(props) {
     super(props);
     this.loginLink = this.loginLink.bind(this);
@@ -28,5 +28,4 @@ class UserSessionNav extends React.Component {
   }
 }
 
-export default UserSessionNav;
-
+export default UserSession;

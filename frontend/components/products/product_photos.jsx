@@ -7,7 +7,6 @@ class ProductPhotos extends React.Component {
       currPhotoIdx: 0,
     };
     this.changePhoto = this.changePhoto.bind(this);
-    // this.clickPhoto = this.clickPhoto.bind(this);
   }
 
   changePhoto(change) {
@@ -17,10 +16,6 @@ class ProductPhotos extends React.Component {
       product.photoUrl.length;
     this.setState({ currPhotoIdx: newPhotoIdx });
   }
-
-  // clickPhoto(idx) {
-  //   this.setState({ currPhotoIdx: idx });
-  // }
 
   render() {
     const { product } = this.props;
@@ -33,7 +28,6 @@ class ProductPhotos extends React.Component {
                 <li key={idx}>
                   <img
                     className="product-show-carousel-photo"
-                    // onClick={() => this.clickPhoto(idx)}
                     src={product.photoUrl[idx]}
                   />
                 </li>

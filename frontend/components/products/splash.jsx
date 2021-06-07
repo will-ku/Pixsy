@@ -1,24 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ProductShow from "./product_show";
+import ProductSplashItem from "./product_splash_item";
 
 class Splash extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchAllProducts();
+  }
+
   render() {
     return (
-      <div>
-        <h1>Splash Page</h1>
-        <h2>Product Index (temporary):</h2>
-        <ul>
-          {this.props.products.map((product, idx) => (
-            <li key={idx}>
-              <Link to={`products/${product.id}`}> --> {product.name}</Link>
-            </li>
-          ))}
-        </ul>
+      <div className="grid-container">
+        <div className="grid-left-whitespace"></div>
+        <div className="grid-splash-content">
+          <section className="first-splash-row">
+            <h2>Our top picks for traveling</h2>
+            <ul className="first-splash-row-content">
+              {this.props.products.map((product) => {
+                return <ProductSplashItem key={product.id} product={product} />;
+              })}
+            </ul>
+          </section>
+        </div>
+        <div className="grid-right-whitespace"></div>
       </div>
     );
   }
