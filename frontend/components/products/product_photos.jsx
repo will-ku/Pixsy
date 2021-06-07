@@ -37,12 +37,12 @@ class ProductPhotos extends React.Component {
         </div>
 
         <div className="product-show-main-photo">
-          <button className="prev-photo" onClick={() => this.changePhoto(1)}>
-            next
-          </button>
-          <img src={product.photoUrl[this.state.currPhotoIdx]} />
           <button className="next-photo" onClick={() => this.changePhoto(-1)}>
             previous
+          </button>
+          <img src={product.photoUrl[this.state.currPhotoIdx]} />
+          <button className="prev-photo" onClick={() => this.changePhoto(1)}>
+            next
           </button>
         </div>
       </div>
