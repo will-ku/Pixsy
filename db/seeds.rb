@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 User.delete_all
 Product.delete_all
 
@@ -23,8 +25,12 @@ aseventhree = Product.create!(
   seller_id: will.id
 )
 
-aseventhree.photos.attach(io: File.open('app/assets/images/seed_cameras/sonya7iii_1.png'), filename: 'sonya7iii_1.png')
-aseventhree.photos.attach(io: File.open('app/assets/images/seed_cameras/sonya7iii_2.png'), filename: 'sonya7iii_2.png')
+file001 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/sonya7iii_1.png")
+file002 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/sonya7iii_2.png")
+file003 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/sonya7iii_3.png")
+aseventhree.photos.attach(io: file001, filename: 'sonya7iii_1.png')
+aseventhree.photos.attach(io: file002, filename: 'sonya7iii_2.png')
+aseventhree.photos.attach(io: file003, filename: 'sonya7iii_3.png')
 
 # PRODUCTS
 =begin
@@ -44,6 +50,12 @@ fujixmten = Product.create!(
   price: 999,
   seller_id: zach.id
 )  
+file004 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/fujixs10_1.png")
+file005 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/fujixs10_2.png")
+file006 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/fujixs10_3.png")
+fujixmten.photos.attach(io: file004, filename: 'fujixs10_1.png')
+fujixmten.photos.attach(io: file005, filename: 'fujixs10_2.png')
+fujixmten.photos.attach(io: file006, filename: 'fujixs10_3.png')
 
 eosr = Product.create!(
   name: "Canon EOS R",
@@ -51,6 +63,12 @@ eosr = Product.create!(
   price: 1800,
   seller_id: will.id
 )  
+file007 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/canoneosr_1.png")
+file008 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/canoneosr_2.png")
+file009 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/canoneosr_3.png")
+eosr.photos.attach(io: file007, filename: "canoneosr_1.png")
+eosr.photos.attach(io: file008, filename: "canoneosr_2.png")
+eosr.photos.attach(io: file009, filename: "canoneosr_3.png")
 
 # accessories
 
@@ -60,3 +78,9 @@ pdslide = Product.create!(
   price: 65,
   seller_id: zach.id
 )  
+filea001 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/product_accessories/pdslide1.png")
+filea002 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/product_accessories/pdslide2.png")
+filea003 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/product_accessories/pdslide3.png")
+pdslide.photos.attach(io: filea001, filename: "pdslide_1.png")
+pdslide.photos.attach(io: filea002, filename: "pdslide_2.png")
+pdslide.photos.attach(io: filea003, filename: "pdslide_3.png")

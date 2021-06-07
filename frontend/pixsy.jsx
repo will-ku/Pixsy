@@ -3,9 +3,6 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
 
-const myStore = configureStore();
-window.myStore = myStore;
-
 document.addEventListener("DOMContentLoaded", () => {
   let store;
 
@@ -16,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
+  window.store = store;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
