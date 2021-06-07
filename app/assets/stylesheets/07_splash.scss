@@ -1,5 +1,9 @@
 .first-splash-row {
   display: flex;
+  flex-direction: column;
+}
+.first-splash-row-content {
+  display: flex;
 }
 
 .product-splash-item {
@@ -13,20 +17,37 @@
 }
 
 .splash-image:hover {
-  // -moz-box-shadow: 0 0 3px #ccc;
-  // -webkit-box-shadow: 0 0 3px #ccc;
-  // box-shadow: 0 0 3px #ccc;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
 
 .splash-image {
-  width: 206px;
-  height: 200px;
+  width: 184px;
+  height: 146px;
+  object-fit: cover;
 }
 
 .splash-cap {
-  padding: 12px;
+  padding: 5px 12px;
+  width: 185px;
   color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+.first-splash-row-content {
+  text-align: center;
+}
+
+.grid-splash-content {
+  padding: 0px 30px;
+  height: auto;
+}
+
+.grid-splash-content h2 {
+  padding: 0px 21px;
+  text-align: center;
 }

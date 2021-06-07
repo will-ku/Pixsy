@@ -15,14 +15,15 @@ class Splash extends React.Component {
     return (
       <div className="grid-container">
         <div className="grid-left-whitespace"></div>
-        <div className="grid-middle-content">
-          <h1>Splash Page</h1>
-          <h2>Product Index (temporary):</h2>
-          <ul className="first-splash-row">
-            {this.props.products.map((product) => {
-              return <ProductSplashItem key={product.id} product={product} />;
-            })}
-          </ul>
+        <div className="grid-splash-content">
+          <section className="first-splash-row">
+            <h2>Our top picks for traveling</h2>
+            <ul className="first-splash-row-content">
+              {this.props.products.map((product) => {
+                return <ProductSplashItem key={product.id} product={product} />;
+              })}
+            </ul>
+          </section>
         </div>
         <div className="grid-right-whitespace"></div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import ProductPhotos from "./product_photos";
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -27,10 +28,11 @@ class ProductShow extends React.Component {
       <div className="grid-container">
         <div className="grid-left-whitespace"></div>
 
-        <div className="grid-middle-content">
-          <div className="product-show-content-left"></div>
-          <div className="product-show-content-right">
-            <h1>Test</h1>
+        <div className="grid-product-show-content">
+          <section className="product-show-content-left">
+            <ProductPhotos product={this.props.product} />
+          </section>
+          <section className="product-show-content-right">
             {/* <img src={this.props.product.photoUrl[0]} alt="" /> */}
             <h1>{product.name}</h1>
             <h3>Price: {product.price}</h3>
@@ -38,7 +40,7 @@ class ProductShow extends React.Component {
             <p>Description:</p>
             <br />
             <p>{product.description}</p>
-          </div>
+          </section>
         </div>
         <div className="grid-right-whitespace"></div>
       </div>

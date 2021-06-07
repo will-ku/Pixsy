@@ -15,7 +15,13 @@ Product.delete_all
 john = User.create!(email: 'john@pixsy.com', first_name: 'John', password: 'abc123')
 will = User.create!(email: 'will@pixsy.com', first_name: 'Will', password: 'abc123')
 zach = User.create!(email: 'zach@pixsy.com', first_name: 'Zach', password: 'abc123')
-
+batman=User.create!(email: "batman@pixsy.com", first_name: "Batman", password: "abc123")
+superman=User.create!(email: "superman@pixsy.com", first_name: "Superman", password: "abc123")
+ironman=User.create!(email: "ironman@pixsy.com", first_name: "Ironman", password: "abc123")
+jenn=User.create!(email: "jenn@pixsy.com", first_name: "Jenn", password: "abc123")
+jason=User.create!(email: "jason@pixsy.com", first_name: "Jason", password: "abc123")
+jessica=User.create!(email: "jesssica@pixsy.com", first_name: "Jessica", password: "abc123")
+peter=User.create!(email: "peter@pixsy.com", first_name: "Peter", password: "abc123")
 # DEMO PRODUCT
 
 aseventhree = Product.create!(
