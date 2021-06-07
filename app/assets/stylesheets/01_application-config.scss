@@ -24,10 +24,13 @@ a:hover {
   height: 100%;
 }
 
+a:-webkit-any-link {
+  color: inherit;
+}
+
 // GRID SETUP
 
 .grid-container {
   display: grid;
   grid-template-columns: auto minmax(850px, 1400px) auto;
 }
-

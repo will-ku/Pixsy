@@ -10,7 +10,6 @@ class ProductShow extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     if (!this.props.product) {
       this.props
         .fetchProduct(this.props.match.params.productId)
@@ -30,7 +29,10 @@ class ProductShow extends React.Component {
 
         <div className="grid-product-show-content">
           <section className="product-show-content-left">
-            <ProductPhotos product={this.props.product} />
+            <ProductPhotos
+              product={this.props.product}
+              fetchProduct={this.props.fetchProduct}
+            />
           </section>
           <section className="product-show-content-right">
             {/* <img src={this.props.product.photoUrl[0]} alt="" /> */}
