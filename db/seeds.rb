@@ -10,6 +10,7 @@ require 'open-uri'
 
 User.delete_all
 Product.delete_all
+Review.delete_all
 
 # users
 john = User.create!(email: 'john@pixsy.com', first_name: 'John', password: 'abc123')
@@ -22,8 +23,8 @@ jenn=User.create!(email: "jenn@pixsy.com", first_name: "Jenn", password: "abc123
 jason=User.create!(email: "jason@pixsy.com", first_name: "Jason", password: "abc123")
 jessica=User.create!(email: "jesssica@pixsy.com", first_name: "Jessica", password: "abc123")
 peter=User.create!(email: "peter@pixsy.com", first_name: "Peter", password: "abc123")
-# DEMO PRODUCT
 
+# DEMO PRODUCT
 aseventhree = Product.create!(
   name: 'Sony Alpha a7iii Mirrorless Digital Camera', 
   description: 'Distinguished by its updated sensor design, the Alpha a7 III Mirrorless Digital Camera from Sony is a well-rounded camera suitable for both photo and video applications in a variety of working situations. Refined for improved speed and low-light performance, the full-frame 24.2MP Exmor R BSI CMOS sensor and BIONZ X image processor pair to realize an impressive 10 fps continuous shooting rate and improved autofocus performance for faster, more reliable subject tracking along with wide frame coverage.',
@@ -37,6 +38,13 @@ file003 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/so
 aseventhree.photos.attach(io: file001, filename: 'sonya7iii_1.png')
 aseventhree.photos.attach(io: file002, filename: 'sonya7iii_2.png')
 aseventhree.photos.attach(io: file003, filename: 'sonya7iii_3.png')
+
+review1 = Review.create!(
+  reviewer_id: will.id,
+  product_id: aseventhree.id,
+  comment: "this is great!!!!!",
+  rating: 5
+)
 
 # PRODUCTS
 =begin

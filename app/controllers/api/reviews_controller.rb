@@ -1,8 +1,8 @@
 class Api::ReviewsController < ApplicationController
-  def index
-    @reviews = Review.all  #where product_id matches
-    render :index
-  end
+  # def index
+  #   @reviews = Review.all  #where product_id matches
+  #   render :show
+  # end
 
   def destroy
     @review = Review.find_by(id: params[:id])
@@ -11,9 +11,8 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-
     if @review && @review.save
-      render :index
+      render :show
     else
       render json: ["Please complete all required fields."], status: 404
     end
@@ -22,7 +21,7 @@ class Api::ReviewsController < ApplicationController
   def update
     @review = Review.find_by(id: params[:id])
     if @review.update(review_params)
-      render :index
+      render :show
     else
       render json: ["Unable to update form. Please complete all required fields"], status: 404
     end

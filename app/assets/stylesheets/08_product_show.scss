@@ -37,7 +37,7 @@
   // border: 1px dotted blue;
   grid-area: photos;
   display: grid;
-  min-width: 535px;
+  // min-width: 535px;
   max-width: 800px;
 }
 
@@ -56,18 +56,10 @@
   display: flex;
   flex-direction: column;
   grid-area: reviews;
-  // border: 1px dotted green;
+  border: 1px dotted green;
   min-width: 535px;
   max-width: 800px;
 }
-
-// .product-show-photos-flex-box {
-//   // display: flex;
-//   display: grid;
-//   grid-template-columns: 66px auto;
-//   height: 520px;
-//   border: 1px dotted blue;
-// }
 
 .product-show-carousel {
   width: 72px;
@@ -77,12 +69,14 @@
 
 .product-show-main-photo {
   height: inherit;
-  object-fit: contain;
+  width: inherit;
+  object-fit: cover;
 }
 
 .product-show-main-photo-container {
   display: flex;
   height: inherit;
+  width: inherit;
   align-items: center;
   justify-content: flex-end;
 }

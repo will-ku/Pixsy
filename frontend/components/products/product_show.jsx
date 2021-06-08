@@ -1,4 +1,5 @@
 import React from "react";
+import ProductShowReviews from "../reviews/product_show_reviews";
 import ProductPhotos from "./product_photos";
 
 class ProductShow extends React.Component {
@@ -15,15 +16,15 @@ class ProductShow extends React.Component {
         .fetchProduct(this.props.match.params.productId)
         .then(() => this.setState({ loading: false }));
     }
-
     this.setState({ loading: false });
   }
 
   render() {
-    const { product } = this.props;
+    if (this.state.loading === true) return null;
 
-    if (this.state.loading) return null;
     if (this.props.product === undefined) return null;
+
+    const { product } = this.props;
 
     const formattedPrice =
       "$" +
@@ -49,14 +50,7 @@ class ProductShow extends React.Component {
           <p>{product.description}</p>
         </section>
         <section className="product-show-reviews">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            autem earum impedit quae id quos facere nobis quasi ipsum labore
-            asperiores quas dolorem voluptatem dolor pariatur eius ea magnam
-            fuga saepe, amet porro explicabo. Cum iste exercitationem, saepe,
-            tenetur aliquid nesciunt ipsam praesentium impedit sit laborum nulla
-            sapiente tempora eveniet.
-          </p>
+          <ProductShowReviews reviews={this.props.product.productReviews} />
         </section>
       </div>
     );
