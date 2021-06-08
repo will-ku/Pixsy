@@ -14,10 +14,9 @@ import SplashContainer from "./products/splash_container";
 import ProductShowContainer from "./products/product_show_container";
 
 const App = () => (
-  <div>
+  <>
     <Modal />
-    <div className="grid-container">
-      <div className="grid-left-whitespace"></div>
+    <div className="nav-container">
       <header>
         <div className="nav-bar">
           <Link
@@ -30,9 +29,9 @@ const App = () => (
           <Search />
           <UserSession />
         </div>
-        <div className="grid-right-whitespace"></div>
       </header>
     </div>
+
     <Switch>
       <Route exact path="/" component={SplashContainer} />
       <Route
@@ -42,7 +41,7 @@ const App = () => (
       />
       <Redirect to="/" />
     </Switch>
-  </div>
+  </>
 );
 
 export default App;

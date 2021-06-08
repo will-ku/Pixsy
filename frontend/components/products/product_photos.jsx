@@ -1,4 +1,5 @@
 import React from "react";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 class ProductPhotos extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class ProductPhotos extends React.Component {
   render() {
     const { product } = this.props;
     return (
-      <div className="product-show-photos-flex-box">
+      <>
         <div className="product-show-carousel">
           <ul>
             {product.photoUrl.map((photo, idx) => {
@@ -42,16 +43,25 @@ class ProductPhotos extends React.Component {
           </ul>
         </div>
 
-        <div className="product-show-main-photo">
-          <button className="next-photo" onClick={() => this.changePhoto(-1)}>
-            previous
+        <div className="product-show-main-photo-container">
+          <button
+            className="main-photo-arrow"
+            onClick={() => this.changePhoto(-1)}
+          >
+            <MdKeyboardArrowLeft />
           </button>
-          <img src={product.photoUrl[this.state.currPhotoIdx]} />
-          <button className="prev-photo" onClick={() => this.changePhoto(1)}>
-            next
+          <img
+            className="product-show-main-photo"
+            src={product.photoUrl[this.state.currPhotoIdx]}
+          />
+          <button
+            className="main-photo-arrow"
+            onClick={() => this.changePhoto(1)}
+          >
+            <MdKeyboardArrowRight />
           </button>
         </div>
-      </div>
+      </>
     );
   }
 }

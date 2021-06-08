@@ -17,4 +17,8 @@ class Product < ApplicationRecord
   foreign_key: :seller_id,
   class_name: :User
   
+  has_many :reviews,
+  foreign_key: :product_id,
+  class_name: :Review
+
 end

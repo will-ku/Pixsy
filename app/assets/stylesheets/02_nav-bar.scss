@@ -3,12 +3,18 @@ $opensans300: "Open Sans", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 $opensans600: "Open Sans", sans-serif;
 
+.nav-container {
+  width: 100%;
+  height: 72px;
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 72px;
-  padding: 5px 36px 12px 36px;
+  // padding: 5px 36px 12px 36px;
 }
 
 .nav-bar {
@@ -17,7 +23,9 @@ header {
   justify-content: space-between;
   min-width: 500px;
   width: 1400px;
+  max-width: 1400px;
   height: 72px;
+  margin: 0px auto;
 }
 
 header h1 {

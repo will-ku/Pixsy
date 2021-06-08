@@ -21,30 +21,43 @@ class ProductShow extends React.Component {
 
   render() {
     const { product } = this.props;
+
     if (this.state.loading) return null;
     if (this.props.product === undefined) return null;
-    return (
-      <div className="grid-container">
-        <div className="grid-left-whitespace"></div>
 
-        <div className="grid-product-show-content">
-          <section className="product-show-content-left">
-            <ProductPhotos
-              product={this.props.product}
-              fetchProduct={this.props.fetchProduct}
-            />
-          </section>
-          <section className="product-show-content-right">
-            {/* <img src={this.props.product.photoUrl[0]} alt="" /> */}
-            <h1>{product.name}</h1>
-            <h3>Price: {product.price}</h3>
-            <br />
-            <p>Description:</p>
-            <br />
-            <p>{product.description}</p>
-          </section>
-        </div>
-        <div className="grid-right-whitespace"></div>
+    const formattedPrice =
+      "$" +
+      product.price.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+
+    return (
+      <div className="product-show-grid-container">
+        <section className="product-show-photos">
+          <ProductPhotos
+            product={this.props.product}
+            fetchProduct={this.props.fetchProduct}
+          />
+        </section>
+        <section className="product-show-details">
+          <h1>{product.name}</h1>
+          <h3>Price: {formattedPrice}</h3>
+          <br />
+          <p>Description:</p>
+          <br />
+          <p>{product.description}</p>
+        </section>
+        <section className="product-show-reviews">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            autem earum impedit quae id quos facere nobis quasi ipsum labore
+            asperiores quas dolorem voluptatem dolor pariatur eius ea magnam
+            fuga saepe, amet porro explicabo. Cum iste exercitationem, saepe,
+            tenetur aliquid nesciunt ipsam praesentium impedit sit laborum nulla
+            sapiente tempora eveniet.
+          </p>
+        </section>
       </div>
     );
   }

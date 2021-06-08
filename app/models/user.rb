@@ -21,6 +21,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :reviews,
+  foreign_key: :reviewer_id,
+  class_name: :Review
+
   has_many :products,
   foreign_key: :seller_id,
   class_name: :Product
