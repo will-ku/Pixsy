@@ -37015,3 +37015,370 @@ Processing by Api::ProductsController#show as JSON
 Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2021-06-08 02:31:20 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6685ms (Views: 6681.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for ::1 at 2021-06-08 02:31:27 -0400
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 49], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 50], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 48], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 51], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/index.json.jbuilder (79.2ms)
+Completed 200 OK in 104ms (Views: 66.0ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c25877f060f11ce5c57294d9e76a229ebf45f1d9/sonya7iii_1.png" for ::1 at 2021-06-08 02:31:27 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a41fc3e514f9a070bc62a5df6cf11dcd376074df/fujixs10_1.png" for ::1 at 2021-06-08 02:31:27 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBOQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--58840df78e31e4818c77648e9c0689d14ab53082/canoneosr_1.png" for ::1 at 2021-06-08 02:31:27 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBOdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--db3a4c8bd89bbc4ac26b1eb6b279108bc4e01b51/pdslide_1.png" for ::1 at 2021-06-08 02:31:27 -0400
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c25877f060f11ce5c57294d9e76a229ebf45f1d9", "filename"=>"sonya7iii_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (3.2ms) [0m[34mGenerated URL for file at key: 8L3xs6ouD4AycghM7g2UnoRR (https://pixsy-dev.s3.us-east-2.amazonaws.com/8L3xs6ouD4AycghM7g2UnoRR?response-content-disposition=inline%3B%20filename%3D%22sonya7iii_1.png%22%3B%20filename%2A%3DUTF-8%27%27sonya7iii_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5079ec622882a210718256ca7217121cf78cfa69cc61216b07dc44b1d653c4fc)[0m
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/8L3xs6ouD4AycghM7g2UnoRR?response-content-disposition=inline%3B%20filename%3D%22sonya7iii_1.png%22%3B%20filename%2A%3DUTF-8%27%27sonya7iii_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5079ec622882a210718256ca7217121cf78cfa69cc61216b07dc44b1d653c4fc
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveStorage::BlobsController#show as PNG
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBOdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--db3a4c8bd89bbc4ac26b1eb6b279108bc4e01b51", "filename"=>"pdslide_1"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a41fc3e514f9a070bc62a5df6cf11dcd376074df", "filename"=>"fujixs10_1"}
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBOQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--58840df78e31e4818c77648e9c0689d14ab53082", "filename"=>"canoneosr_1"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.8ms) [0m[34mGenerated URL for file at key: oLcKSoB8dx5SmEX898LGQXSo (https://pixsy-dev.s3.us-east-2.amazonaws.com/oLcKSoB8dx5SmEX898LGQXSo?response-content-disposition=inline%3B%20filename%3D%22pdslide_1.png%22%3B%20filename%2A%3DUTF-8%27%27pdslide_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=888acdc6c35e0bcad79b40aac56469bec44591a576d4bc54dda77aa26522c0ed)[0m
+  [1m[36mActiveStorage::Blob Load (2.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/oLcKSoB8dx5SmEX898LGQXSo?response-content-disposition=inline%3B%20filename%3D%22pdslide_1.png%22%3B%20filename%2A%3DUTF-8%27%27pdslide_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=888acdc6c35e0bcad79b40aac56469bec44591a576d4bc54dda77aa26522c0ed
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.6ms) [0m[34mGenerated URL for file at key: TUvE8U7qkmkVoteMYRsWVAhZ (https://pixsy-dev.s3.us-east-2.amazonaws.com/TUvE8U7qkmkVoteMYRsWVAhZ?response-content-disposition=inline%3B%20filename%3D%22canoneosr_1.png%22%3B%20filename%2A%3DUTF-8%27%27canoneosr_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=80861991f7fbe6add4cb4e465810b76a3d302fb7df7379feebb78ea95f71ad68)[0m
+[36m  S3 Storage (0.5ms) [0m[34mGenerated URL for file at key: DYt34fRRq9BBfiLFPVkcecej (https://pixsy-dev.s3.us-east-2.amazonaws.com/DYt34fRRq9BBfiLFPVkcecej?response-content-disposition=inline%3B%20filename%3D%22fujixs10_1.png%22%3B%20filename%2A%3DUTF-8%27%27fujixs10_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a1af3669be7c162a06a5e3fd5c2532570cba10568b02ce5df688d50bd2d4557d)[0m
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/TUvE8U7qkmkVoteMYRsWVAhZ?response-content-disposition=inline%3B%20filename%3D%22canoneosr_1.png%22%3B%20filename%2A%3DUTF-8%27%27canoneosr_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=80861991f7fbe6add4cb4e465810b76a3d302fb7df7379feebb78ea95f71ad68
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/DYt34fRRq9BBfiLFPVkcecej?response-content-disposition=inline%3B%20filename%3D%22fujixs10_1.png%22%3B%20filename%2A%3DUTF-8%27%27fujixs10_1.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063127Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a1af3669be7c162a06a5e3fd5c2532570cba10568b02ce5df688d50bd2d4557d
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d80cb1db5d6d40c47e11a90e686b19cebabc4a07/fujixs10_2.png" for ::1 at 2021-06-08 02:31:30 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6765dea352d55fbaf8b440f76070934872069b9f/fujixs10_3.png" for ::1 at 2021-06-08 02:31:30 -0400
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d80cb1db5d6d40c47e11a90e686b19cebabc4a07", "filename"=>"fujixs10_2"}
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6765dea352d55fbaf8b440f76070934872069b9f", "filename"=>"fujixs10_3"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: Yawc6YjnyEh7XeaPxK6r5TTW (https://pixsy-dev.s3.us-east-2.amazonaws.com/Yawc6YjnyEh7XeaPxK6r5TTW?response-content-disposition=inline%3B%20filename%3D%22fujixs10_2.png%22%3B%20filename%2A%3DUTF-8%27%27fujixs10_2.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063130Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9b52e075ba228d8cd7fc9f2a9c16f71af78574420eb8b6b8efd7081a2e43fdd7)[0m
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/Yawc6YjnyEh7XeaPxK6r5TTW?response-content-disposition=inline%3B%20filename%3D%22fujixs10_2.png%22%3B%20filename%2A%3DUTF-8%27%27fujixs10_2.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063130Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9b52e075ba228d8cd7fc9f2a9c16f71af78574420eb8b6b8efd7081a2e43fdd7
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: S6EdM4CZu3GN4r4H3Tq8qXo4 (https://pixsy-dev.s3.us-east-2.amazonaws.com/S6EdM4CZu3GN4r4H3Tq8qXo4?response-content-disposition=inline%3B%20filename%3D%22fujixs10_3.png%22%3B%20filename%2A%3DUTF-8%27%27fujixs10_3.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063130Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b5d1697fa57d54396ffca8eb19d6c7a1b123599ec54d51209c95d036c3eb29d7)[0m
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/S6EdM4CZu3GN4r4H3Tq8qXo4?response-content-disposition=inline%3B%20filename%3D%22fujixs10_3.png%22%3B%20filename%2A%3DUTF-8%27%27fujixs10_3.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063130Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b5d1697fa57d54396ffca8eb19d6c7a1b123599ec54d51209c95d036c3eb29d7
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for ::1 at 2021-06-08 02:31:37 -0400
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 49], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 50], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 48], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 51], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/index.json.jbuilder (24.7ms)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f2fa32caf63deb2aabb54ad17b6845a5671c7d9d/sonya7iii_2.png" for ::1 at 2021-06-08 02:31:39 -0400
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f2fa32caf63deb2aabb54ad17b6845a5671c7d9d", "filename"=>"sonya7iii_2"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--73ff499d83e24dd53669d4e3a4f4285a6408da79/sonya7iii_3.png" for ::1 at 2021-06-08 02:31:39 -0400
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.9ms) [0m[34mGenerated URL for file at key: Za9g31iLcfhjyPn4K8Ju3iuC (https://pixsy-dev.s3.us-east-2.amazonaws.com/Za9g31iLcfhjyPn4K8Ju3iuC?response-content-disposition=inline%3B%20filename%3D%22sonya7iii_2.png%22%3B%20filename%2A%3DUTF-8%27%27sonya7iii_2.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063139Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8f61b402bc10b7394323ffe4004b3a3ca4615c653548139c00b9e75d39b48cf7)[0m
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/Za9g31iLcfhjyPn4K8Ju3iuC?response-content-disposition=inline%3B%20filename%3D%22sonya7iii_2.png%22%3B%20filename%2A%3DUTF-8%27%27sonya7iii_2.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063139Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8f61b402bc10b7394323ffe4004b3a3ca4615c653548139c00b9e75d39b48cf7
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--73ff499d83e24dd53669d4e3a4f4285a6408da79", "filename"=>"sonya7iii_3"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.9ms) [0m[34mGenerated URL for file at key: KtxYRqprS26HruYQYSi6xhX1 (https://pixsy-dev.s3.us-east-2.amazonaws.com/KtxYRqprS26HruYQYSi6xhX1?response-content-disposition=inline%3B%20filename%3D%22sonya7iii_3.png%22%3B%20filename%2A%3DUTF-8%27%27sonya7iii_3.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063139Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1753d6d6fc27552d6dd619b6f35efbed0af7f6086cc8e866e5b2881b0c7804d1)[0m
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/KtxYRqprS26HruYQYSi6xhX1?response-content-disposition=inline%3B%20filename%3D%22sonya7iii_3.png%22%3B%20filename%2A%3DUTF-8%27%27sonya7iii_3.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063139Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1753d6d6fc27552d6dd619b6f35efbed0af7f6086cc8e866e5b2881b0c7804d1
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2021-06-08 02:31:40 -0400
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 49], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 50], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 48], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 51], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/index.json.jbuilder (17.5ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--04bc469f73464c3ab04f75454211b4f813200324/pdslide_2.png" for ::1 at 2021-06-08 02:31:40 -0400
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--04bc469f73464c3ab04f75454211b4f813200324", "filename"=>"pdslide_2"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.8ms) [0m[34mGenerated URL for file at key: vKZpHDf3umeNcHoA8sNFp7jq (https://pixsy-dev.s3.us-east-2.amazonaws.com/vKZpHDf3umeNcHoA8sNFp7jq?response-content-disposition=inline%3B%20filename%3D%22pdslide_2.png%22%3B%20filename%2A%3DUTF-8%27%27pdslide_2.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063140Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7e47a8640a64a90211de277ee7056b087a0234bc2e6e13db5ab89b9e97645e47)[0m
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/vKZpHDf3umeNcHoA8sNFp7jq?response-content-disposition=inline%3B%20filename%3D%22pdslide_2.png%22%3B%20filename%2A%3DUTF-8%27%27pdslide_2.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063140Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7e47a8640a64a90211de277ee7056b087a0234bc2e6e13db5ab89b9e97645e47
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a48fc3b9951985751a35a92008ac613e13d82e4e/pdslide_3.png" for ::1 at 2021-06-08 02:31:40 -0400
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a48fc3b9951985751a35a92008ac613e13d82e4e", "filename"=>"pdslide_3"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ /Users/will/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.8ms) [0m[34mGenerated URL for file at key: C9SgGzmozSZmpnQRhsxNi652 (https://pixsy-dev.s3.us-east-2.amazonaws.com/C9SgGzmozSZmpnQRhsxNi652?response-content-disposition=inline%3B%20filename%3D%22pdslide_3.png%22%3B%20filename%2A%3DUTF-8%27%27pdslide_3.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063140Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=068bc314149fcc69a408bf9e95ad39a3f34491a358bc5968e9e2db7477e9e0c4)[0m
+Redirected to https://pixsy-dev.s3.us-east-2.amazonaws.com/C9SgGzmozSZmpnQRhsxNi652?response-content-disposition=inline%3B%20filename%3D%22pdslide_3.png%22%3B%20filename%2A%3DUTF-8%27%27pdslide_3.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVGJ3XJVYEXCYSA4U%2F20210608%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210608T063140Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=068bc314149fcc69a408bf9e95ad39a3f34491a358bc5968e9e2db7477e9e0c4
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for ::1 at 2021-06-08 02:31:43 -0400
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 49], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 50], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 48], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 51], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:4
+  Rendered api/products/index.json.jbuilder (15.4ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2021-06-08 02:32:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products/49" for ::1 at 2021-06-08 02:32:57 -0400
+Processing by Api::ProductsController#show as JSON
+  Parameters: {"id"=>"49"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/api/products_controller.rb:8
+  Rendering api/products/show.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 49], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  Rendered api/products/show.json.jbuilder (8.1ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2021-06-08 02:33:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products/49" for ::1 at 2021-06-08 02:33:28 -0400
+Processing by Api::ProductsController#show as JSON
+  Parameters: {"id"=>"49"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/api/products_controller.rb:8
+  Rendering api/products/show.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 49], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  Rendered api/products/show.json.jbuilder (5.6ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2021-06-08 02:34:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products/49" for ::1 at 2021-06-08 02:34:00 -0400
+Processing by Api::ProductsController#show as JSON
+  Parameters: {"id"=>"49"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/api/products_controller.rb:8
+  Rendering api/products/show.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 49], ["record_type", "Product"], ["name", "photos"]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/products/show.json.jbuilder:3
+  Rendered api/products/show.json.jbuilder (6.4ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.9ms)
+
+

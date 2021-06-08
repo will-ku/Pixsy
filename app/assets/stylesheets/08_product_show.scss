@@ -93,7 +93,11 @@
   object-fit: contain;
   border-radius: 5px;
   border: 1.5px solid black;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+.product-show-carousel-photo:hover {
+  cursor: pointer;
 }
 
 .main-photo-arrow {
@@ -107,6 +111,7 @@
   border-radius: 50px;
   border: none;
   z-index: 1;
+  margin: 0 6px;
 }
 
 .main-photo-arrow:hover {
