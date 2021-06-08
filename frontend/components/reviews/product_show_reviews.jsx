@@ -5,21 +5,26 @@ import ProductShowReviewItem from "./product_show_review_item";
 class ProductShowReviews extends React.Component {
   constructor(props) {
     super(props);
+    this.reviewsArr = this.reviewsArr.bind(this);
+  }
+
+  reviewsArr() {
+    if (this.props.product.productReviews === undefined) return [];
+    return Object.values(this.props.product.productReviews);
   }
 
   render() {
-    if (this.props.reviews === undefined) return null;
+    // if (this.props.reviews === undefined) return null;
 
     return (
       <div className="product-show-reviews-flex">
-        <h1> Show number of seller reviews || Stars: * * * * * </h1>
-        <h2>
-          Buyers are raving! Multiple people gave 5-star reviews to this shop in
-          the past 7 days.
-        </h2>
-        <h3>Number of reviews for this item</h3>
+        <h1>TESTTEXT: Show number of seller reviews || Stars: * * * * *</h1>
+        <h1>
+          TESTTEXT: Number of reviews for this item: {this.reviewsArr().length}
+        </h1>
+
         <ul>
-          {this.props.reviews.map((review) => {
+          {this.reviewsArr().map((review) => {
             return <ProductShowReviewItem review={review} key={review.id} />;
           })}
         </ul>

@@ -21,7 +21,6 @@ class ProductShow extends React.Component {
 
   render() {
     if (this.state.loading === true) return null;
-
     if (this.props.product === undefined) return null;
 
     const { product } = this.props;
@@ -43,14 +42,14 @@ class ProductShow extends React.Component {
         </section>
         <section className="product-show-details">
           <h1>{product.name}</h1>
-          <h3>Price: {formattedPrice}</h3>
+          <h3>TESTTEXT: Price: {formattedPrice}</h3>
           <br />
-          <p>Description:</p>
+          <p>TESTTEXT: Description:</p>
           <br />
           <p>{product.description}</p>
         </section>
         <section className="product-show-reviews">
-          <ProductShowReviews reviews={this.props.product.productReviews} />
+          <ProductShowReviews product={this.props.product} />
         </section>
       </div>
     );
