@@ -24,7 +24,17 @@ const App = () => (
             style={{ textDecoration: "none" }}
             className="header-link"
           >
-            <h1>Pixsy</h1>
+            {/* <img
+              src={require("../../app/assets/images/PixsyLogo.svg")}
+              alt="Pixsy Logo"
+            /> */}
+
+            <img
+              src="https://pixsy-dev.s3.us-east-2.amazonaws.com/pixsypng.png"
+              alt="Pixsy"
+              height="45"
+              width="85"
+            />
           </Link>
           <Search />
           <UserSession />

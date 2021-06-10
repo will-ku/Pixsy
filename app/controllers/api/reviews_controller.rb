@@ -4,6 +4,12 @@ class Api::ReviewsController < ApplicationController
   #   render :show
   # end
 
+  def index
+    product = Product.find(params[:id])
+    @reviews = product.reviews
+    render :index
+  end
+
   def destroy
     @review = Review.find_by(id: params[:id])
     @review.destroy if @review.reviewer_id == current_user.id
@@ -11,10 +17,16 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+    # (reviewer_id: params[:reviewer_id], 
+    #   product_id: params[:product_id], 
+    #   comment: params[:comment], 
+    #   rating: params[:rating])
+
+    @review.reviewer_id = current_user.id
     if @review && @review.save
       render :show
     else
-      render json: ["Please complete all required fields."], status: 404
+      render json: ["Both a rating and comment are required."], status: 404
     end
   end
 

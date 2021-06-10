@@ -1,6 +1,7 @@
 import React from "react";
 import ProductShow from "../products/product_show";
 import ProductShowReviewItem from "./product_show_review_item";
+import CreateReviewFormContainer from "./create_review_form_container";
 
 class ProductShowReviews extends React.Component {
   constructor(props) {
@@ -14,8 +15,8 @@ class ProductShowReviews extends React.Component {
   }
 
   render() {
+    console.log(Object.values(this.props.reviews).reverse().slice(0, 5));
     // if (this.props.reviews === undefined) return null;
-
     return (
       <div className="product-show-reviews-flex">
         <h1>TESTTEXT: Show number of seller reviews || Stars: * * * * *</h1>
@@ -24,10 +25,22 @@ class ProductShowReviews extends React.Component {
         </h1>
 
         <ul>
-          {this.reviewsArr().map((review) => {
-            return <ProductShowReviewItem review={review} key={review.id} />;
-          })}
+          {Object.values(this.props.reviews)
+            .reverse()
+            .slice(0, 5)
+            .map((review) => {
+              return (
+                <ProductShowReviewItem
+                  review={review}
+                  key={review.id}
+                  currentUser={this.props.currentUser}
+                  updateReview={this.props.updateReview}
+                  deleteReview={this.props.deleteReview}
+                />
+              );
+            })}
         </ul>
+        <CreateReviewFormContainer productId={this.props.product.id} />
       </div>
     );
   }

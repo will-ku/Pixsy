@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :underscore_params!
   helper_method :current_user, :logged_in?
-
+  skip_before_action :verify_authenticity_token
+  
   private
 
   def current_user

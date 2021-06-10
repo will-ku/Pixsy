@@ -1,6 +1,7 @@
-export const fetchAllReviews = () => {
+export const fetchAllReviews = (productId) => {
   return $.ajax({
     url: "/api/reviews",
+    data: { id: productId },
   });
 };
 

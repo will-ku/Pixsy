@@ -8,14 +8,17 @@ const ProductSplashItem = (props) => {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
-
   return (
     <li>
       <Link to={`products/${props.product.id}`} className="product-splash-item">
         <img className="splash-image" src={props.product.photoUrl[0]} />
         <div className="splash-item-details">
-          <figcaption className="splash-item-name">{props.product.name}</figcaption>
-          <figcaption className="splash-item-price">{formattedPrice}</figcaption>
+          <figcaption className="splash-item-name">
+            {props.product.name}
+          </figcaption>
+          <figcaption className="splash-item-price">
+            {formattedPrice}
+          </figcaption>
         </div>
       </Link>
     </li>

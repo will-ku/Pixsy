@@ -11,6 +11,7 @@ require 'open-uri'
 User.delete_all
 Product.delete_all
 Review.delete_all
+# Not deleting all categories
 
 # users
 john = User.create!(email: 'john@pixsy.com', first_name: 'John', password: 'abc123')
@@ -24,12 +25,23 @@ jason=User.create!(email: "jason@pixsy.com", first_name: "Jason", password: "abc
 jessica=User.create!(email: "jesssica@pixsy.com", first_name: "Jessica", password: "abc123")
 peter=User.create!(email: "peter@pixsy.com", first_name: "Peter", password: "abc123")
 
+# categories
+digicam = Category.create!(name: "Digital Cameras")
+lenses = Category.create!(name: "Lenses")
+bags = Category.create!(name: "Bags & Cases")
+drones = Category.create!(name: "Drones")
+filmcam = Category.create!(name: "Film Cameras")
+mobile = Category.create!(name: "Mobile Photography")
+accessories = Category.create!(name: "Accessories")
+
+
 # DEMO PRODUCT
 aseventhree = Product.create!(
   name: 'Sony Alpha a7iii Mirrorless Digital Camera', 
   description: 'Distinguished by its updated sensor design, the Alpha a7 III Mirrorless Digital Camera from Sony is a well-rounded camera suitable for both photo and video applications in a variety of working situations. Refined for improved speed and low-light performance, the full-frame 24.2MP Exmor R BSI CMOS sensor and BIONZ X image processor pair to realize an impressive 10 fps continuous shooting rate and improved autofocus performance for faster, more reliable subject tracking along with wide frame coverage.',
   price: 1998,
-  seller_id: will.id
+  seller_id: will.id,
+  category_id: digicam.id
 )
 
 file001 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/sonya7iii_1.png")
@@ -42,7 +54,7 @@ aseventhree.photos.attach(io: file003, filename: 'sonya7iii_3.png')
 review1 = Review.create!(
   reviewer_id: will.id,
   product_id: aseventhree.id,
-  comment: "this is great!!!!!",
+  comment: "This was my first full frame camera and I love it!",
   rating: 5
 )
 
@@ -75,7 +87,8 @@ eosr = Product.create!(
   name: "Canon EOS R",
   description: "The EOS R expands Canon’s line-up as our first full-frame mirrorless camera — paving the way for continued optical excellence. Designed to excel in both performance and handling, the EOS R features impressive autofocus capabilities and the ability to shoot in both 4K and Full HD — plus, a new lens mount system that offers full compatibility with EF and EF-S lenses.",
   price: 1800,
-  seller_id: will.id
+  seller_id: will.id,
+  category_id: digicam.id
 )  
 file007 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/canoneosr_1.png")
 file008 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/canoneosr_2.png")
@@ -90,7 +103,8 @@ pdslide = Product.create!(
   name: 'Peak Design Slide',
   description: 'The most versatile pro camera strap in the world, the newly upgraded Slide can be worn as a sling, neck, or shoulder strap. Internally-padded nylon webbing has a smooth side that glides over clothing in sling mode and a grippy side that prevents slipping in shoulder mode. Dual quick-adjusters provide instant access and easy reconfiguration. Unique Anchor Link system connects quickly and dual points of connection keep your camera more stable than traditional sling straps.',
   price: 65,
-  seller_id: zach.id
+  seller_id: zach.id,
+  category_id: accessories.id
 )  
 filea001 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/product_accessories/pdslide1.png")
 filea002 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/product_accessories/pdslide2.png")

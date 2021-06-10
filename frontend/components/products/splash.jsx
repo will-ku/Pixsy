@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductSplashItem from "./product_splash_item";
+import LoadingIcon from "../loading";
 
 class Splash extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class Splash extends React.Component {
   }
 
   render() {
+    // if the last item in your array doesn't exist, then return Loading (this.props.products[-1])
     return (
       <div className="grid-container">
         <div className="grid-left-whitespace"></div>

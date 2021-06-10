@@ -3,6 +3,8 @@ import {
   RECEIVE_PRODUCT,
 } from "../actions/product_actions";
 
+import { RECEIVE_REVIEW } from "../actions/review_actions";
+
 const productsReducer = (state = {}, action) => {
   Object.freeze(state);
   const nextState = Object.assign({}, state);
@@ -10,7 +12,6 @@ const productsReducer = (state = {}, action) => {
     case RECEIVE_ALL_PRODUCTS:
       return Object.assign(nextState, action.products);
     case RECEIVE_PRODUCT:
-      // const newProduct = { [action.product.id]: action.product };
       return Object.assign({}, state, action.product);
     default:
       return state;
@@ -18,3 +19,8 @@ const productsReducer = (state = {}, action) => {
 };
 
 export default productsReducer;
+
+// case RECEIVE_REVIEW:
+//   let reviews = nextState[action.review.productId].productReviews;
+//   reviews[action.review.id] = action.review;
+//   return nextState;

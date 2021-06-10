@@ -1,26 +1,27 @@
 import React from "react";
-import ProductShowReviews from "../reviews/product_show_reviews";
+import CartItemsForm from "../cart/cart_items_form";
+import ProductShowReviewsContainer from "../reviews/product_show_reviews_container";
 import ProductPhotos from "./product_photos";
 
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      loading: true,
-    };
+    // this.state = {
+    //   loading: true,
+    // };
   }
 
   componentDidMount() {
-    if (!this.props.product) {
-      this.props
-        .fetchProduct(this.props.match.params.productId)
-        .then(() => this.setState({ loading: false }));
-    }
-    this.setState({ loading: false });
+    Promise.all([
+      this.props.fetchProduct(this.props.match.params.productId),
+      this.props.fetchAllReviews(this.props.match.params.productId),
+    ]);
+    //   .then(() => this.setState({ loading: false }));
+    // this.setState({ loading: false });
   }
 
   render() {
-    if (this.state.loading === true) return null;
+    // if (this.state.loading === true) return null;
     if (this.props.product === undefined) return null;
 
     const { product } = this.props;
@@ -47,9 +48,17 @@ class ProductShow extends React.Component {
           <p>TESTTEXT: Description:</p>
           <br />
           <p>{product.description}</p>
+          <CartItemsForm />
         </section>
         <section className="product-show-reviews">
-          <ProductShowReviews product={this.props.product} />
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quam
+          harum distinctio officia officiis architecto similique inventore?
+          Tempore dolor exercitationem sunt similique quo, architecto, ipsum sed
+          ab deleniti maiores dignissimos.
+          <ProductShowReviewsContainer
+            product={this.props.product}
+            fetchProduct={this.props.fetchProduct}
+          />
         </section>
       </div>
     );
