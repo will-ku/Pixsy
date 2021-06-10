@@ -58,6 +58,8 @@ review1 = Review.create!(
   rating: 5
 )
 
+cartitem001 = CartItem.create!(user_id: john.id, product_id: aseventhree.id, quantity: 1)
+
 # PRODUCTS
 =begin
 productname = Product.create!(

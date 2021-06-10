@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import CartIcon from "./cart_icon";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state) => {
   return {
@@ -8,7 +9,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    // openModal: () => openModal(),
+    // check login form container and user session
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

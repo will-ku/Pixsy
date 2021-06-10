@@ -10,6 +10,12 @@ class Api::UsersController < ApplicationController
     end
   end
 
+
+  def show
+    @user = User.find(params[:id])
+    # @cart_items = @user.cart_items
+  end
+
   private
 
   def user_params

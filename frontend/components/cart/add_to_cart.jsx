@@ -8,6 +8,7 @@ class AddToCart extends React.Component {
       quantity: 0,
     };
     this.submitHandler = this.submitHandler.bind(this);
+    this.pendingQuantity = this.pendingQuantity.bind(this);
   }
 
   componentDidMount() {
@@ -15,16 +16,20 @@ class AddToCart extends React.Component {
       fetchAllCartItems(this.props.currentUser.id);
   }
 
+  pendingQuantity(e) {
+    this.setState({ quantity: parseInt(e.target.value) });
+  }
+
   submitHandler() {
-    if (this.props.cartItems);
+    e.preventDefault();
+    // if (this.props.cartItems)
   }
 
   render() {
     if (this.props.product === undefined) return null;
-
     return (
       <form>
-        <select>
+        <select onChange={this.pendingQuantity} onSubmit={this.submitHandler}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>

@@ -4,6 +4,7 @@ json.set! @product.id do
     json.photoUrl @product.photos.map { |file| url_for(file)}
 end
 
+# this was after photUrl but created nested objects: 
 # json.product_reviews do
 #     @product.reviews.each do |review|
 #         json.set! review.id do

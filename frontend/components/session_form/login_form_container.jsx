@@ -3,10 +3,12 @@ import React from "react";
 import { login } from "../../actions/session_actions";
 import LoginForm from "./login_form";
 import { openModal, closeModal } from "../../actions/modal_actions";
+import { fetchAllCartItems } from "../../actions/cart_item_actions";
 
-const mapStateToProps = ({ errors }) => ({
+const mapStateToProps = ({ errors, session }) => ({
   errors: errors.session,
   formType: "login",
+  currentUser: session.currentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -24,6 +26,7 @@ const mapDispatchToProps = (dispatch) => ({
     </button>
   ),
   closeModal: () => dispatch(closeModal()),
+  fetchAllCartItems: (userId) => dispatch(fetchAllCartItems(userId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

@@ -32,7 +32,7 @@ const removeCartItemErrors = () => ({
 
 export const fetchAllCartItems = (userId) => (dispatch) => {
   return APIUtil.fetchAllCartItems(userId).then((cartItems) =>
-    dispatch(receiveCartItem(cartItems))
+    dispatch(receiveCartItems(cartItems))
   );
 };
 

@@ -1,8 +1,8 @@
 
 class Api::CartItemsController < ApplicationController
   def index
-    @user = User.find_by(id: params[:user_id])
-
+    @user = User.find_by(id: params[:id])
+    
     @cart_items = @user.cart_items
     render :index
   end
