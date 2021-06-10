@@ -11,6 +11,7 @@ const cartItemsReducer = (state = {}, action) => {
   const nextState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
+      debugger;
       return Object.assign({}, action.currentUser.cartItems);
     case RECEIVE_ALL_CART_ITEMS:
       return Object.assign({}, action.cartItems);

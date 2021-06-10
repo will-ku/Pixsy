@@ -58,7 +58,8 @@ review1 = Review.create!(
   rating: 5
 )
 
-cartitem001 = CartItem.create!(user_id: john.id, product_id: aseventhree.id, quantity: 1)
+
+
 
 # PRODUCTS
 =begin
@@ -85,6 +86,8 @@ file006 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/fu
 fujixmten.photos.attach(io: file004, filename: 'fujixs10_1.png')
 fujixmten.photos.attach(io: file005, filename: 'fujixs10_2.png')
 fujixmten.photos.attach(io: file006, filename: 'fujixs10_3.png')
+
+
 
 eosr = Product.create!(
   name: "Canon EOS R",
@@ -115,3 +118,8 @@ filea003 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/product_accessorie
 pdslide.photos.attach(io: filea001, filename: "pdslide_1.png")
 pdslide.photos.attach(io: filea002, filename: "pdslide_2.png")
 pdslide.photos.attach(io: filea003, filename: "pdslide_3.png")
+
+
+# seeding cart items
+cartitem001 = CartItem.create!(user_id: john.id, product_id: pdslide.id, quantity: 1)
+cartitem002 = CartItem.create!(user_id: john.id, product_id: fujixmten.id, quantity: 20)

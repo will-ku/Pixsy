@@ -8,7 +8,7 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    cartItems: state.entities.cartItems,
+    entities: state.entities,
     currentUser: state.session.currentUser,
   };
 };
@@ -18,6 +18,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchAllCartItems: (userId) => dispatch(fetchAllCartItems(userId)),
     createCartItem: (cartItem) => dispatch(createCartItem(cartItem)),
     updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
+    openModal: (modal) => dispatch(openModal(modal)),
   };
 };
 

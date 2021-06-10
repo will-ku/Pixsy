@@ -10,10 +10,14 @@ class Api::CartItemsController < ApplicationController
   def create
     # @cart_item = CartItem.new(cart_item_params)
     @cart_item = CartItem.new(
-    user_id: params[:user_id],
-    product_id: params[:product_id],
-    quantity: params[:quantity])
-    if @cart_item.quantity > 0 && @cart_item.save
+    # user_id: params[:user_id],
+    product_id: params[:cart_item][:product_id],
+    quantity: params[:cart_item][:quantity])
+
+    @cart_item.user_id = current_user.id
+    # check for @cart_item.quantity > 0 
+    if @cart_item.save
+      @cart_items = [@cart_item]
       render :index
     else
       render json: ["Cannot add quantity of zero to cart."], status: 404

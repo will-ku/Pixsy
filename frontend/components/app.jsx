@@ -29,10 +29,10 @@ const App = () => (
             {/* <ReactLogo /> */}
 
             <img
-              src="https://pixsy-dev.s3.us-east-2.amazonaws.com/pixsypng.png"
+              src="https://pixsy-dev.s3.us-east-2.amazonaws.com/pixsypng2.png"
               alt="Pixsy"
-              height="45"
-              width="85"
+              height="47"
+              width="87"
             />
           </Link>
           <Search />

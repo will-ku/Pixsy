@@ -21,12 +21,9 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props);
     const user = Object.assign({}, this.state);
-    this.props
-      .processForm(user)
-      .then(this.props.fetchAllCartItems(this.props.currentUser.id))
-      .then(this.props.closeModal);
+    this.props.processForm(user).then(this.props.closeModal);
+    // .then(this.props.fetchAllCartItems(this.props.currentUser.id))
   }
 
   demoUser(e) {

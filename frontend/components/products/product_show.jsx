@@ -1,5 +1,5 @@
 import React from "react";
-import AddToCart from "../cart/add_to_cart";
+import AddToCartContainer from "../cart/add_to_cart_container";
 import ProductShowReviewsContainer from "../reviews/product_show_reviews_container";
 import ProductPhotos from "./product_photos";
 
@@ -48,7 +48,7 @@ class ProductShow extends React.Component {
           <p>TESTTEXT: Description:</p>
           <br />
           <p>{product.description}</p>
-          <AddToCart product={this.props.product} />
+          <AddToCartContainer product={this.props.product} />
         </section>
         <section className="product-show-reviews">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quam
