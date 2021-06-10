@@ -6,26 +6,27 @@ import CreateReviewFormContainer from "./create_review_form_container";
 class ProductShowReviews extends React.Component {
   constructor(props) {
     super(props);
-    this.reviewsArr = this.reviewsArr.bind(this);
+    this.createReviewsForm = this.createReviewsForm.bind(this);
   }
 
-  reviewsArr() {
-    if (this.props.product.productReviews === undefined) return [];
-    return Object.values(this.props.product.productReviews);
+  createReviewsForm() {
+    return this.props.currentUser ? (
+      <CreateReviewFormContainer productId={this.props.product.id} />
+    ) : (
+      <p>Please log in to submit a review.</p>
+    );
   }
 
   render() {
-    console.log(Object.values(this.props.reviews).reverse().slice(0, 5));
-    // if (this.props.reviews === undefined) return null;
+    const reviewsArr = Object.values(this.props.reviews);
+
     return (
       <div className="product-show-reviews-flex">
         <h1>TESTTEXT: Show number of seller reviews || Stars: * * * * *</h1>
-        <h1>
-          TESTTEXT: Number of reviews for this item: {this.reviewsArr().length}
-        </h1>
+        <h1>TESTTEXT: Number of reviews for this item: {reviewsArr.length}</h1>
 
         <ul>
-          {Object.values(this.props.reviews)
+          {reviewsArr
             .reverse()
             .slice(0, 5)
             .map((review) => {
@@ -40,7 +41,7 @@ class ProductShowReviews extends React.Component {
               );
             })}
         </ul>
-        <CreateReviewFormContainer productId={this.props.product.id} />
+        {this.createReviewsForm()}
       </div>
     );
   }

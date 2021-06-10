@@ -14,7 +14,6 @@ class CreateReviewForm extends React.Component {
   }
 
   submitHandler(e) {
-    // console.log(this.state);
     e.preventDefault();
     this.props.createReview(this.state);
     this.props.fetchProduct(this.props.productId).then(

@@ -19,8 +19,3 @@ const productsReducer = (state = {}, action) => {
 };
 
 export default productsReducer;
-
-// case RECEIVE_REVIEW:
-//   let reviews = nextState[action.review.productId].productReviews;
-//   reviews[action.review.id] = action.review;
-//   return nextState;

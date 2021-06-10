@@ -50,7 +50,7 @@ export const createReview = (review) => (dispatch) => {
 };
 
 export const updateReview = (review) => (dispatch) => {
-  return APIUtil.createReview(review).then(
+  return APIUtil.updateReview(review).then(
     (review) => dispatch(receiveReview(review)),
     (err) => dispatch(receiveReviewErrors(err.responseJSON))
   );

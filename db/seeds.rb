@@ -74,7 +74,8 @@ fujixmten = Product.create!(
   name: 'Fujifilm X-S10',
   description: "The Fujifilm X-S10 doesn't have the external exposure controls of the higher-level X-series cameras, but that's the only thing we can find to complain about, and it's clear this is no 'amateur' camera. as its build quality and handling stand out straight away. The swap to a conventional mode dial might disappoint Fujifilm fans, but the excellent finish, build quality and handling and the inclusion of IBIS (in-body stabilisation) gives this camera a very broad appeal to produce perhaps the best combination of performance, quality and value in the APS-C mirrorless camera. ",
   price: 999,
-  seller_id: zach.id
+  seller_id: zach.id,
+  category_id: digicam.id
 )  
 file004 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/fujixs10_1.png")
 file005 = open("https://pixsy-dev.s3.us-east-2.amazonaws.com/products_cameras/fujixs10_2.png")
