@@ -1,20 +1,40 @@
 import React from "react";
+import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 export default function ProductShowReviewItem(props) {
   const { currentUser, updateReview, deleteReview, review } = props;
 
+  const filledStars = () => {
+    for (let i = 0; i < review.rating; i++) {
+      return <BsStarFill />;
+    }
+  };
+
+  const emptyStars = () => {
+    for (let i = 0; i < 4 - review.rating; i++) {
+      return <BsStarHalf />;
+    }
+  };
+
   return (
     <li>
-      hi
+      <h3>{review.updatedAt}</h3>
       {/* {currentUser.id === review.reviewerId ? (
         <button onClick={updateReview(review)}>Update Review</button>
       ) : null} */}
       {/* {currentUser.id === review.reviewerId ? (
         <button onClick={deleteReview(review.id)}>Delete Review</button>
       ) : null} */}
-      <h1>{review.rating}</h1>
-      <h1>{review.comment}</h1>
-      <h1>{review.updatedAt}</h1>
+      <div className="review-star-rating">
+        <BsStarFill />
+        <BsStarFill />
+        <BsStarFill />
+        <BsStarFill />
+        <BsStarFill />
+        {/* <div>{filledStars()}</div> */}
+        {/* <div>{emptyStars()}</div> */}
+      </div>
+      <h3>{review.comment}</h3>
     </li>
   );
 }

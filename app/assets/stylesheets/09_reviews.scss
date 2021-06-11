@@ -6,3 +6,35 @@
 input.star-radio {
   visibility: hidden;
 }
+
+.product-show-reviews {
+  padding-right: 25px;
+}
+
+.product-show-reviews-flex h1 {
+  font-size: 26px;
+  font-family: $martel;
+  font-weight: 200;
+  padding-bottom: 15px;
+}
+
+.product-show-reviews-flex h3 {
+  font-size: 13px;
+  font-weight: 200;
+  padding-bottom: 15px;
+  margin-right: 25px;
+}
+
+.actual-reviews {
+  border-top: 0.5px solid lightgray;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.reviews-login-link {
+  font-style: italic;
+}
+
+.review-star-rating {
+  padding-bottom: 10px;
+}

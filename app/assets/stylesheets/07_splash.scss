@@ -4,9 +4,16 @@ $redhat: "Red Hat Display", sans-serif;
 $quatt: "Quattrocento", serif;
 
 .first-splash-row {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
 }
+
+.first-splash-row h1 {
+  padding-left: 20px;
+  font-weight: 600;
+}
+
 .first-splash-row-content {
   display: flex;
 }
@@ -31,6 +38,7 @@ $quatt: "Quattrocento", serif;
   width: 184px;
   height: 146px;
   object-fit: cover;
+  padding-bottom: 5px;
 }
 
 .splash-item-details {
@@ -42,13 +50,16 @@ $quatt: "Quattrocento", serif;
 
 .splash-item-price {
   text-align: left;
+  font-weight: 600;
 }
 
 .splash-item-name {
+  font-family: $martel;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 14px;
+  padding-bottom: 3px;
 }
 
 .first-splash-row-content {

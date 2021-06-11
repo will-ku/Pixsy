@@ -16,6 +16,9 @@ const ProductSplashItem = (props) => {
           <figcaption className="splash-item-name">
             {props.product.name}
           </figcaption>
+          <figcaption className="splash-seller-name">
+            {props.product.sellerName}
+          </figcaption>
           <figcaption className="splash-item-price">
             {formattedPrice}
           </figcaption>

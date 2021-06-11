@@ -2,6 +2,8 @@ import React from "react";
 import ProductShow from "../products/product_show";
 import ProductShowReviewItem from "./product_show_review_item";
 import CreateReviewFormContainer from "./create_review_form_container";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import { RiUserStarLine } from "react-icons/ri";
 
 class ProductShowReviews extends React.Component {
   constructor(props) {
@@ -13,7 +15,9 @@ class ProductShowReviews extends React.Component {
     return this.props.currentUser ? (
       <CreateReviewFormContainer productId={this.props.product.id} />
     ) : (
-      <p>Please log in to submit a review.</p>
+      <p className="reviews-login-link">
+        <i>Please log in to submit a review.</i>
+      </p>
     );
   }
 
@@ -22,10 +26,21 @@ class ProductShowReviews extends React.Component {
 
     return (
       <div className="product-show-reviews-flex">
-        <h1>TESTTEXT: Show number of seller reviews || Stars: * * * * *</h1>
-        <h1>TESTTEXT: Number of reviews for this item: {reviewsArr.length}</h1>
+        <h1>
+          {reviewsArr.length} reviews &nbsp;
+          <BsStarFill />
+          <BsStarFill />
+          <BsStarFill />
+          <BsStarFill />
+          <BsStarHalf />
+        </h1>
+        <h3>
+          <RiUserStarLine /> &nbsp;
+          <b>Buyers are raving! </b> Multiple people gave 5-star reviews to this
+          shop in the past 7 days
+        </h3>
 
-        <ul>
+        <ul className="actual-reviews">
           {reviewsArr
             .reverse()
             .slice(0, 5)

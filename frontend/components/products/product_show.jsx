@@ -44,7 +44,7 @@ class ProductShow extends React.Component {
           />
         </section>
         <section className="product-show-details">
-          <div className="show-details-header">
+          <div className="details-header">
             <h3>{this.props.product.sellerName}'s Store</h3>
             <p>
               {Math.floor(Math.random() * 1000)} sales | &nbsp;
@@ -58,20 +58,22 @@ class ProductShow extends React.Component {
           <h1>{product.name}</h1>
           <div className="show-price">{formattedPrice}</div>
           <AddToCartContainer product={this.props.product} />
-          <h3>Highlights:</h3>
-          <p>
-            <MdGavel /> Sturdy design
-          </p>
-          <h3>Description:</h3>
-          <p>{product.description}</p>
-          <h3>Shipping and return policies</h3>
-          <p>Estimated arrival: Jan 1-2099</p>
+          <div className="product-hightlights">
+            <h3>Highlights:</h3>
+            <p>
+              <MdGavel /> &nbsp;Sturdy design
+            </p>
+          </div>
+          <div className="product-description">
+            <h3>Description:</h3>
+            <p>{product.description}</p>
+          </div>
+          <div className="product-delivery">
+            <h3>Shipping and return policies</h3>
+            <p>Estimated arrival: Jan 1-2099</p>
+          </div>
         </section>
         <section className="product-show-reviews">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quam
-          harum distinctio officia officiis architecto similique inventore?
-          Tempore dolor exercitationem sunt similique quo, architecto, ipsum sed
-          ab deleniti maiores dignissimos.
           <ProductShowReviewsContainer
             product={this.props.product}
             fetchProduct={this.props.fetchProduct}

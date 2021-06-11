@@ -24,7 +24,7 @@ class Splash extends React.Component {
         <div className="grid-left-whitespace"></div>
         <div className="grid-splash-content">
           <section className="first-splash-row">
-            <h2>Our top picks for traveling</h2>
+            <h1>Our top picks for travel</h1>
             <ul className="first-splash-row-content">
               {this.props.products.map((product) => {
                 return <ProductSplashItem key={product.id} product={product} />;
