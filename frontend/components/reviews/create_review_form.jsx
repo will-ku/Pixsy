@@ -46,11 +46,10 @@ class CreateReviewForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.submitHandler}>
-        <h1>Create Review</h1>
+      <form className="review-form" onSubmit={this.submitHandler}>
+        <h1 id="review-form-header">Create Review</h1>
         {this.props.errors ? this.renderErrors() : null}
-        Rating
-        <div>
+        <div className="review-form-stars">
           {[...Array(5)].map((star, idx) => {
             const ratingValue = idx + 1;
             return (
@@ -74,13 +73,16 @@ class CreateReviewForm extends React.Component {
           })}
         </div>
         <label>
-          Comment
+          <br />
           <textarea
+            className="review-text-area"
             value={this.state.comment}
             onChange={this.updateComment()}
           />
         </label>
-        <button type="submit">Submit Review</button>
+        <button className="review-submit" type="submit">
+          Submit Review
+        </button>
       </form>
     );
   }

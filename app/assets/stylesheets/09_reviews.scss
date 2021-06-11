@@ -38,3 +38,49 @@ input.star-radio {
 .review-star-rating {
   padding-bottom: 10px;
 }
+
+.review-form-stars {
+  display: flex;
+  justify-content: flex-start;
+}
+.review-form-stars > label {
+  width: 30x;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.review-text-area {
+  border: 0.5px solid gray;
+  width: 500px;
+  height: 70px;
+}
+
+.review-submit {
+  width: auto;
+  background-color: rgba(236, 236, 236, 0.753);
+  color: black;
+  font-family: $opensans300;
+  font-size: 14px;
+  border-radius: 50px;
+  border: 1px solid darkgray;
+  padding: 5px 0px 8px 0px;
+  width: 200px;
+  margin-top: 9px;
+  height: 30px;
+}
+
+.review-submit:hover {
+  transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+  transition: all 0.4s ease 0s;
+}
+
+#review-form-header {
+  padding: 0px;
+  font-size: 20px;
+}
