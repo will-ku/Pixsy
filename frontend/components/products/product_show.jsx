@@ -2,6 +2,8 @@ import React from "react";
 import AddToCartContainer from "../cart/add_to_cart_container";
 import ProductShowReviewsContainer from "../reviews/product_show_reviews_container";
 import ProductPhotos from "./product_photos";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import { MdGavel } from "react-icons/md";
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -42,13 +44,28 @@ class ProductShow extends React.Component {
           />
         </section>
         <section className="product-show-details">
+          <div className="show-details-header">
+            <h3>{this.props.product.sellerName}'s Store</h3>
+            <p>
+              {Math.floor(Math.random() * 1000)} sales | &nbsp;
+              <BsStarFill />
+              <BsStarFill />
+              <BsStarFill />
+              <BsStarFill />
+              <BsStarHalf />
+            </p>
+          </div>
           <h1>{product.name}</h1>
-          <h3>TESTTEXT: Price: {formattedPrice}</h3>
-          <br />
-          <p>TESTTEXT: Description:</p>
-          <br />
-          <p>{product.description}</p>
+          <div className="show-price">{formattedPrice}</div>
           <AddToCartContainer product={this.props.product} />
+          <h3>Highlights:</h3>
+          <p>
+            <MdGavel /> Sturdy design
+          </p>
+          <h3>Description:</h3>
+          <p>{product.description}</p>
+          <h3>Shipping and return policies</h3>
+          <p>Estimated arrival: Jan 1-2099</p>
         </section>
         <section className="product-show-reviews">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quam

@@ -74,7 +74,7 @@ productname = Product.create!(
 
 
 fujixmten = Product.create!(
-  name: 'Fujifilm X-S10',
+  name: 'Fujifilm X-S10 Mirrorless Camera, Black',
   description: "The Fujifilm X-S10 doesn't have the external exposure controls of the higher-level X-series cameras, but that's the only thing we can find to complain about, and it's clear this is no 'amateur' camera. as its build quality and handling stand out straight away. The swap to a conventional mode dial might disappoint Fujifilm fans, but the excellent finish, build quality and handling and the inclusion of IBIS (in-body stabilisation) gives this camera a very broad appeal to produce perhaps the best combination of performance, quality and value in the APS-C mirrorless camera. ",
   price: 999,
   seller_id: zach.id,
@@ -90,7 +90,7 @@ fujixmten.photos.attach(io: file006, filename: 'fujixs10_3.png')
 
 
 eosr = Product.create!(
-  name: "Canon EOS R",
+  name: "Canon EOS R Mirrorless Digital Camera Body",
   description: "The EOS R expands Canon’s line-up as our first full-frame mirrorless camera — paving the way for continued optical excellence. Designed to excel in both performance and handling, the EOS R features impressive autofocus capabilities and the ability to shoot in both 4K and Full HD — plus, a new lens mount system that offers full compatibility with EF and EF-S lenses.",
   price: 1800,
   seller_id: will.id,
@@ -106,7 +106,7 @@ eosr.photos.attach(io: file009, filename: "canoneosr_3.png")
 # accessories
 
 pdslide = Product.create!(
-  name: 'Peak Design Slide',
+  name: 'Peak Design Slide Lite Strap',
   description: 'The most versatile pro camera strap in the world, the newly upgraded Slide can be worn as a sling, neck, or shoulder strap. Internally-padded nylon webbing has a smooth side that glides over clothing in sling mode and a grippy side that prevents slipping in shoulder mode. Dual quick-adjusters provide instant access and easy reconfiguration. Unique Anchor Link system connects quickly and dual points of connection keep your camera more stable than traditional sling straps.',
   price: 65,
   seller_id: zach.id,

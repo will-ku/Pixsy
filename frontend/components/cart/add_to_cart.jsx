@@ -39,8 +39,8 @@ class AddToCart extends React.Component {
   render() {
     if (this.props.product === undefined) return null;
     return (
-      <form onSubmit={(e) => this.submitHandler(e)}>
-        <select onChange={this.pendingQuantity}>
+      <form className="addtocart" onSubmit={(e) => this.submitHandler(e)}>
+        <select className="addtocart-drop" onChange={this.pendingQuantity}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -52,7 +52,12 @@ class AddToCart extends React.Component {
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-        <input type="submit" value="Add to Cart" />
+        <input
+          id="addtocart-button"
+          className="addtocart-button"
+          type="submit"
+          value="Add to Cart"
+        />
       </form>
     );
   }
