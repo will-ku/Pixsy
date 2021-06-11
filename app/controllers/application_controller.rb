@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
   before_action :underscore_params!
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :current_user_cart_items
   skip_before_action :verify_authenticity_token
   
   private
+
+  def current_user_cart_items
+    current_user ? CartItem.where("user_id = ?", current_user.id) : nil
+  end
 
   def current_user
     return nil unless session[:session_token]

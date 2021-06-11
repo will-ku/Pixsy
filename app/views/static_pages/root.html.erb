@@ -2,7 +2,8 @@
   <% if logged_in? %>
   	window.currentUser = <%= render("api/users/user.json.jbuilder",
   		user: current_user).html_safe %>
+    window.cartItems = <%= render("api/cart_items/cart_items.json.jbuilder").html_safe %>
   <% end %>
 </script>
 
-<main id="root">static root ;)</main>
+<main id="root">oops</main>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= favicon_link_tag asset_path('PixsyFavicon.png')%>
+    <%= favicon_link_tag asset_path('pixsy-favicon.png')%>
     <title>Pixsy</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
     <script type="text/javascript">
-      window.logo = "<%= image_url('PixsyLogo.svg') %>";
+      window.pixsylogoURL = "<%= image_url('pixsy-logo-png.png') %>";
     </script>
 
   </head>

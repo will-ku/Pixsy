@@ -12,8 +12,7 @@ import UserSession from "./nav_bar/user_session_container";
 import Search from "../components/nav_bar/search";
 import SplashContainer from "./products/splash_container";
 import ProductShowContainer from "./products/product_show_container";
-import CartIcon from "./cart/cart_icon";
-// import ReactLogo from "../../app/assets/images/PixsyLogo.svg";
+import CartIconContainer from "./cart/cart_icon";
 
 const App = () => (
   <>
@@ -26,18 +25,11 @@ const App = () => (
             style={{ textDecoration: "none" }}
             className="header-link"
           >
-            {/* <ReactLogo /> */}
-
-            <img
-              src="https://pixsy-dev.s3.us-east-2.amazonaws.com/pixsypng2.png"
-              alt="Pixsy"
-              height="47"
-              width="87"
-            />
+            <img src={window.pixsylogoURL} alt="Pixsy" height="45" width="90" />
           </Link>
           <Search />
           <UserSession />
-          <CartIcon />
+          <CartIconContainer />
         </div>
       </header>
     </div>
