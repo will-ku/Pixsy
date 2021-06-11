@@ -13,6 +13,7 @@ import Search from "../components/nav_bar/search";
 import SplashContainer from "./products/splash_container";
 import ProductShowContainer from "./products/product_show_container";
 import CartIconContainer from "./cart/cart_icon";
+import CategoryNav from "./nav_bar/category_nav";
 
 const App = () => (
   <>
@@ -25,17 +26,24 @@ const App = () => (
             style={{ textDecoration: "none" }}
             className="header-link"
           >
-            <img src={window.pixsylogoURL} alt="Pixsy" height="45" width="90" />
+            <img
+              className="pixsy-logo"
+              src={window.pixsylogoURL}
+              alt="Pixsy"
+              height="45"
+              width="90"
+            />
           </Link>
           <Search />
           <UserSession />
           <CartIconContainer />
         </div>
       </header>
+      <CategoryNav />
     </div>
-
+    <div className="fluff">{/* <div>hello</div> */}</div>
     <Switch>
-      <Route exact path="/" component={SplashContainer} />
+      <Route exact path="/" component={SplashContainer}></Route>
       <Route
         exact
         path="/products/:productId"

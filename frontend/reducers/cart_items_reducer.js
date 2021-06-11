@@ -6,8 +6,6 @@ import {
 
 import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 
-
-
 const cartItemsReducer = (state = {}, action) => {
   Object.freeze(state);
   const nextState = Object.assign({}, state);
@@ -17,6 +15,7 @@ const cartItemsReducer = (state = {}, action) => {
     case RECEIVE_ALL_CART_ITEMS:
       return Object.assign({}, action.cartItems);
     case RECEIVE_CART_ITEM:
+      // debugger;
       return Object.assign(nextState, {
         [action.cartItem.productId]: action.cartItem,
       });

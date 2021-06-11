@@ -30,7 +30,7 @@ class AddToCart extends React.Component {
 
   submitHandler(e) {
     e.preventDefault();
-
+    debugger;
     this.props.createCartItem(this.state);
     // if (!this.props) {
     // }

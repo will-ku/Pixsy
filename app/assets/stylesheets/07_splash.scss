@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+$redhat: "Red Hat Display", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
+$quatt: "Quattrocento", serif;
+
 .first-splash-row {
   display: flex;
   flex-direction: column;
@@ -58,4 +63,40 @@
 .grid-splash-content h2 {
   padding: 0px 21px;
   text-align: center;
+}
+
+#barc {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: -10;
+}
+
+#barc-text {
+  position: absolute;
+  top: 195px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: rgb(255, 255, 255);
+  font-family: $quatt;
+  font-size: 32px;
+}
+
+#shop-fathers {
+  position: absolute;
+  top: 235px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.875);
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgb(169, 169, 169);
 }

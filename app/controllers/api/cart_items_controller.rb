@@ -9,17 +9,19 @@ class Api::CartItemsController < ApplicationController
   end
 
   def create
-    # @cart_item = CartItem.new(cart_item_params)
-    @cart_item = CartItem.new(
-    # user_id: params[:user_id],
-    product_id: params[:cart_item][:product_id],
-    quantity: params[:cart_item][:quantity])
+    @cart_item = CartItem.new(cart_item_params)
+    # @cart_item = CartItem.new(
+    # # user_id: params[:user_id],
+    # product_id: params[:cart_item][:product_id],
+    # quantity: params[:cart_item][:quantity])
+    
+    
+    # debugger
 
     @cart_item.user_id = current_user.id
     # check for @cart_item.quantity > 0 
     if @cart_item.save
-      @cart_items = [@cart_item]
-      render :index
+      render :show
     else
       render json: ["Cannot add quantity of zero to cart."], status: 404
     end
@@ -30,11 +32,11 @@ class Api::CartItemsController < ApplicationController
 
     if @cart_item && @cart_item.quantity < 1
       @cart_item.destroy
-      render :index
+      # render :show
     end
     
     if @cart_item && @cart_item.save
-      render :index
+      render :show
     end
   end
 
@@ -45,7 +47,7 @@ class Api::CartItemsController < ApplicationController
 
   private
   def cart_item_params
-    params.requre(:cart_item).permit(:user_id, :product_id, :quantity)
+    params.require(:cart_item).permit(:user_id, :product_id, :quantity)
   end
 
 end

@@ -3,6 +3,8 @@
   max-width: 1400px;
   margin: 0px auto;
   padding: 0px 30px;
+  padding-top: 25px;
+  border-top: 0.5px solid rgba(211, 211, 211, 0.478);
 }
 
 @media (min-width: 800px) {
@@ -60,7 +62,7 @@
   flex-direction: column;
   grid-area: reviews;
   border: 3px solid fuchsia;
-  min-width: 535px;
+  min-width: 300px;
   max-width: 800px;
 }
 

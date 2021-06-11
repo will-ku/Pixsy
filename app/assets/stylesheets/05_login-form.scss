@@ -76,6 +76,14 @@ $opensans700: "Open Sans", sans-serif;
   text-align: center;
 }
 
+.register-button:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  background-color: rgba(236, 236, 236, 0.753);
+  transition: all 0.4s ease 0s;
+  transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+}
+
 .login-form label {
   padding-top: 10px;
 }
@@ -94,8 +102,10 @@ $opensans700: "Open Sans", sans-serif;
   height: 52px;
 }
 
-.session-submit button:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+.session-submit:hover {
+  transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+  box-shadow: 0px 1px 0px 0px;
   transition: all 0.4s ease 0s;
 }
 
@@ -113,9 +123,15 @@ $opensans700: "Open Sans", sans-serif;
   height: 52px;
 }
 
-.demo-submit button:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+.demo-submit:hover {
+  background-color: rgba(22, 166, 22, 0.841);
+  color: white;
+  font-weight: 700;
+  // border: 1px solid black;
+  // text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   transition: all 0.4s ease 0s;
+  transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
 }
 
 .errors-ul {

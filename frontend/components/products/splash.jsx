@@ -16,6 +16,11 @@ class Splash extends React.Component {
     // if the last item in your array doesn't exist, then return Loading (this.props.products[-1])
     return (
       <div className="grid-container">
+        <div className="banner-container">
+          <img id="barc" src={window.barcelonaURL} alt="Banner" />
+          <div id="barc-text">Buy dad something nice this year.</div>
+          <div id="shop-fathers">Shop Father's Day</div>
+        </div>
         <div className="grid-left-whitespace"></div>
         <div className="grid-splash-content">
           <section className="first-splash-row">
