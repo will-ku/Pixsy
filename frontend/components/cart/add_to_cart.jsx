@@ -11,6 +11,7 @@ class AddToCart extends React.Component {
     this.submitHandler = this.submitHandler.bind(this);
     this.pendingQuantity = this.pendingQuantity.bind(this);
     this.checkLoggedIn = this.checkLoggedIn.bind(this);
+    this.isProductInCart = this.isProductInCart.bind(this);
   }
 
   componentDidMount() {
@@ -28,12 +29,21 @@ class AddToCart extends React.Component {
     }
   }
 
+  isProductInCart() {
+    let productId = this.props.product.id;
+    // debugger;
+    if (this.props.entities.cartItems[productId] === undefined) {
+      return false;
+    } else return true;
+  }
+
   submitHandler(e) {
     e.preventDefault();
-    debugger;
+
+    // this.isProductInCart()
+    //   ? console.log("already_in_cart")
+    //   : this.props.createCartItem(this.state);
     this.props.createCartItem(this.state);
-    // if (!this.props) {
-    // }
   }
 
   render() {

@@ -6,8 +6,8 @@ import {
 
 export default (state = [], action) => {
   switch (action.type) {
-    case RECEIVE_CART_ITEM:
-      return action.errors;
+    // case RECEIVE_CART_ITEM:
+    //   return action.errors;
     case RECEIVE_CART_ITEM_ERRORS:
       return [];
     case REMOVE_CART_ITEM_ERRORS:

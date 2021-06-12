@@ -7,6 +7,9 @@ class CartIcon extends React.Component {
   constructor(props) {
     super(props);
     // this.cartCount = this.cartCount.bind(this);
+    // this.state = {
+    //   cartCount = null
+    // }
   }
 
   // componentDidMount() {
@@ -14,18 +17,20 @@ class CartIcon extends React.Component {
   // }
 
   // cartCount() {
-  //   if (this.props.currentUser === null) return null;
-  //   if (Object.keys(this.props.cartItems).length === 0) return null;
+  //   // if (this.props.currentUser === null) return null;
+  //   if (Object.keys(this.props.cartItems).length === 0) {
+  //     return null;
+  //   } else {
+  //     return Object.keys(this.props.cartItems).length;
+  //   }
   // }
-
-  
 
   render() {
     // console.log(this.cartCount());
     return (
       <div className="cart-icon">
         <TiShoppingCart size={27} />
-        {/* {this.cartCount} */}
+        {/* {this.state.cartCount} */}
       </div>
     );
   }

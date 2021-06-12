@@ -1,5 +1,6 @@
 import React from "react";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import { formatDateTime } from "../../util/date_util";
 
 export default function ProductShowReviewItem(props) {
   const { currentUser, updateReview, deleteReview, review } = props;
@@ -18,7 +19,7 @@ export default function ProductShowReviewItem(props) {
 
   return (
     <li>
-      <h3>{review.updatedAt}</h3>
+      <h3>{formatDateTime(review.updatedAt)}</h3>
       {/* {currentUser.id === review.reviewerId ? (
         <button onClick={updateReview(review)}>Update Review</button>
       ) : null} */}

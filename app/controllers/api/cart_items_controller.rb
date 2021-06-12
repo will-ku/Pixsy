@@ -10,16 +10,14 @@ class Api::CartItemsController < ApplicationController
 
   def create
     @cart_item = CartItem.new(cart_item_params)
-    # @cart_item = CartItem.new(
-    # # user_id: params[:user_id],
-    # product_id: params[:cart_item][:product_id],
-    # quantity: params[:cart_item][:quantity])
     
-    
-    # debugger
+    deleted_cart_items = 
+      CartItem.where(user: current_user.id).
+      where(product_id: params[:cart_item][:product_id]).
+      delete_all
 
     @cart_item.user_id = current_user.id
-    # check for @cart_item.quantity > 0 
+
     if @cart_item.save
       render :show
     else
@@ -50,4 +48,7 @@ class Api::CartItemsController < ApplicationController
     params.require(:cart_item).permit(:user_id, :product_id, :quantity)
   end
 
+  def product_exists_in_cart_items?
+    
+  end
 end
