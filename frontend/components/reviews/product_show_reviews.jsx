@@ -15,15 +15,18 @@ class ProductShowReviews extends React.Component {
     return this.props.currentUser ? (
       <CreateReviewFormContainer productId={this.props.product.id} />
     ) : (
-      <p className="reviews-login-link">
-        <i>Please log in to submit a review.</i>
-      </p>
+      <a
+        className="reviews-login-link"
+        onClick={() => this.props.openModal("login")}
+      >
+        <i>Please sign in to submit a review.</i>
+      </a>
     );
   }
 
   render() {
     const reviewsArr = Object.values(this.props.reviews);
-
+    // debugger;
     return (
       <div className="product-show-reviews-flex">
         <h1>

@@ -1,39 +1,17 @@
 import React from "react";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 import { TiShoppingCart } from "react-icons/ti";
+import { fetchAllCartItems } from "../../actions/cart_item_actions";
 import { Link } from "react-router-dom";
 
-class CartIcon extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.cartCount = this.cartCount.bind(this);
-    // this.state = {
-    //   cartCount = null
-    // }
-  }
+export default function CartIcon() {
+  const cartItems = useSelector((state) => state.entities.cartItems);
+  const currentUser = useSelector((state) => state.session.currentUser);
 
-  // componentDidMount() {
-  //   this.props.fetchAllCartItems(this.props.currentUser);
-  // }
-
-  // cartCount() {
-  //   // if (this.props.currentUser === null) return null;
-  //   if (Object.keys(this.props.cartItems).length === 0) {
-  //     return null;
-  //   } else {
-  //     return Object.keys(this.props.cartItems).length;
-  //   }
-  // }
-
-  render() {
-    // console.log(this.cartCount());
-    return (
-      <div className="cart-icon">
-        <TiShoppingCart size={27} />
-        {/* {this.state.cartCount} */}
-      </div>
-    );
-  }
+  return (
+    <div className="cart-icon">
+      <TiShoppingCart size={27} />
+      {Object.keys(cartItems).length}
+    </div>
+  );
 }
-
-export default CartIcon;

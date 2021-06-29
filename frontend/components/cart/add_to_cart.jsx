@@ -39,7 +39,8 @@ class AddToCart extends React.Component {
 
   submitHandler(e) {
     e.preventDefault();
-
+    this.checkLoggedIn();
+    // removing logic because the quanity in form will override existing cart item quantity
     // this.isProductInCart()
     //   ? console.log("already_in_cart")
     //   : this.props.createCartItem(this.state);

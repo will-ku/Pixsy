@@ -5,6 +5,7 @@ import {
   updateCartItem,
   fetchAllCartItems,
 } from "../../actions/cart_item_actions";
+import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state) => {
   return {

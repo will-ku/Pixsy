@@ -12,8 +12,8 @@ import UserSession from "./nav_bar/user_session_container";
 import Search from "../components/nav_bar/search";
 import SplashContainer from "./products/splash_container";
 import ProductShowContainer from "./products/product_show_container";
-import CartIconContainer from "./cart/cart_icon";
 import CategoryNav from "./nav_bar/category_nav";
+import CartIcon from "./cart/cart_icon";
 
 const App = () => (
   <>
@@ -36,7 +36,7 @@ const App = () => (
           </Link>
           <Search />
           <UserSession />
-          <CartIconContainer />
+          <CartIcon />
         </div>
       </header>
       <CategoryNav />
