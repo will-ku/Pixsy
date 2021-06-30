@@ -16,9 +16,9 @@ const receiveCartItem = (cartItem) => ({
   cartItem,
 });
 
-const removeCartItem = (cartItemId) => ({
+const removeCartItem = (productId) => ({
   type: REMOVE_CART_ITEM,
-  cartItemId,
+  productId,
 });
 
 const receiveCartItemErrors = (errors) => ({
@@ -51,9 +51,9 @@ export const updateCartItem = (cartItem) => (dispatch) => {
 };
 
 export const deleteCartItem = (cartItemId) => (dispatch) => {
-  return APIUtil.deleteCartItem(cartItemId).then((cartItem) =>
-    dispatch(removeCartItem(cartItem.id))
-  );
+  return APIUtil.deleteCartItem(cartItemId).then((cartItem) => {
+    dispatch(removeCartItem(cartItem.productId));
+  });
 };
 
 export const clearCartItemErrors = () => (dispatch) => {

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { formattedPrice } from "../../util/product_format_util";
-import { updateCartItem } from "../../actions/cart_item_actions";
+import {
+  updateCartItem,
+  deleteCartItem,
+} from "../../actions/cart_item_actions";
 import { useDispatch } from "react-redux";
 
 export default function CheckoutItem(props) {
@@ -13,6 +16,10 @@ export default function CheckoutItem(props) {
     let newQuantity = { quantity: parseInt(e.target.value) };
     let updatedCartItem = Object.assign(cartItem, newQuantity);
     dispatch(updateCartItem(updatedCartItem));
+  };
+
+  const deleteClickHandler = () => {
+    dispatch(deleteCartItem(cartItem.id));
   };
 
   return (
@@ -38,6 +45,7 @@ export default function CheckoutItem(props) {
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
+      <button onClick={deleteClickHandler}>x</button>
     </li>
   );
 }

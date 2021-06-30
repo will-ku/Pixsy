@@ -8,7 +8,6 @@ import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 
 const cartItemsReducer = (state = {}, action) => {
   Object.freeze(state);
-  console.log(action);
   const nextState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
@@ -20,7 +19,7 @@ const cartItemsReducer = (state = {}, action) => {
         [action.cartItem.productId]: action.cartItem,
       });
     case REMOVE_CART_ITEM:
-      delete nextState[action.cartItemId];
+      delete nextState[action.productId];
       return nextState;
     default:
       return state;
