@@ -1,4 +1,5 @@
 import React from "react";
+import { formattedPrice } from "../../util/product_format_util";
 
 export default function CheckoutItem(props) {
   const { product, quantity } = props;
@@ -8,6 +9,7 @@ export default function CheckoutItem(props) {
       <img className="splash-image" src={product.photoUrl[0]} />
       {product.name}
       quantity: {quantity}
+      {formattedPrice(product.price)}
     </li>
   );
 }
