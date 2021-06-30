@@ -1,4 +1,3 @@
-
 class Api::CartItemsController < ApplicationController
   
   def index
@@ -27,13 +26,11 @@ class Api::CartItemsController < ApplicationController
 
   def update
     @cart_item = CartItem.find_by(id: params[:id])
-
-    if @cart_item && @cart_item.quantity < 1
-      @cart_item.destroy
-    end
     
-    if @cart_item && @cart_item.save
+    if @cart_item.update(cart_item_params) && @cart_item.save
       render :show
+    else
+      render json: ["Unable to update quantity of cart item."],status: 404
     end
   end
 

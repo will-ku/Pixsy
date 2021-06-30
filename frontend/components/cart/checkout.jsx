@@ -7,7 +7,6 @@ export default function Checkout() {
   const currentUser = useSelector((state) => state.session.currentUser);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.entities.cartItems);
-  // const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     dispatch(fetchCartItemProducts(currentUser.id));
@@ -17,7 +16,6 @@ export default function Checkout() {
 
   return (
     <div className="checkout-container">
-      {/* {loaded === false ? null : ( */}
       {Object.keys(products).length < Object.keys(cartItems).length ? null : (
         <ul className="checkout-ul">
           {Object.values(cartItems).map((cartItem) => {
@@ -25,6 +23,7 @@ export default function Checkout() {
             return (
               <CheckoutItem
                 key={cartItem.id}
+                cartItem={cartItem}
                 product={products[productId]}
                 quantity={cartItem.quantity}
               />

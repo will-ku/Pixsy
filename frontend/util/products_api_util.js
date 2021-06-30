@@ -13,6 +13,5 @@ export const fetchProduct = (productId) => {
 export const fetchCartItemProducts = (userId) => {
   return $.ajax({
     url: `/api/user_cart_items/${userId}`,
-    // data: { id: userId },
   });
 };

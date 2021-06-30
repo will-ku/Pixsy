@@ -14,8 +14,9 @@ export const createCartItem = (cartItem) => {
 };
 
 export const updateCartItem = (cartItem) => {
+  console.log("hit api util.. here is cart item: ", cartItem);
   return $.ajax({
-    url: "/api/cart_items",
+    url: `/api/cart_items/${cartItem.id}`,
     method: "patch",
     data: { cartItem },
   });
