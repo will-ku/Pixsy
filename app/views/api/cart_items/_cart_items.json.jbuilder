@@ -4,4 +4,3 @@ current_user_cart_items.each do |cart_item|
     end
 end
 
-

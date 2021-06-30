@@ -5,12 +5,6 @@ export const fetchAllCartItems = (userId) => {
   });
 };
 
-// export const fetchCartItem = (cartItemId) => {
-//   return $.ajax({
-//     url: `/api/reviews/${cartItemId}`,
-//   });
-// };
-
 export const createCartItem = (cartItem) => {
   return $.ajax({
     url: "/api/cart_items",

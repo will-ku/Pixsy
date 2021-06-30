@@ -8,6 +8,14 @@ class Api::ProductsController < ApplicationController
     @product = Product.find(params[:id])
     render :show
   end
+
+  def cart_item_products
+    @user = User.find_by(id: params[:id])
+    @cart_items = @user.cart_items
+
+    @products = @cart_items.map {|cart_item| Product.find(cart_item.product_id) }
+    render :index    
+  end
   
   private
 

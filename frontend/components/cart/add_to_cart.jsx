@@ -31,7 +31,6 @@ class AddToCart extends React.Component {
 
   isProductInCart() {
     let productId = this.props.product.id;
-    // debugger;
     if (this.props.entities.cartItems[productId] === undefined) {
       return false;
     } else return true;
@@ -40,10 +39,6 @@ class AddToCart extends React.Component {
   submitHandler(e) {
     e.preventDefault();
     this.checkLoggedIn();
-    // removing logic because the quanity in form will override existing cart item quantity
-    // this.isProductInCart()
-    //   ? console.log("already_in_cart")
-    //   : this.props.createCartItem(this.state);
     this.props.createCartItem(this.state);
   }
 

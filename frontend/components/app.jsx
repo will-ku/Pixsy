@@ -14,6 +14,8 @@ import SplashContainer from "./products/splash_container";
 import ProductShowContainer from "./products/product_show_container";
 import CategoryNav from "./nav_bar/category_nav";
 import CartIcon from "./cart/cart_icon";
+import Checkout from "./cart/checkout";
+import { ProtectedRoute } from "../util/route_util";
 
 const App = () => (
   <>
@@ -41,7 +43,6 @@ const App = () => (
       </header>
       <CategoryNav />
     </div>
-    <div className="fluff">{/* <div>hello</div> */}</div>
     <Switch>
       <Route exact path="/" component={SplashContainer}></Route>
       <Route
@@ -49,6 +50,7 @@ const App = () => (
         path="/products/:productId"
         component={ProductShowContainer}
       />
+      <ProtectedRoute exact path="/checkout/:userId" component={Checkout} />
       <Redirect to="/" />
     </Switch>
   </>

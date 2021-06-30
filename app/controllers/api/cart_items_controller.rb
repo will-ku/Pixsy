@@ -3,8 +3,8 @@ class Api::CartItemsController < ApplicationController
   
   def index
     @user = User.find_by(id: params[:id])
-    
     @cart_items = @user.cart_items
+    
     render :index
   end
 
@@ -30,7 +30,6 @@ class Api::CartItemsController < ApplicationController
 
     if @cart_item && @cart_item.quantity < 1
       @cart_item.destroy
-      # render :show
     end
     
     if @cart_item && @cart_item.save

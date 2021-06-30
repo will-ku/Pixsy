@@ -16,11 +16,9 @@ const cartItemsReducer = (state = {}, action) => {
     case RECEIVE_ALL_CART_ITEMS:
       return Object.assign({}, action.cartItems);
     case RECEIVE_CART_ITEM:
-      // debugger;
       return Object.assign({}, state, {
         [action.cartItem.productId]: action.cartItem,
       });
-    // return state;
     case REMOVE_CART_ITEM:
       delete nextState[action.cartItemId];
       return nextState;
