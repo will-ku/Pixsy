@@ -9,26 +9,35 @@ export default function CartIcon() {
   const cartItems = useSelector((state) => state.entities.cartItems);
   const currentUser = useSelector((state) => state.session.currentUser);
 
-  const linkToCheckout = () => {
-    if (currentUser) {
-      return (
-        <Link to={`checkout/${currentUser.id}`}>
-          <TiShoppingCart size={27} />
-          {Object.keys(cartItems).length === 0
-            ? null
-            : Object.keys(cartItems).length}
-        </Link>
-      );
-    } else
-      return (
-        <div>
-          <TiShoppingCart size={27} />
-          {Object.keys(cartItems).length === 0
-            ? null
-            : Object.keys(cartItems).length}
-        </div>
-      );
-  };
+  // const linkToCheckout = () => {
+  //   if (currentUser) {
+  //     return (
+  //       <Link to={`checkout/${currentUser.id}`}>
+  //         <TiShoppingCart size={27} />
+  //         {Object.keys(cartItems).length === 0
+  //           ? null
+  //           : Object.keys(cartItems).length}
+  //       </Link>
+  //     );
+  //   } else
+  //     return (
+  //       <div>
+  //         <TiShoppingCart size={27} />
+  //         {Object.keys(cartItems).length === 0
+  //           ? null
+  //           : Object.keys(cartItems).length}
+  //       </div>
+  //     );
+  // };
 
-  return <div className="cart-icon">{linkToCheckout()}</div>;
+  return (
+    <div className="cart-icon">
+      <Link to={`checkout/${currentUser.id}`}>
+        <TiShoppingCart size={27} />
+        {Object.keys(cartItems).length === 0
+          ? null
+          : Object.keys(cartItems).length}
+      </Link>
+    </div>
+  );
 }

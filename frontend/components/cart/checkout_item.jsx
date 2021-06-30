@@ -21,7 +21,6 @@ export default function CheckoutItem(props) {
   const deleteClickHandler = () => {
     dispatch(deleteCartItem(cartItem.id));
   };
-
   return (
     <li className="checkout-li">
       {product.sellerName}

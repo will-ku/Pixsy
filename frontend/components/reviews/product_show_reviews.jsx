@@ -26,7 +26,6 @@ class ProductShowReviews extends React.Component {
 
   render() {
     const reviewsArr = Object.values(this.props.reviews);
-    // debugger;
     return (
       <div className="product-show-reviews-flex">
         <h1>
