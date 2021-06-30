@@ -21,6 +21,11 @@ const removeCartItem = (productId) => ({
   productId,
 });
 
+const removeAllCartItems = (cartItems) => ({
+  type: REMOVE_ALL_CART_ITEMS,
+  cartItems,
+});
+
 const receiveCartItemErrors = (errors) => ({
   type: RECEIVE_CART_ITEM_ERRORS,
   errors,

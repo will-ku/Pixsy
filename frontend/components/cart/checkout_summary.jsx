@@ -5,25 +5,37 @@ import { useSelector } from "react-redux";
 export default function CheckoutSummary(props) {
   const currentUser = useSelector((state) => state.session.currentUser);
   const cartItems = useSelector((state) => state.entities.cartItems);
+  const handlePlaceOrder = () => {
+    return console.log("Order placed!!");
+  };
 
   return (
     <div className="checkout-summary-container">
       <h2>How you'll pay</h2>
       <ul>
         <li>
-          <input type="radio" name="Payment Type" id="Credit Card" />
+          <input
+            type="radio"
+            name="Payment Type"
+            id="Credit Card"
+            checked="checked"
+          />
           Credit Card
         </li>
-        <li><input type="radio" name="Payment Type" id="Paypal" />
-        Paypal</li>
-        <li><input type="radio" name="Payment Type" id="LinkedIn" />
-        LinkedIn</li>
+        <li>
+          <input type="radio" name="Payment Type" id="Paypal" />
+          Paypal
+        </li>
+        <li>
+          <input type="radio" name="Payment Type" id="LinkedIn" />
+          LinkedIn
+        </li>
       </ul>
       <div className="subtotal">
         <p>Item(s) total</p>
         <p>{formattedPrice(props.subtotal)}</p>
       </div>
-      <button>Place Order</button>
+      <button onClick={handlePlaceOrder}>Place Order</button>
     </div>
   );
 }
