@@ -23,21 +23,29 @@ class Splash extends React.Component {
         </div>
         <div className="grid-left-whitespace"></div>
         <div className="grid-splash-content">
-          <section className="first-splash-row">
-            <h1>Our top picks for you</h1>
-            <ul className="first-splash-row-content">
-              {this.props.products.slice(0, 6).map((product) => {
-                return <ProductSplashItem key={product.id} product={product} />;
-              })}
-            </ul>
+          <section className="splash-row-container">
+            <div className="splash-row-section">
+              <h1>Our top picks for you</h1>
+              <ul className="splash-row-content">
+                {this.props.products.slice(0, 6).map((product) => {
+                  return (
+                    <ProductSplashItem key={product.id} product={product} />
+                  );
+                })}
+              </ul>
+            </div>
           </section>
-          <section className="first-splash-row">
-            <h1>Top picks for travel</h1>
-            <ul className="first-splash-row-content">
-              {this.props.products.slice(6, 12).map((product) => {
-                return <ProductSplashItem key={product.id} product={product} />;
-              })}
-            </ul>
+          <section className="splash-row-container">
+            <div className="splash-row-section">
+              <h1>Top picks for travel</h1>
+              <ul className="splash-row-content">
+                {this.props.products.slice(6, 12).map((product) => {
+                  return (
+                    <ProductSplashItem key={product.id} product={product} />
+                  );
+                })}
+              </ul>
+            </div>
           </section>
         </div>
         <div className="grid-right-whitespace"></div>

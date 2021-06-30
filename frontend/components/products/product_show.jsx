@@ -4,6 +4,7 @@ import ProductShowReviewsContainer from "../reviews/product_show_reviews_contain
 import ProductPhotos from "./product_photos";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { MdGavel } from "react-icons/md";
+import { formattedPrice } from "../../util/product_format_util";
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -28,13 +29,6 @@ class ProductShow extends React.Component {
 
     const { product } = this.props;
 
-    const formattedPrice =
-      "$" +
-      product.price.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      });
-
     return (
       <div className="product-show-grid-container">
         <section className="product-show-photos">
@@ -56,7 +50,7 @@ class ProductShow extends React.Component {
             </p>
           </div>
           <h1>{product.name}</h1>
-          <div className="show-price">{formattedPrice}</div>
+          <div className="show-price">{formattedPrice(product.price)}</div>
           <AddToCartContainer product={this.props.product} />
           <div className="product-hightlights">
             <h3>Highlights:</h3>

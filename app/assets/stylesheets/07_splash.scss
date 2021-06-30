@@ -3,20 +3,32 @@ $redhat: "Red Hat Display", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
 $quatt: "Quattrocento", serif;
 
-.first-splash-row {
+.splash-row-container {
   padding-top: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.first-splash-row h1 {
+.spash-row-container {
+  display: flex;
+  justify-content: center;
+}
+
+.splash-row-container h1 {
   padding-left: 20px;
   font-weight: 600;
 }
 
-.first-splash-row-content {
+.splash-row-section {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+
+.splash-row-content {
+  display: flex;
 }
 
 .product-splash-item {
