@@ -27,3 +27,10 @@ export const deleteCartItem = (cartItemId) => {
     method: "delete",
   });
 };
+
+export const deleteAllCartItems = (userId) => {
+  return $.ajax({
+    url: `/api/user_cart_items/delete_all/${userId}`,
+    method: "delete",
+  });
+};

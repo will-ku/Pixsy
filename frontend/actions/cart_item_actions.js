@@ -61,6 +61,12 @@ export const deleteCartItem = (cartItemId) => (dispatch) => {
   });
 };
 
+export const deleteAllCartItems = (userId) => (dispatch) => {
+  return APIUtil.deleteAllCartItems(userId).then((cartItems) =>
+    dispatch(receiveAllCartItems(cartItems))
+  );
+};
+
 export const clearCartItemErrors = () => (dispatch) => {
   return dispatch(removeCartItemErrors());
 };

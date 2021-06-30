@@ -40,6 +40,16 @@ class Api::CartItemsController < ApplicationController
     render :show
   end
 
+  def destroy_all
+    @user = User.find_by(id: params[:id])
+    @cart_items = @user.cart_items
+    if @cart_items.destroy_all
+      render :index
+    else
+      render json: ["Unable to place order at this time."]
+    end
+  end
+
   private
   def cart_item_params
     params.require(:cart_item).permit(:user_id, :product_id, :quantity)

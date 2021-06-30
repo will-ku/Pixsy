@@ -1,12 +1,13 @@
 import React from "react";
 import { formattedPrice } from "../../util/product_format_util";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteAllCartItems } from "../../actions/cart_item_actions";
 
 export default function CheckoutSummary(props) {
   const currentUser = useSelector((state) => state.session.currentUser);
-  const cartItems = useSelector((state) => state.entities.cartItems);
+  const dispatch = useDispatch();
   const handlePlaceOrder = () => {
-    return console.log("Order placed!!");
+    dispatch(deleteAllCartItems(currentUser.id));
   };
 
   return (

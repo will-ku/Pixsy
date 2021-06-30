@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :cart_items
     
     get '/user_cart_items/:id', to: 'products#cart_item_products', as: 'cart_item_products'
+    delete '/user_cart_items/delete_all/:id', to: 'cart_items#destroy_all', as: 'destroy_all'
   end
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
