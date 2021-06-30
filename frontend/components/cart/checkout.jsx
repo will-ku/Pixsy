@@ -14,6 +14,7 @@ export default function Checkout() {
   }, []);
 
   const products = useSelector((state) => state.entities.products);
+
   return (
     <div className="checkout-container">
       {/* {loaded === false ? null : ( */}
@@ -24,7 +25,7 @@ export default function Checkout() {
             return (
               <CheckoutItem
                 key={cartItem.id}
-                product={products.productId}
+                product={products[productId]}
                 quantity={cartItem.quantity}
               />
             );

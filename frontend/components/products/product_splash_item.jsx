@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { formattedPrice } from "../../util/product_format_util";
 
 const ProductSplashItem = (props) => {
-  let formattedPrice =
-    "$" +
-    props.product.price.toLocaleString(undefined, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
+  // let formattedPrice =
+  //   "$" +
+  //   props.product.price.toLocaleString(undefined, {
+  //     minimumFractionDigits: 2,
+  //     maximumFractionDigits: 2,
+  //   });
   return (
     <li>
       <Link to={`products/${props.product.id}`} className="product-splash-item">
@@ -20,7 +21,7 @@ const ProductSplashItem = (props) => {
             {props.product.sellerName}
           </figcaption>
           <figcaption className="splash-item-price">
-            {formattedPrice}
+            {formattedPrice(props.product.price)}
           </figcaption>
         </div>
       </Link>
