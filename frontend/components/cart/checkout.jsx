@@ -25,14 +25,14 @@ export default function Checkout() {
 
   return (
     <div className="checkout-page">
-      <div className="checkout-content-container">
-        <div className="checkout-left">
-          {Object.keys(cartItems).length === 0 ? (
-            <div className="empty-cart-container">
-              <h1>Your cart is empty.</h1>
-              <Link to="/">Discover something unique to fill it up</Link>
-            </div>
-          ) : (
+      {Object.keys(cartItems).length === 0 ? (
+        <div className="empty-cart-container">
+          <h1>Your cart is empty.</h1>
+          <Link to="/">Discover something unique to fill it up</Link>
+        </div>
+      ) : (
+        <div className="checkout-content-container">
+          <div className="checkout-left">
             <ul className="checkout-ul">
               {Object.values(cartItems).map((cartItem) => {
                 let productId = cartItem.productId;
@@ -46,10 +46,11 @@ export default function Checkout() {
                 );
               })}
             </ul>
-          )}
+          </div>
+
+          <CheckoutSummary subtotal={subtotal} className="checkout-right" />
         </div>
-        <CheckoutSummary subtotal={subtotal} className="checkout-right" />
-      </div>
+      )}
       <p className="checkout-footer">
         <IoLeaf />
         Pixsy offsets carbon emissions from every delivery
