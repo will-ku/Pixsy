@@ -54,8 +54,4 @@ class Api::CartItemsController < ApplicationController
   def cart_item_params
     params.require(:cart_item).permit(:user_id, :product_id, :quantity)
   end
-
-  def product_exists_in_cart_items?
-    
-  end
 end

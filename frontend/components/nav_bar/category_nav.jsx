@@ -1,17 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
-const CategoryNav = (props) => (
-  <div className="center-cats">
-    <div className="category-nav-container">
-      <a href="#">Digital Cameras</a>
-      <a href="#">Lenses</a>
-      <a href="#">Bags & Cases</a>
-      <a href="#">Drones</a>
-      <a href="#">Film Cameras</a>
-      <a href="#">Mobile Photogprahy</a>
-      <a href="#">Accessories</a>
+export default function CategoryNav(props) {
+  return (
+    <div className="center-cats">
+      <div className="category-nav-container">
+        <Link to={`/category/1`}>Digital Cameras</Link>
+        <Link to={`/category/2`}>Lenses</Link>
+        <Link to={`/category/3`}>Bags & Cases</Link>
+        <Link to={`/category/4`}>Drones</Link>
+        <Link to={`/category/5`}>Film Cameras</Link>
+        <Link to={`/category/6`}>Mobile Photogprahy</Link>
+        <Link to={`/category/7`}>Accessories</Link>
+      </div>
     </div>
-  </div>
-);
-
-export default CategoryNav;
+  );
+}

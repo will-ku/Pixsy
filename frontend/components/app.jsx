@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Route,
-  Link,
-  NavLink,
-  HashRouter,
-  Redirect,
-  Switch,
-} from "react-router-dom";
+import { Route, Link, Redirect, Switch } from "react-router-dom";
 import Modal from "./modal/modal";
 import UserSession from "./nav_bar/user_session_container";
 import Search from "../components/nav_bar/search";
@@ -16,6 +9,7 @@ import CategoryNav from "./nav_bar/category_nav";
 import CartIcon from "./cart/cart_icon";
 import Checkout from "./cart/checkout";
 import { ProtectedRoute } from "../util/route_util";
+import CategoryShow from "./products/category_show";
 
 const App = () => (
   <>
@@ -50,8 +44,13 @@ const App = () => (
         path="/products/:productId"
         component={ProductShowContainer}
       />
+      <Route
+        exact
+        path="/category/:categoryId"
+        component={CategoryShow}
+      ></Route>
       <ProtectedRoute exact path="/checkout/:userId" component={Checkout} />
-      <Redirect to="/" />
+      {/* <Redirect to="/" /> */}
     </Switch>
   </>
 );

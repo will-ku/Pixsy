@@ -12,7 +12,7 @@ export default function CartIcon() {
   const linkToCheckout = () => {
     if (currentUser) {
       return (
-        <Link to={`checkout/${currentUser.id}`}>
+        <Link to={`/checkout/${currentUser.id}`}>
           <TiShoppingCart size={27} />
           {Object.keys(cartItems).length === 0
             ? null

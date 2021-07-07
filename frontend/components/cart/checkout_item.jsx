@@ -5,6 +5,7 @@ import {
   deleteCartItem,
 } from "../../actions/cart_item_actions";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function CheckoutItem(props) {
   const { product, cartItem, quantity } = props;
@@ -24,8 +25,10 @@ export default function CheckoutItem(props) {
   return (
     <li className="checkout-li">
       {product.sellerName}
-      <img className="splash-image" src={product.photoUrl[0]} />
-      {product.name}
+      <Link to={`/products/${product.id}`}>
+        <img className="splash-image" src={product.photoUrl[0]} />
+      </Link>
+      <Link to={`/products/${product.id}`}>{product.name}</Link>
       quantity: {quantity}
       {formattedPrice(product.price)}
       <select
