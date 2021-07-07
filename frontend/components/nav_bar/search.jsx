@@ -10,7 +10,7 @@ function Search() {
         className="search-bar"
         type="text"
         size="30"
-        placeholder="I'm shopping for..."
+        placeholder="Shop for unique items"
       />
       <button className="search-button" type="submit">
         <MdSearch size={24} />

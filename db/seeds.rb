@@ -14,7 +14,7 @@ Review.delete_all
 # Not deleting all categories
 
 # users
-john = User.create!(email: 'john@pixsy.com', first_name: 'John', password: 'abc123')
+spiderman = User.create!(email: 'spiderman@pixsy.com', first_name: 'Spiderman', password: 'abc123')
 will = User.create!(email: 'will@pixsy.com', first_name: 'Will', password: 'abc123')
 megaman = User.create!(email: 'megaman@pixsy.com', first_name: 'Megaman', password: 'abc123')
 batman=User.create!(email: "batman@pixsy.com", first_name: "Batman", password: "abc123")
@@ -122,8 +122,8 @@ pdslide.photos.attach(io: filea012, filename: "pdslide_3.png")
 
 
 # seeding cart items
-cartitem001 = CartItem.create!(user_id: john.id, product_id: pdslide.id, quantity: 1)
-cartitem002 = CartItem.create!(user_id: john.id, product_id: fujixmten.id, quantity: 20)
+cartitem001 = CartItem.create!(user_id: spiderman.id, product_id: pdslide.id, quantity: 1)
+cartitem002 = CartItem.create!(user_id: spiderman.id, product_id: fujixmten.id, quantity: 20)
 
 # more seeding of products
 

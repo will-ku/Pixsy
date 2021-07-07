@@ -1,5 +1,5 @@
-import React from "react";
-import { useSelector, useRef, useState } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch, useState } from "react-redux";
 import { TiShoppingCart } from "react-icons/ti";
 import { fetchAllCartItems } from "../../actions/cart_item_actions";
 import { Link } from "react-router-dom";
@@ -8,6 +8,11 @@ import Checkout from "./checkout";
 export default function CartIcon() {
   const cartItems = useSelector((state) => state.entities.cartItems);
   const currentUser = useSelector((state) => state.session.currentUser);
+  const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   if (currentUser) dispatch(fetchAllCartItems(currentUser.id));
+  // }, []);
 
   const linkToCheckout = () => {
     if (currentUser) {
