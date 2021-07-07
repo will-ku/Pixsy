@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllProductsInCat } from "../../actions/product_actions";
 import ProductSplashItem from "./product_splash_item";

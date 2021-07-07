@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch, useState } from "react-redux";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { TiShoppingCart } from "react-icons/ti";
-import { fetchAllCartItems } from "../../actions/cart_item_actions";
 import { Link } from "react-router-dom";
-import Checkout from "./checkout";
+import { openModal } from "../../actions/modal_actions";
 
 export default function CartIcon() {
   const cartItems = useSelector((state) => state.entities.cartItems);
   const currentUser = useSelector((state) => state.session.currentUser);
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   if (currentUser) dispatch(fetchAllCartItems(currentUser.id));
-  // }, []);
+  const loginLink = () => dispatch(openModal("login"));
 
   const linkToCheckout = () => {
     if (currentUser) {
@@ -26,7 +22,7 @@ export default function CartIcon() {
       );
     } else
       return (
-        <div>
+        <div onClick={loginLink}>
           <TiShoppingCart size={27} />
           {Object.keys(cartItems).length === 0
             ? null
