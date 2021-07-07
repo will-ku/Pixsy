@@ -14,7 +14,6 @@ export default function CheckoutSummary(props) {
     <div className="checkout-summary-container">
       <h2>How you'll pay</h2>
       <ul>
-        <form onSubmit="handlePlaceOrder"></form>
         <li>
           <input
             type="radio"

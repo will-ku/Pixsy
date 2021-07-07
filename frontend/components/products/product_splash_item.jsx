@@ -4,12 +4,13 @@ import { formattedPrice } from "../../util/product_format_util";
 
 const ProductSplashItem = (props) => {
   return (
-    <li>
-      <Link
-        to={`/products/${props.product.id}`}
-        className="product-splash-item"
-      >
-        <img className="splash-image" src={props.product.photoUrl[0]} />
+    <li className="product-splash-item">
+      <Link to={`/products/${props.product.id}`}>
+        <img
+          className="splash-image"
+          src={props.product.photoUrl[0]}
+          name={props.product.name}
+        />
         <div className="splash-item-details">
           <figcaption className="splash-item-name">
             {props.product.name}

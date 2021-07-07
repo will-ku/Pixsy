@@ -9,6 +9,7 @@ $quatt: "Quattrocento", serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .spash-row-container {
@@ -25,21 +26,33 @@ $quatt: "Quattrocento", serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .splash-row-content {
   display: flex;
+  width: 100%;
+  // margin: 0px 30px;
+  // flex-wrap: wrap;
 }
 
 .product-splash-item {
   display: flex;
   flex-direction: column;
   // align-items: center;
-  margin: 9px;
-  width: 195px;
-  height: 210px;
+  // margin: 9px;
+  // width: 195px;
+  // height: 210px;
+
+  max-width: 16.67%;
+  flex-basis: 16.67%;
+  flex-grow: 1;
   text-decoration: none;
   text-align: left;
+}
+
+.product-splash-item > * {
+  padding: 10px;
 }
 
 .splash-image:hover {
@@ -49,15 +62,16 @@ $quatt: "Quattrocento", serif;
 }
 
 .splash-image {
-  width: 184px;
-  height: 146px;
+  // width: 184px;
+  // height: 146px;
+  width: 100%;
   object-fit: cover;
   margin-bottom: 5px;
 }
 
 .splash-item-details {
   padding: 5px 12px;
-  width: 185px;
+  // width: 185px;
   color: black;
   text-decoration: none;
 }
@@ -65,6 +79,7 @@ $quatt: "Quattrocento", serif;
 .splash-item-price {
   text-align: left;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .splash-item-name {
@@ -81,11 +96,13 @@ $quatt: "Quattrocento", serif;
 }
 
 .grid-splash-content {
-  padding: 0px 30px;
+  // margin: 0px 20px;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .grid-splash-content h2 {
@@ -93,7 +110,12 @@ $quatt: "Quattrocento", serif;
   text-align: center;
 }
 
-#barc {
+.splash-row-section {
+  width: 95%;
+  padding: 10px;
+}
+
+.banner-container {
   height: 300px;
   width: 100%;
   margin-bottom: 20px;
@@ -102,8 +124,10 @@ $quatt: "Quattrocento", serif;
   margin: 0px;
   position: relative;
   text-align: center;
-  color: white;
+  color: black;
   z-index: -10;
+  background-color: rgb(224, 234, 227);
+  width: 100%;
 }
 
 #barc-text {
