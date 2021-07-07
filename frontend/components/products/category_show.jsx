@@ -20,11 +20,9 @@ export default function CategoryShow(props) {
         <div className="splash-row-section">
           <h1>Category goes here</h1>
           <ul className="splash-row-content">
-            {Object.values(products)
-              .slice(0, 6)
-              .map((product) => {
-                return <ProductSplashItem key={product.id} product={product} />;
-              })}
+            {Object.values(products).map((product) => {
+              return <ProductSplashItem key={product.id} product={product} />;
+            })}
           </ul>
         </div>
       </section>

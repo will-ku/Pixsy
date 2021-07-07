@@ -12,9 +12,9 @@ function Search() {
         size="30"
         placeholder="Search bar under construction"
       />
-      <button className="search-button" type="submit">
+      <input className="search-button" type="submit">
         <MdSearch size={24} />
-      </button>
+      </input>
     </form>
   );
 }
