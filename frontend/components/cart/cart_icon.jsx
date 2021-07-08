@@ -9,27 +9,29 @@ export default function CartIcon() {
   const currentUser = useSelector((state) => state.session.currentUser);
   const dispatch = useDispatch();
   const loginLink = () => dispatch(openModal("login"));
+  const cartCount =
+    Object.keys(cartItems).length === 0 ? null : Object.keys(cartItems).length;
 
   const linkToCheckout = () => {
     if (currentUser) {
       return (
-        <Link to={`/checkout/${currentUser.id}`}>
-          <TiShoppingCart size={27} />
-          {Object.keys(cartItems).length === 0
-            ? null
-            : Object.keys(cartItems).length}
+        <Link className="cart-link" to={`/checkout/${currentUser.id}`}>
+          <span className="cart-icon">
+            <TiShoppingCart size={27} className="cart-svg" color="black" />
+            <p className="cart-count">{cartCount}</p>
+          </span>
         </Link>
       );
-    } else
-      return (
-        <div onClick={loginLink}>
-          <TiShoppingCart size={27} />
-          {Object.keys(cartItems).length === 0
-            ? null
-            : Object.keys(cartItems).length}
-        </div>
-      );
+    }
   };
 
-  return <div className="cart-icon">{linkToCheckout()}</div>;
+  const linkToLogin = () => {
+    return (
+      <span className="cart-icon" onClick={loginLink}>
+        <TiShoppingCart size={27} color="black" className="cart-svg" />
+      </span>
+    );
+  };
+
+  return <div>{currentUser ? linkToCheckout() : linkToLogin()}</div>;
 }
