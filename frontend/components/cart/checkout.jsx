@@ -14,6 +14,13 @@ export default function Checkout() {
     dispatch(fetchCartItemProducts(currentUser.id));
   }, []);
 
+  const itemOrItems = () => {
+    if (Object.keys(cartItems).length === 1) return "1 item in your cart";
+    else {
+      return `${Object.keys(cartItems).length} items in your cart`;
+    }
+  };
+
   const products = useSelector((state) => state.entities.products);
 
   if (Object.keys(products).length < Object.keys(cartItems).length) return null;
@@ -31,9 +38,18 @@ export default function Checkout() {
           <Link to="/">Discover something unique to fill it up</Link>
         </div>
       ) : (
-        <div className="checkout-content-container">
-          <div className="checkout-left">
-            <ul className="checkout-ul">
+        <div className="checkout-container">
+          <div className="checkout-header-container">
+            <h1>{itemOrItems()}</h1>
+            
+              <button className="cart-buttons" id="keep-shopping">
+                Keep shopping
+                <Link to="/"></Link>
+              </button>
+            
+          </div>
+          <div className="checkout-content-container">
+            <ul className="checkout-left">
               {Object.values(cartItems).map((cartItem) => {
                 let productId = cartItem.productId;
                 return (
@@ -46,9 +62,8 @@ export default function Checkout() {
                 );
               })}
             </ul>
+            <CheckoutSummary subtotal={subtotal} />
           </div>
-
-          <CheckoutSummary subtotal={subtotal} className="checkout-right" />
         </div>
       )}
       <p className="checkout-footer">

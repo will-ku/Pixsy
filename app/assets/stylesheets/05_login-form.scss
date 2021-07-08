@@ -88,7 +88,8 @@ $opensans700: "Open Sans", sans-serif;
   padding-top: 10px;
 }
 
-.session-submit {
+.session-submit,
+.place-order {
   width: auto;
   background-color: black;
   color: white;
@@ -102,7 +103,8 @@ $opensans700: "Open Sans", sans-serif;
   height: 52px;
 }
 
-.session-submit:hover {
+.session-submit:hover,
+.place-order:hover {
   transform: scale(1.05, 1.05);
   -webkit-transform: scale(1.05, 1.05);
   box-shadow: 0px 1px 0px 0px;

@@ -112,7 +112,8 @@ header h1 {
   transition-duration: 0.1s;
 }
 
-.sign-in button {
+.sign-in button,
+.cart-buttons {
   color: black;
   font-weight: 600;
   font-size: 15px;
@@ -127,7 +128,8 @@ header h1 {
   transition: all 0.4s ease 0s;
 }
 
-.sign-in button:hover {
+.sign-in button:hover,
+.cart-buttons:hover {
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   // -webkit-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);
   // -moz-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);

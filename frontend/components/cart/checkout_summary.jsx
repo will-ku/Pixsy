@@ -33,10 +33,12 @@ export default function CheckoutSummary(props) {
         </li>
       </ul>
       <div className="subtotal">
-        <p>Item(s) total</p>
+        <p className="subtotal-description">Item(s) total</p>
         <p>{formattedPrice(props.subtotal)}</p>
       </div>
-      <button onClick={handlePlaceOrder}>Place Order</button>
+      <button onClick={handlePlaceOrder} className="place-order">
+        Place Order
+      </button>
     </div>
   );
 }

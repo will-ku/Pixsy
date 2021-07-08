@@ -26,13 +26,21 @@ export default function CheckoutItem(props) {
     <li className="checkout-li">
       {product.sellerName}
       <Link to={`/products/${product.id}`}>
-        <img className="splash-image" src={product.photoUrl[0]} />
+        <img
+          id="checkout-image"
+          className="splash-image"
+          src={product.photoUrl[0]}
+        />
       </Link>
-      <Link to={`/products/${product.id}`}>{product.name}</Link>
-      quantity: {quantity}
-      {formattedPrice(product.price)}
+      <div className="checkout-li-mid-col">
+        <Link to={`/products/${product.id}`}>{product.name}</Link>
+        <button onClick={deleteClickHandler} className="cart-buttons">
+          Remove
+        </button>
+      </div>
       <select
         className="addtocart-drop"
+        id="checkout-drop"
         onChange={handleChange}
         value={quantity}
       >
@@ -47,7 +55,9 @@ export default function CheckoutItem(props) {
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <button onClick={deleteClickHandler}>x</button>
+      <p style={{ width: "90px", fontWeight: "600" }}>
+        {formattedPrice(product.price)}
+      </p>
     </li>
   );
 }

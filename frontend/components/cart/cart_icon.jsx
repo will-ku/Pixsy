@@ -9,8 +9,10 @@ export default function CartIcon() {
   const currentUser = useSelector((state) => state.session.currentUser);
   const dispatch = useDispatch();
   const loginLink = () => dispatch(openModal("login"));
-  const cartCount =
-    Object.keys(cartItems).length === 0 ? null : Object.keys(cartItems).length;
+  const cartCount = () =>
+    Object.keys(cartItems).length === 0 ? null : (
+      <p className="cart-count">{Object.keys(cartItems).length}</p>
+    );
 
   const linkToCheckout = () => {
     if (currentUser) {
@@ -18,7 +20,7 @@ export default function CartIcon() {
         <Link className="cart-link" to={`/checkout/${currentUser.id}`}>
           <span className="cart-icon">
             <TiShoppingCart size={27} className="cart-svg" color="black" />
-            <p className="cart-count">{cartCount}</p>
+            {cartCount()}
           </span>
         </Link>
       );

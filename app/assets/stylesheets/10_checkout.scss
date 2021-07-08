@@ -25,13 +25,14 @@
 
 .cart-count {
   text-align: center;
-  margin-left: -12px;
+  margin-left: -15px;
   padding-bottom: 2px;
   padding-right: 1px;
   width: 2ch;
   height: 2ch;
   font-size: 13px;
-  background-color: rgb(236, 164, 126);
+  font-weight: 600;
+  background-color: rgb(251, 155, 120);
   border: 2px white solid;
   border-radius: 50%;
   z-index: 1;
@@ -44,15 +45,121 @@
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  padding-bottom: 20px;
+  border-bottom: 1px rgb(231, 231, 231) solid;
 }
 
-.checkout-content-container {
+.checkout-container {
   display: flex;
   flex-direction: column;
+  margin: 30px;
 }
 
 .empty-cart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 80px 30px 50px 30px;
+}
+
+.empty-cart-container > h1 {
+  font-size: 25px;
+}
+
+.empty-cart-container > * {
+  margin-bottom: 10px;
+}
+
+.checkout-header-container {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#keep-shopping {
+  width: 14ch;
+}
+
+.checkout-header-container > h1 {
+  font-size: 32px;
+}
+
+// container setup for main checkout area
+
+.checkout-content-container {
+  display: flex;
+  gap: 20px;
+}
+
+.checkout-left {
+  flex: 3 1 0;
+}
+
+.checkout-summary-container {
+  flex: 1 1 0;
+  min-width: 270px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 15px;
+  box-shadow: 0 0 15px 0 rgba(127, 127, 127, 0.2);
+  padding: 25px;
+  margin-left: 40px;
+}
+
+// left side of checkout page
+
+.checkout-li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+  padding: 20px 10px 30px 10px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+#checkout-image {
+  max-width: 200px;
+}
+
+#checkout-drop {
+  width: 60px;
+  border-radius: 10px;
+  border-color: lightgray;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.checkout-li-mid-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 5px 0;
+}
+
+// right side of checkout page
+
+.checkout-summary-container > * {
+  line-height: 1.5;
+}
+.checkout-summary-container > ul {
+  line-height: 2;
+}
+
+.checkout-summary-container > h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subtotal-description {
+  font-weight: 600;
 }
