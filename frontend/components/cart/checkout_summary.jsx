@@ -13,7 +13,7 @@ export default function CheckoutSummary(props) {
   return (
     <div className="checkout-summary-container">
       <h2>How you'll pay</h2>
-      <ul>
+      <ul className="payment-options">
         <li>
           <input
             type="radio"
@@ -21,16 +21,47 @@ export default function CheckoutSummary(props) {
             id="Credit Card"
             checked="checked"
           />
-          Credit Card
+          Credit Card{" "}
+          <img
+            className="checkout-cc-logos"
+            src="../../../assets/images/Mastercard_logo.jpg"
+          />{" "}
+          <img
+            className="checkout-cc-logos"
+            src="../../../assets/images/visa.jpg"
+          />{" "}
+          <img
+            className="checkout-cc-logos"
+            src="../../../assets/images/amex.png"
+          />{" "}
+          <img
+            className="checkout-cc-logos"
+            src="../../../assets/images/discover.jpg"
+          />
         </li>
         <li>
           <input type="radio" name="Payment Type" id="Paypal" />
-          Paypal
+          Paypal{" "}
+          <img
+            className="checkout-cc-logos"
+            src="../../../assets/images/paypal.png"
+          />
         </li>
-        <li>
-          <input type="radio" name="Payment Type" id="LinkedIn" />
-          LinkedIn
-        </li>
+        <a
+          href="https://www.linkedin.com/in/willku/"
+          style={{
+            textDecoration: "none",
+          }}
+        >
+          <li id="linkedin-checkout">
+            <input type="radio" name="Payment Type" />
+            LinkedIn{" "}
+            <img
+              className="checkout-cc-logos"
+              src="../../../assets/images/linkedin.png"
+            />
+          </li>
+        </a>
       </ul>
       <div className="subtotal">
         <p className="subtotal-description">Item(s) total</p>

@@ -7,11 +7,12 @@ export default function CategoryShow(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAllProductsInCat(props.match.params.categoryId));
-  }, [props.match.params]);
+  }, []);
 
   const products = useSelector((state) => state.entities.products);
 
   if (Object.keys(products).length === 0) return null;
+  if (!Object.values(products)[0].categoryId) return null;
 
   return (
     <div>

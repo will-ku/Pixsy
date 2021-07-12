@@ -146,8 +146,16 @@
 .checkout-summary-container > * {
   line-height: 1.5;
 }
-.checkout-summary-container > ul {
+
+.payment-options {
   line-height: 2;
+}
+
+.payment-options > *,
+.linkedin-checkout {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .checkout-summary-container > h2 {
@@ -162,4 +170,11 @@
 
 .subtotal-description {
   font-weight: 600;
+}
+
+.checkout-cc-logos {
+  width: 33px;
+  height: 23px;
+  border: 0.5px solid gray;
+  border-radius: 5px;
 }

@@ -19,7 +19,7 @@ class Api::ProductsController < ApplicationController
   
   def all_category_products
     @products = Product.where(category: params[:category_id])
-    render :index
+    render "/api/products/search_results"
   end
 
   private
