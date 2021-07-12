@@ -8,23 +8,28 @@ export default function CategoryShow(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAllProductsInCat(props.match.params.categoryId));
-  }, [products]);
+  }, [props.match.params]);
+  const noProductsInState = Object.keys(products).length === 0;
 
-  if (Object.keys(products).length === 0) return null;
-  if (!Object.values(products)[0].categoryId) return null;
+  if (noProductsInState) return null;
+  if (!Object.values(products)[0].categoryName) return null;
 
   return (
     <div>
-      <section className="splash-row-container">
-        <div className="splash-row-section">
-          <h1>Category goes here</h1>
-          <ul className="splash-row-content">
-            {Object.values(products).map((product) => {
-              return <ProductSplashItem key={product.id} product={product} />;
-            })}
-          </ul>
-        </div>
-      </section>
+      {noProductsInState ? (
+        <div>No search results found</div>
+      ) : (
+        <section className="splash-row-container">
+          <div className="splash-row-section">
+            <h1>Category goes here</h1>
+            <ul className="splash-row-content">
+              {Object.values(products).map((product) => {
+                return <ProductSplashItem key={product.id} product={product} />;
+              })}
+            </ul>
+          </div>
+        </section>
+      )}
     </div>
   );
 }
