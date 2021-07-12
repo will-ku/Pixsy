@@ -4,12 +4,11 @@ import { fetchAllProductsInCat } from "../../actions/product_actions";
 import ProductSplashItem from "./product_splash_item";
 
 export default function CategoryShow(props) {
+  const products = useSelector((state) => state.entities.products);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAllProductsInCat(props.match.params.categoryId));
-  }, []);
-
-  const products = useSelector((state) => state.entities.products);
+  }, [products]);
 
   if (Object.keys(products).length === 0) return null;
   if (!Object.values(products)[0].categoryId) return null;
