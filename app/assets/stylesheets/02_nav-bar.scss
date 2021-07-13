@@ -41,11 +41,12 @@ header h1 {
 }
 
 .search-component {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1000px;
-  min-width: 300px;
+  min-width: 340px;
 }
 
 .search-bar {
@@ -66,9 +67,8 @@ header h1 {
   border-right-color: rgb(236, 235, 235);
   box-shadow: 0 1px 4px 0 rgb(242, 242, 242);
   //size
-  max-width: 1000px;
+  min-width: 300px;
   width: 100%;
-  min-width: 200px;
   height: 26px;
   margin: 20px 0px 20px 20px;
   padding: 9px 0px 9px 18px;
@@ -104,12 +104,30 @@ header h1 {
   padding-left: 0;
 }
 
+.search-list {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  width: 90%;
+  min-width: 200px;
+  padding: 10px;
+}
+
 .search-bar:focus + .search-button {
   background: black;
   color: white;
   border: none;
   transition-property: background;
   transition-duration: 0.1s;
+}
+
+.search-bar:focus ~ .search-list,
+.search-bar:focus ~ .search-list:hover {
+  visibility: visible;
+  z-index: 2;
+  border: 1px solid red;
 }
 
 .sign-in button,

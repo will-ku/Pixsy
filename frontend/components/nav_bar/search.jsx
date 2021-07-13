@@ -15,6 +15,11 @@ function Search() {
       <button className="search-button" type="submit">
         <MdSearch size={24} />
       </button>
+      <ul className="search-list">
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+      </ul>
     </form>
   );
 }
