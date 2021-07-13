@@ -21,3 +21,10 @@ export const fetchAllProductsInCat = (catId) => {
     url: `/api/category/${catId}`,
   });
 };
+
+export const searchProducts = (query) => {
+  return $.ajax({
+    url: "/api/search/",
+    data: { search: query },
+  });
+};

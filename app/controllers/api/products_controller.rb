@@ -25,6 +25,11 @@ class Api::ProductsController < ApplicationController
     render "/api/products/search_results"
   end
 
+  def search_products
+    @products = Product.search(params[:search])
+    render :index
+  end
+
   private
 
   def product_params

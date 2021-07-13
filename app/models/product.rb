@@ -30,4 +30,14 @@ class Product < ApplicationRecord
   foreign_key: :product_id,
   class_name: :Product
 
+  attr_reader :search
+
+  def self.search(query)
+    if query.include?("?query=")
+      debugger
+    else
+
+    end
+  end
+
 end
