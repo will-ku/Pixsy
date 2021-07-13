@@ -11,25 +11,26 @@ export default function CategoryShow(props) {
   }, [props.match.params]);
   const noProductsInState = Object.keys(products).length === 0;
 
+  // if (noProductsInState) return <div>No search results found</div>;
   if (noProductsInState) return null;
-  if (!Object.values(products)[0].categoryName) return null;
+
+  let categoryName;
+  typeof Object.values(products)[0].categoryName === "undefined"
+    ? null
+    : (categoryName = Object.values(products)[0].categoryName);
 
   return (
     <div>
-      {noProductsInState ? (
-        <div>No search results found</div>
-      ) : (
-        <section className="splash-row-container">
-          <div className="splash-row-section">
-            <h1>Category goes here</h1>
-            <ul className="splash-row-content">
-              {Object.values(products).map((product) => {
-                return <ProductSplashItem key={product.id} product={product} />;
-              })}
-            </ul>
-          </div>
-        </section>
-      )}
+      <section className="splash-row-container">
+        <div className="splash-row-section">
+          <h1>{categoryName}</h1>
+          <ul className="splash-row-content">
+            {Object.values(products).map((product) => {
+              return <ProductSplashItem key={product.id} product={product} />;
+            })}
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
