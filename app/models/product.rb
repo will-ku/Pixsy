@@ -33,11 +33,11 @@ class Product < ApplicationRecord
   attr_reader :search
 
   def self.search(query)
-    if query.include?("?query=")
-      debugger
-    else
-
-    end
+    search_result = self.where("LOWER(name) like ?", "%#{query.downcase}%")
+    
+    if search_result.length > 0
+      return search_result
+    end  
   end
 
 end

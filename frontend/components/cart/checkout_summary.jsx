@@ -10,6 +10,10 @@ export default function CheckoutSummary(props) {
     dispatch(deleteAllCartItems(currentUser.id));
   };
 
+  const doNothing = () => {
+    return null;
+  };
+
   return (
     <div className="checkout-summary-container">
       <h2>How you'll pay</h2>
@@ -20,6 +24,7 @@ export default function CheckoutSummary(props) {
             name="Payment Type"
             id="Credit Card"
             checked="checked"
+            onChange={doNothing}
           />
           Credit Card{" "}
           <img
@@ -40,7 +45,12 @@ export default function CheckoutSummary(props) {
           />
         </li>
         <li>
-          <input type="radio" name="Payment Type" id="Paypal" />
+          <input
+            type="radio"
+            name="Payment Type"
+            id="Paypal"
+            onChange={doNothing}
+          />
           Paypal{" "}
           <img
             className="checkout-cc-logos"
@@ -54,7 +64,7 @@ export default function CheckoutSummary(props) {
           }}
         >
           <li id="linkedin-checkout">
-            <input type="radio" name="Payment Type" />
+            <input type="radio" name="Payment Type" onChange={doNothing} />
             LinkedIn{" "}
             <img
               className="checkout-cc-logos"

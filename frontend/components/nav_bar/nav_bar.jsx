@@ -5,7 +5,7 @@ import UserSessionContainer from "./user_session_container";
 import CartIcon from "../cart/cart_icon";
 import CategoryNav from "./category_nav";
 
-export default function NavBar(props) {
+export default function NavBar() {
   return (
     <div className="nav-container">
       <header>
@@ -14,6 +14,7 @@ export default function NavBar(props) {
             to="/"
             style={{ textDecoration: "none" }}
             className="header-link"
+            replace
           >
             <img
               className="pixsy-logo"

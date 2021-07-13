@@ -3,6 +3,8 @@ import * as APIUtil from "../util/products_api_util";
 export const RECEIVE_ALL_PRODUCTS = "RECEIVE_ALL_PRODUCTS";
 export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
 export const RECEIVE_SEARCHED_PRODUCTS = "RECEIVE_SEARCHED_PRODUCTS";
+export const CLEAR_ALL_PRODUCTS = "CLEAR_ALL_PRODUCTS";
+export const RECEIVE_SEARCH_ERRORS = "RECEIVE_SEARCH_ERRORS";
 
 export const receiveAllProducts = (products) => ({
   type: RECEIVE_ALL_PRODUCTS,
@@ -17,6 +19,15 @@ export const receiveProduct = (product) => ({
 export const receiveSearchedProducts = (products) => ({
   type: RECEIVE_SEARCHED_PRODUCTS,
   products,
+});
+
+export const receiveErrors = (errors) => ({
+  type: RECEIVE_SEARCH_ERRORS,
+  errors,
+});
+
+export const clearAllProducts = () => ({
+  type: CLEAR_ALL_PRODUCTS,
 });
 
 export const fetchAllProducts = () => (dispatch) => {
@@ -44,7 +55,8 @@ export const fetchAllProductsInCat = (catId) => (dispatch) => {
 };
 
 export const fetchSearchedProducts = (query) => (dispatch) => {
-  return APIUtil.searchProducts(query).then((products) =>
-    dispatch(receiveSearchedProducts(products))
+  return APIUtil.searchProducts(query).then(
+    (products) => dispatch(receiveSearchedProducts(products)),
+    (err) => dispatch(receiveErrors(err.responseJSON))
   );
 };

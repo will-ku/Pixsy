@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 import { MdSearch } from "react-icons/md";
-import { fetchSearchedProducts } from "../../actions/product_actions";
+import { clearAllProducts } from "../../actions/product_actions";
 
 function Search() {
   const [term, setTerm] = useState("");
   const [sbFocus, setFocus] = useState(false);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(fetchSearchedProducts(term));
+
+    // dispatch(clearAllProducts()).then
+    history.push({
+      pathname: "/search",
+      search: `?q=${term}`,
+    });
   };
 
   return (

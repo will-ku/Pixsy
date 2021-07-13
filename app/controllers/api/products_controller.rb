@@ -27,7 +27,12 @@ class Api::ProductsController < ApplicationController
 
   def search_products
     @products = Product.search(params[:search])
-    render :index
+    
+    if @products   
+      render :index
+    else
+      render json: ["We couldn't find any results for #{params[:search]}"], status: 404
+    end
   end
 
   private

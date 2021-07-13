@@ -13,7 +13,6 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # @cart_items = @user.cart_items
   end
 
   private

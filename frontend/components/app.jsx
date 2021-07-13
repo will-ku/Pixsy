@@ -7,6 +7,7 @@ import Checkout from "./cart/checkout";
 import { ProtectedRoute } from "../util/route_util";
 import CategoryShow from "./products/category_show";
 import NavBar from "./nav_bar/nav_bar";
+import SearchPage from "./products/search_page";
 
 const App = () => (
   <>
@@ -24,6 +25,7 @@ const App = () => (
         path="/category/:categoryId"
         component={CategoryShow}
       ></Route>
+      <Route exact path="/search" component={SearchPage}></Route>
       <ProtectedRoute exact path="/checkout/:userId" component={Checkout} />
     </Switch>
   </>
