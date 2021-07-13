@@ -1,18 +1,23 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { MdSearch } from "react-icons/md";
+import { fetchSearchedProducts } from "../../actions/product_actions";
 
 function Search() {
   const [term, setTerm] = useState("");
   const [sbFocus, setFocus] = useState(false);
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    dispatch(fetchSearchedProducts(term));
   };
 
-  // debugger;
   return (
-    <form className="search-component" onSubmit={handleSubmit}>
+    <form
+      className="search-component"
+      onSubmit={term.length === 0 ? null : handleSubmit}
+    >
       <input
         className={`search-bar ${
           sbFocus ? " search-bar-focus search-focus" : ""

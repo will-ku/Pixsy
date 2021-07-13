@@ -129,12 +129,6 @@ header h1 {
   color: black;
   border-color: black;
 }
-// .search-bar:focus {
-//   transition: all 0.2s ease 0s;
-//   background-color: white;
-//   color: black;
-//   border-color: black;
-// }
 
 .search-button-focus {
   background: black;
@@ -143,26 +137,12 @@ header h1 {
   transition-property: background;
   transition-duration: 0.1s;
 }
-// .search-bar:focus + .search-button {
-//   background: black;
-//   color: white;
-//   border: none;
-//   transition-property: background;
-//   transition-duration: 0.1s;
-// }
 
 .search-list-focus {
   visibility: visible;
   z-index: 2;
   border: 1px solid red;
 }
-
-// .search-bar:focus ~ .search-list,
-// .search-bar:focus ~ .search-list:hover {
-//   visibility: visible;
-//   z-index: 2;
-//   border: 1px solid red;
-// }
 
 .search-background-focus {
   z-index: 0;

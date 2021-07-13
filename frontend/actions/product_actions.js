@@ -42,3 +42,9 @@ export const fetchAllProductsInCat = (catId) => (dispatch) => {
     dispatch(receiveSearchedProducts(products))
   );
 };
+
+export const fetchSearchedProducts = (query) => (dispatch) => {
+  return APIUtil.searchProducts(query).then((products) =>
+    dispatch(receiveSearchedProducts(products))
+  );
+};

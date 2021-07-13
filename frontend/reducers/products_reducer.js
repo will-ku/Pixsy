@@ -3,7 +3,6 @@ import {
   RECEIVE_PRODUCT,
   RECEIVE_SEARCHED_PRODUCTS,
 } from "../actions/product_actions";
-
 import { RECEIVE_REVIEW } from "../actions/review_actions";
 
 const productsReducer = (state = {}, action) => {
