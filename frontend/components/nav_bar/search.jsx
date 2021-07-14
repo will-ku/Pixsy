@@ -13,7 +13,6 @@ function Search() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // dispatch(clearAllProducts()).then
     history.push({
       pathname: "/search",
       search: `?q=${term}`,
