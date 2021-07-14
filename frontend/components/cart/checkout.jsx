@@ -23,6 +23,7 @@ export default function Checkout() {
 
   const products = useSelector((state) => state.entities.products);
 
+  // if (Object.keys(cartItems).length === 0) return null;
   if (Object.keys(products).length < Object.keys(cartItems).length) return null;
 
   const subtotal = Object.values(cartItems).reduce((acc, cartItem) => {
@@ -41,12 +42,11 @@ export default function Checkout() {
         <div className="checkout-container">
           <div className="checkout-header-container">
             <h1>{itemOrItems()}</h1>
-            
-              <button className="cart-buttons" id="keep-shopping">
-                Keep shopping
-                <Link to="/"></Link>
-              </button>
-            
+
+            <button className="cart-buttons" id="keep-shopping">
+              Keep shopping
+              <Link to="/"></Link>
+            </button>
           </div>
           <div className="checkout-content-container">
             <ul className="checkout-left">

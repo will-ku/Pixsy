@@ -65,6 +65,7 @@ header h1 {
   display: flex;
   justify-content: left;
   align-items: center;
+  caret-color: transparent;
   // font
   font-family: Inter;
   font-size: 14px;
@@ -128,6 +129,7 @@ header h1 {
   background-color: white;
   color: black;
   border-color: black;
+  caret-color: auto;
 }
 
 .search-button-focus {

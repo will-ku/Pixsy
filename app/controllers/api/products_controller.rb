@@ -20,7 +20,6 @@ class Api::ProductsController < ApplicationController
   def all_category_products
     category = Category.find(params[:category_id])
     @category_name = category.name
-
     @products = Product.where(category: params[:category_id])
     render "/api/products/search_results"
   end
