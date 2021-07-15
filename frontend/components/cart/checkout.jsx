@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { fetchCartItemProducts } from "../../actions/product_actions";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CheckoutItem from "./checkout_item";
 import { Link } from "react-router-dom";
@@ -7,12 +6,7 @@ import { IoLeaf } from "react-icons/io5";
 import CheckoutSummary from "./checkout_summary";
 
 export default function Checkout() {
-  const currentUser = useSelector((state) => state.session.currentUser);
-  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.entities.cartItems);
-  useEffect(() => {
-    dispatch(fetchCartItemProducts(currentUser.id));
-  }, []);
 
   const itemOrItems = () => {
     if (Object.keys(cartItems).length === 1) return "1 item in your cart";
@@ -21,19 +15,9 @@ export default function Checkout() {
     }
   };
 
-  const products = useSelector((state) => state.entities.products);
-
-  // if (Object.keys(cartItems).length === 0) return null;
-  if (Object.keys(products).length !== Object.keys(cartItems).length)
-    return null;
-
-  // if (loading) return null;
-  // if (loading) return null;
-
-  // const subtotal = Object.values(cartItems).reduce((acc, cartItem) => {
-  //   let productId = cartItem.productId;
-  //   return acc + cartItem.quantity * products[productId].price;
-  // }, 0);
+  const subtotal = Object.values(cartItems).reduce((acc, cartItem) => {
+    return acc + cartItem.quantity * cartItem.productPrice;
+  }, 0);
 
   return (
     <div className="checkout-page">
@@ -55,23 +39,16 @@ export default function Checkout() {
           <div className="checkout-content-container">
             <ul className="checkout-left">
               {Object.values(cartItems).map((cartItem) => {
-                let productId = cartItem.productId;
                 return (
                   <CheckoutItem
                     key={cartItem.id}
                     cartItem={cartItem}
-                    product={products[productId]}
                     quantity={cartItem.quantity}
                   />
                 );
               })}
             </ul>
-            <CheckoutSummary
-              subtotal={Object.values(cartItems).reduce((acc, cartItem) => {
-                let productId = cartItem.productId;
-                return acc + cartItem.quantity * products[productId].price;
-              }, 0)}
-            />
+            <CheckoutSummary subtotal={subtotal} />
           </div>
         </div>
       )}

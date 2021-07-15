@@ -8,12 +8,10 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function CheckoutItem(props) {
-  const { product, cartItem, quantity } = props;
+  const { cartItem, quantity } = props;
   const dispatch = useDispatch();
-  // const [localQuantity, setLocalQuantity] = useState(quantity);
 
   const handleChange = (e) => {
-    // setLocalQuantity(parseInt(e.target.value));
     let newQuantity = { quantity: parseInt(e.target.value) };
     let updatedCartItem = Object.assign(cartItem, newQuantity);
     dispatch(updateCartItem(updatedCartItem));
@@ -24,16 +22,18 @@ export default function CheckoutItem(props) {
   };
   return (
     <li className="checkout-li">
-      {product.sellerName}
-      <Link to={`/products/${product.id}`}>
+      {/* {cartItem.sellerName} */}
+      <Link to={`/products/${cartItem.productId}`}>
         <img
           id="checkout-image"
           className="splash-image"
-          src={product.photoUrl[0]}
+          src={cartItem.photoUrl[0]}
         />
       </Link>
       <div className="checkout-li-mid-col">
-        <Link to={`/products/${product.id}`}>{product.name}</Link>
+        <Link to={`/products/${cartItem.productId}`}>
+          {cartItem.productName}
+        </Link>
         <button onClick={deleteClickHandler} className="cart-buttons">
           Remove
         </button>
@@ -56,7 +56,7 @@ export default function CheckoutItem(props) {
         <option value="10">10</option>
       </select>
       <p style={{ width: "90px", fontWeight: "600" }}>
-        {formattedPrice(product.price)}
+        {formattedPrice(cartItem.productPrice)}
       </p>
     </li>
   );
