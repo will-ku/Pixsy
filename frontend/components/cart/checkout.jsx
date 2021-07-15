@@ -24,12 +24,16 @@ export default function Checkout() {
   const products = useSelector((state) => state.entities.products);
 
   // if (Object.keys(cartItems).length === 0) return null;
-  if (Object.keys(products).length < Object.keys(cartItems).length) return null;
+  if (Object.keys(products).length !== Object.keys(cartItems).length)
+    return null;
 
-  const subtotal = Object.values(cartItems).reduce((acc, cartItem) => {
-    let productId = cartItem.productId;
-    return acc + cartItem.quantity * products[productId].price;
-  }, 0);
+  // if (loading) return null;
+  // if (loading) return null;
+
+  // const subtotal = Object.values(cartItems).reduce((acc, cartItem) => {
+  //   let productId = cartItem.productId;
+  //   return acc + cartItem.quantity * products[productId].price;
+  // }, 0);
 
   return (
     <div className="checkout-page">
@@ -62,7 +66,12 @@ export default function Checkout() {
                 );
               })}
             </ul>
-            <CheckoutSummary subtotal={subtotal} />
+            <CheckoutSummary
+              subtotal={Object.values(cartItems).reduce((acc, cartItem) => {
+                let productId = cartItem.productId;
+                return acc + cartItem.quantity * products[productId].price;
+              }, 0)}
+            />
           </div>
         </div>
       )}

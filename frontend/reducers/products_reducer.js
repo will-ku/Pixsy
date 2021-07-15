@@ -2,6 +2,7 @@ import {
   RECEIVE_ALL_PRODUCTS,
   RECEIVE_PRODUCT,
   RECEIVE_SEARCHED_PRODUCTS,
+  RECEIVE_CART_PRODUCTS,
   CLEAR_ALL_PRODUCTS,
 } from "../actions/product_actions";
 import { RECEIVE_REVIEW } from "../actions/review_actions";
@@ -15,6 +16,8 @@ const productsReducer = (state = {}, action) => {
     case RECEIVE_PRODUCT:
       return Object.assign({}, state, action.product);
     case RECEIVE_SEARCHED_PRODUCTS:
+      return Object.assign({}, action.products);
+    case RECEIVE_CART_PRODUCTS:
       return Object.assign({}, action.products);
     case CLEAR_ALL_PRODUCTS:
       return {};

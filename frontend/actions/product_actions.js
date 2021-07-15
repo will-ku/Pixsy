@@ -3,6 +3,7 @@ import * as APIUtil from "../util/products_api_util";
 export const RECEIVE_ALL_PRODUCTS = "RECEIVE_ALL_PRODUCTS";
 export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
 export const RECEIVE_SEARCHED_PRODUCTS = "RECEIVE_SEARCHED_PRODUCTS";
+export const RECEIVE_CART_PRODUCTS = "RECEIVE_SEARCHED_PRODUCTS";
 export const CLEAR_ALL_PRODUCTS = "CLEAR_ALL_PRODUCTS";
 export const RECEIVE_SEARCH_ERRORS = "RECEIVE_SEARCH_ERRORS";
 
@@ -18,6 +19,11 @@ export const receiveProduct = (product) => ({
 
 export const receiveSearchedProducts = (products) => ({
   type: RECEIVE_SEARCHED_PRODUCTS,
+  products,
+});
+
+export const receiveCartProducts = (products) => ({
+  type: RECEIVE_CART_PRODUCTS,
   products,
 });
 
@@ -44,7 +50,7 @@ export const fetchProduct = (productId) => (dispatch) => {
 
 export const fetchCartItemProducts = (userId) => (dispatch) => {
   return APIUtil.fetchCartItemProducts(userId).then((products) =>
-    dispatch(receiveAllProducts(products))
+    dispatch(receiveCartProducts(products))
   );
 };
 
