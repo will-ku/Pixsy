@@ -23,6 +23,16 @@ export default function SearchPage() {
     );
   };
 
+  const renderSearchResults = () => {
+    return (
+      <div className="search-page-grid-container">
+        {Object.values(products).map((product, i) => {
+          return <ProductSplashItem key={i} product={product} />;
+        })}
+      </div>
+    );
+  };
+
   useEffect(
     () => dispatch(fetchSearchedProducts(queryTerm)),
     [history.location.search]
@@ -31,12 +41,9 @@ export default function SearchPage() {
   if (Object.keys(products).length === 0) return null;
 
   return (
-    <div>
-      {errors.length > 0
-        ? renderErrors()
-        : Object.values(products).map((product, i) => {
-            return <ProductSplashItem key={i} product={product} />;
-          })}
+    <div className="search-page-container">
+      <div className="search-page-side-bar"></div>
+      {errors.length > 0 ? renderErrors() : renderSearchResults()}
     </div>
   );
 }

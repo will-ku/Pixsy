@@ -29,19 +29,19 @@ export default function CheckoutSummary(props) {
           Credit Card{" "}
           <img
             className="checkout-cc-logos"
-            src="../../../assets/images/Mastercard_logo.jpg"
+            src="https://pixsy-dev.s3.us-east-2.amazonaws.com/checkout-icons/checkout-mastercard.jpg"
           />{" "}
           <img
             className="checkout-cc-logos"
-            src="../../../assets/images/visa.jpg"
+            src="https://pixsy-dev.s3.us-east-2.amazonaws.com/checkout-icons/checkout-visa.jpg"
           />{" "}
           <img
             className="checkout-cc-logos"
-            src="../../../assets/images/amex.png"
+            src="https://pixsy-dev.s3.us-east-2.amazonaws.com/checkout-icons/checkout-amex.png"
           />{" "}
           <img
             className="checkout-cc-logos"
-            src="../../../assets/images/discover.jpg"
+            src="https://pixsy-dev.s3.us-east-2.amazonaws.com/checkout-icons/checkout-discover.jpg"
           />
         </li>
         <li>
@@ -54,7 +54,7 @@ export default function CheckoutSummary(props) {
           Paypal{" "}
           <img
             className="checkout-cc-logos"
-            src="../../../assets/images/paypal.png"
+            src="https://pixsy-dev.s3.us-east-2.amazonaws.com/checkout-icons/checkout-paypal.png"
           />
         </li>
         <a
@@ -68,7 +68,7 @@ export default function CheckoutSummary(props) {
             LinkedIn{" "}
             <img
               className="checkout-cc-logos"
-              src="../../../assets/images/linkedin.png"
+              src="https://pixsy-dev.s3.us-east-2.amazonaws.com/checkout-icons/checkout-linkedin.jpeg"
             />
           </li>
         </a>

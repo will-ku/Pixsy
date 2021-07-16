@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
 $redhat: "Red Hat Display", sans-serif;
 
+:root {
+  --max-splash-content-width: 1300px;
+}
+
 $header-height: 72px;
 $text-size: 13px;
 

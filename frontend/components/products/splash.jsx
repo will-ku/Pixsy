@@ -19,28 +19,34 @@ class Splash extends React.Component {
         <div className="banner-container">
           <h1>Because everyone deserves something as unique as they are.</h1>
           <h3>Shop special finds</h3>
-          <ul className="banner-links">
-            <li className="banner-cat-li">
-              <div>luls</div>
-              <Link to={`/category/1`}>Digital Cameras</Link>
-            </li>
-            <li className="banner-cat-li">
-              <div></div>
-              <Link to={`/category/7`}>Accessories</Link>
-            </li>
-            <li className="banner-cat-li">
-              <div></div>
-              <Link to={`/category/7`}>Accessories</Link>
-            </li>
-            <li className="banner-cat-li">
-              <div></div>
-              <Link to={`/category/3`}>Bags & Cases</Link>
-            </li>
-            <li className="banner-cat-li">
-              <div></div>
-              <Link to={`/category/2`}>Lenses</Link>
-            </li>
-          </ul>
+          <div className="banner-links-container">
+            <div className="banner-links">
+              <Link to={`/category/1`} className="banner-cat-li">
+                <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-cam.png" />
+                <p>Digital Cameras</p>
+              </Link>
+
+              <Link to={`/category/7`} className="banner-cat-li">
+                <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-accessories.jpeg" />
+                <p>Accessories</p>
+              </Link>
+
+              <Link to={`/category/4`} className="banner-cat-li">
+                <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-drone.jpeg" />
+                <p>Drones</p>
+              </Link>
+
+              <Link to={`/category/3`} className="banner-cat-li">
+                <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-bag.png" />
+                <p>Bags & Cases</p>
+              </Link>
+
+              <Link to={`/category/2`} className="banner-cat-li">
+                <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-lens.png" />
+                <p>Lenses</p>
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="grid-left-whitespace"></div>
         <div className="grid-splash-content">
