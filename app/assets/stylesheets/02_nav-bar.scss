@@ -127,6 +127,8 @@ header h1 {
 .search-list-item {
   font-size: 14px;
   text-decoration: none;
+  height: 100%;
+  width: 100%;
 }
 
 .search-focus {
@@ -161,7 +163,7 @@ header h1 {
 .search-list-focus > a {
   text-decoration: none;
   line-height: 2;
-  padding: 0.25em 0.5em;
+  padding: 0;
 }
 
 .search-list-focus > a:hover {

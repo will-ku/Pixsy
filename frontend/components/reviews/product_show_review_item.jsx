@@ -1,6 +1,7 @@
 import React from "react";
-import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { formatDateTime } from "../../util/date_util";
+import { numberOfStars } from "../../util/review_stars_util";
 
 export default function ProductShowReviewItem(props) {
   const { currentUser, updateReview, deleteReview, review } = props;
@@ -16,25 +17,12 @@ export default function ProductShowReviewItem(props) {
       return <BsStarHalf />;
     }
   };
+  console.log(review);
 
   return (
-    <li>
+    <li className="review-li">
       <h3>{formatDateTime(review.updatedAt)}</h3>
-      {/* {currentUser.id === review.reviewerId ? (
-        <button onClick={updateReview(review)}>Update Review</button>
-      ) : null} */}
-      {/* {currentUser.id === review.reviewerId ? (
-        <button onClick={deleteReview(review.id)}>Delete Review</button>
-      ) : null} */}
-      <div className="review-star-rating">
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        {/* <div>{filledStars()}</div> */}
-        {/* <div>{emptyStars()}</div> */}
-      </div>
+      {numberOfStars(review.rating)}
       <h3>{review.comment}</h3>
     </li>
   );

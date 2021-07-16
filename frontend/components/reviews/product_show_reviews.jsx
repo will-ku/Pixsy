@@ -1,5 +1,4 @@
 import React from "react";
-import ProductShow from "../products/product_show";
 import ProductShowReviewItem from "./product_show_review_item";
 import CreateReviewFormContainer from "./create_review_form_container";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
