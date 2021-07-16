@@ -41,7 +41,7 @@ export default function SearchPage() {
   if (Object.keys(products).length === 0) return null;
 
   return (
-    <div className="search-page-container">
+    <div className="search-page-content-container">
       <div className="search-page-side-bar"></div>
       {errors.length > 0 ? renderErrors() : renderSearchResults()}
     </div>

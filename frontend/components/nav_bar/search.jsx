@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { MdSearch } from "react-icons/md";
-import { clearAllProducts } from "../../actions/product_actions";
 
 function Search() {
   const [term, setTerm] = useState("");
@@ -12,7 +11,7 @@ function Search() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setFocus(false);
     history.push({
       pathname: "/search",
       search: `?q=${term}`,

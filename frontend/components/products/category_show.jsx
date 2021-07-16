@@ -11,7 +11,6 @@ export default function CategoryShow(props) {
   }, [props.match.params]);
   const noProductsInState = Object.keys(products).length === 0;
 
-  // if (noProductsInState) return <div>No search results found</div>;
   if (noProductsInState) return null;
 
   let categoryName;
@@ -20,9 +19,12 @@ export default function CategoryShow(props) {
     : (categoryName = Object.values(products)[0].categoryName);
 
   return (
-    <div>
-      <h1>{categoryName}</h1>
-      <div className="search-page-container">
+    <div className="search-whole-page-container">
+      <div className="search-page-header-container">
+        <h1>{categoryName}</h1>
+      </div>
+      <div className="search-page-content-container">
+        <div className="search-page-side-bar"></div>
         <div className="search-page-grid-container">
           {Object.values(products).map((product) => {
             return <ProductSplashItem key={product.id} product={product} />;

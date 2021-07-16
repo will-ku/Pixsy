@@ -1,13 +1,32 @@
-.search-page-container {
+.search-whole-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.search-page-header-container {
   display: flex;
   justify-content: center;
-  padding: 3rem;
+}
+
+.search-page-header-container > h1 {
+  margin-left: 0.75rem;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 24px;
+  max-width: var(--max-splash-content-width);
+}
+
+.search-page-content-container {
+  display: flex;
+  justify-content: center;
 }
 
 .search-page-grid-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(150px, 300px));
   gap: 0.25em;
+  margin-top: 0.5rem;
 }
 
 .search-page-grid-container > .product-splash-item {
