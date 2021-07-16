@@ -141,6 +141,12 @@
   padding: 5px 0;
 }
 
+.checkout-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 // right side of checkout page
 
 .checkout-summary-container > * {

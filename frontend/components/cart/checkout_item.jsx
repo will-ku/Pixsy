@@ -17,6 +17,16 @@ export default function CheckoutItem(props) {
     dispatch(updateCartItem(updatedCartItem));
   };
 
+  const priceBasedOnQuantity = () =>
+    cartItem.productPrice * parseInt(cartItem.quantity);
+
+  const pricePerUnit = () => {
+    if (cartItem.quantity < 2) return null;
+    else {
+      return `(${formattedPrice(cartItem.productPrice)} each)`;
+    }
+  };
+
   const deleteClickHandler = () => {
     dispatch(deleteCartItem(cartItem.id));
   };
@@ -55,9 +65,24 @@ export default function CheckoutItem(props) {
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <p style={{ width: "90px", fontWeight: "600" }}>
-        {formattedPrice(cartItem.productPrice)}
-      </p>
+
+      <div className="checkout-price">
+        <p style={{ width: "90px", fontWeight: "600", textAlign: "right" }}>
+          {formattedPrice(priceBasedOnQuantity())}
+        </p>
+        <p
+          style={{
+            width: "90px",
+            fontWeight: "300",
+            fontSize: "12px",
+            marginTop: "2px",
+            fontStyle: "italic",
+            textAlign: "right",
+          }}
+        >
+          {pricePerUnit()}
+        </p>
+      </div>
     </li>
   );
 }
