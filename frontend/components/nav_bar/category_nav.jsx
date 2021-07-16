@@ -9,7 +9,7 @@ export default function CategoryNav(props) {
         <Link to={`/category/2`}>Lenses</Link>
         <Link to={`/category/3`}>Bags & Cases</Link>
         <Link to={`/category/4`}>Drones</Link>
-        <Link to={`/category/5`}>Film Cameras</Link>
+        {/* <Link to={`/category/5`}>Film Cameras</Link> */}
         <Link to={`/category/6`}>Mobile Photogprahy</Link>
         <Link to={`/category/7`}>Accessories</Link>
       </div>
