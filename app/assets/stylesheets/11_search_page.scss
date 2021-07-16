@@ -1,13 +1,19 @@
+.search-page-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
 .search-page-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 350px));
-  gap: 0.75em 0.25em;
+  grid-template-columns: repeat(4, minmax(150px, 300px));
+  gap: 0.25em;
 }
 
 .search-page-grid-container > .product-splash-item {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 300px;
   flex-basis: 16.67%;
   flex-grow: 1;
   text-decoration: none;

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { openModal } from "../../actions/modal_actions";
+import { fetchAllCartItems } from "../../actions/cart_item_actions";
 
 export default function CartIcon() {
   const cartItems = useSelector((state) => state.entities.cartItems);
   const currentUser = useSelector((state) => state.session.currentUser);
   const dispatch = useDispatch();
   const loginLink = () => dispatch(openModal("login"));
+
   const cartCount = () =>
     Object.keys(cartItems).length === 0 ? null : (
       <p className="cart-count">{Object.keys(cartItems).length}</p>

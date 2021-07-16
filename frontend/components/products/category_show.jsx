@@ -21,16 +21,14 @@ export default function CategoryShow(props) {
 
   return (
     <div>
-      <section className="splash-row-container">
-        <div className="splash-row-section">
-          <h1>{categoryName}</h1>
-          <ul className="splash-row-content">
-            {Object.values(products).map((product) => {
-              return <ProductSplashItem key={product.id} product={product} />;
-            })}
-          </ul>
+      <h1>{categoryName}</h1>
+      <div className="search-page-container">
+        <div className="search-page-grid-container">
+          {Object.values(products).map((product) => {
+            return <ProductSplashItem key={product.id} product={product} />;
+          })}
         </div>
-      </section>
+      </div>
     </div>
   );
 }
