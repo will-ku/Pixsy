@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { MdSearch } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Search() {
   const [term, setTerm] = useState("");
@@ -46,9 +47,33 @@ function Search() {
           sbFocus && term.length === 0 ? " search-list-focus search-focus" : ""
         }`}
       >
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
+ 
+          <Link
+            to="/products/1"
+            className="search-list-item"
+            onClick={() => setFocus(!sbFocus)}
+          >
+            Sony Alpha a7iii Mirrorless Digital Camera
+          </Link>
+
+
+          <Link
+            to="/products/13"
+            className="search-list-item"
+            onClick={() => setFocus(!sbFocus)}
+          >
+            Canon RF 70-200mm f/2.8L IS USM Lens
+          </Link>
+  
+     
+          <Link
+            to="/products/26"
+            className="search-list-item"
+            onClick={() => setFocus(!sbFocus)}
+          >
+            WANDRD PRVKE 21L Backpack
+          </Link>
+
       </ul>
       <div
         className={`search-background ${
