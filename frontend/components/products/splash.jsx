@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductSplashItem from "./product_splash_item";
-import LoadingIcon from "../loading";
 
 class Splash extends React.Component {
   constructor(props) {
@@ -14,6 +13,8 @@ class Splash extends React.Component {
 
   render() {
     // if the last item in your array doesn't exist, then return Loading (this.props.products[-1])
+    const arrowRight = "->";
+
     return (
       <div className="grid-container">
         <div className="banner-container">
@@ -23,27 +24,27 @@ class Splash extends React.Component {
             <div className="banner-links">
               <Link to={`/category/1`} className="banner-cat-li">
                 <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-cam.png" />
-                <p>Digital Cameras</p>
+                <p>Digital Cameras {arrowRight}</p>
               </Link>
 
               <Link to={`/category/7`} className="banner-cat-li">
                 <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-accessories.jpeg" />
-                <p>Accessories</p>
+                <p>Accessories {arrowRight}</p>
               </Link>
 
               <Link to={`/category/4`} className="banner-cat-li">
                 <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-drone.jpeg" />
-                <p>Drones</p>
+                <p>Drones {arrowRight}</p>
               </Link>
 
               <Link to={`/category/3`} className="banner-cat-li">
                 <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-bag.png" />
-                <p>Bags & Cases</p>
+                <p>Bags & Cases {arrowRight}</p>
               </Link>
 
               <Link to={`/category/2`} className="banner-cat-li">
                 <img src="https://pixsy-dev.s3.us-east-2.amazonaws.com/splash-pics/splash-lens.png" />
-                <p>Lenses</p>
+                <p>Lenses {arrowRight}</p>
               </Link>
             </div>
           </div>

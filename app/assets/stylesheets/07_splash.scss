@@ -158,6 +158,8 @@ $quatt: "Quattrocento", serif;
 .banner-cat-li {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .banner-cat-li > img {
