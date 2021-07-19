@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { MdSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -7,7 +6,6 @@ import { Link } from "react-router-dom";
 function Search() {
   const [term, setTerm] = useState("");
   const [sbFocus, setFocus] = useState(false);
-  const dispatch = useDispatch();
   const history = useHistory();
 
   const handleSubmit = (e) => {
