@@ -23,13 +23,4 @@ class Review < ApplicationRecord
   foreign_key: :product_id,
   class_name: :Product
 
-  # def valid_comment
-  #   review = Review.find_by(id: params[:id])
-  #   if review.comment.length < 1
-  #     return true
-  #   else
-  #     return false
-  #   end
-  # end
-
 end

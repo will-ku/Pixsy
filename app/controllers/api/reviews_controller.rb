@@ -1,9 +1,4 @@
 class Api::ReviewsController < ApplicationController
-  # def index
-  #   @reviews = Review.all  #where product_id matches
-  #   render :show
-  # end
-
   def index
     product = Product.find(params[:id])
     @reviews = product.reviews
@@ -17,10 +12,6 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    # (reviewer_id: params[:reviewer_id], 
-    #   product_id: params[:product_id], 
-    #   comment: params[:comment], 
-    #   rating: params[:rating])
 
     @review.reviewer_id = current_user.id
     if @review && @review.save

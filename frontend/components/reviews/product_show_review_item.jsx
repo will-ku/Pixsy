@@ -17,11 +17,12 @@ export default function ProductShowReviewItem(props) {
       return <BsStarHalf />;
     }
   };
-  console.log(review);
 
   return (
     <li className="review-li">
-      <h3>{formatDateTime(review.updatedAt)}</h3>
+      <h3>
+        {review.reviewerName} | {formatDateTime(review.updatedAt)}
+      </h3>
       {numberOfStars(review.rating)}
       <h3>{review.comment}</h3>
     </li>
