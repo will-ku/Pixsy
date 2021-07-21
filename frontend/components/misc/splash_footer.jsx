@@ -18,7 +18,7 @@ export default function SplashFooter() {
                 }}
                 src="https://pixsy-dev.s3.us-east-2.amazonaws.com/misc-icons-and-images/Screen+Shot+2021-07-20+at+10.42.29+PM.png"
               ></img>
-              United States | English(US) | $(USD)
+              United States | English(US) | $ (USD)
             </p>
           </div>
           <ul className="footer-bottom-terms">
@@ -27,7 +27,7 @@ export default function SplashFooter() {
             </li>
             <li>Terms of Use</li>
             <li>Privacy</li>
-            <li>Internet-based ads</li>
+            <li>Interest-based ads</li>
           </ul>
         </div>
       </div>
