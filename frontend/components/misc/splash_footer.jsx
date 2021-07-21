@@ -14,19 +14,21 @@ export default function SplashFooter() {
                   height: "12px",
                   weight: "12px",
                   borderRadius: "50%",
-                  paddingRight: "3px",
+                  paddingRight: "5px",
                 }}
                 src="https://pixsy-dev.s3.us-east-2.amazonaws.com/misc-icons-and-images/Screen+Shot+2021-07-20+at+10.42.29+PM.png"
               ></img>
               United States | English(US) | $(USD)
             </p>
           </div>
-          <div className="footer-bottom-terms">
-            <p style={{ textDecoration: "none" }}>© 2021 Pixsy, Inc.</p>
-            <p>Terms of Use</p>
-            <p>Privacy</p>
-            <p>Internet-based ads</p>
-          </div>
+          <ul className="footer-bottom-terms">
+            <li style={{ textDecoration: "none", cursor: "default" }}>
+              © 2021 Pixsy, Inc.
+            </li>
+            <li>Terms of Use</li>
+            <li>Privacy</li>
+            <li>Internet-based ads</li>
+          </ul>
         </div>
       </div>
     </div>

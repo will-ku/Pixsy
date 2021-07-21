@@ -10,7 +10,7 @@ import NavBar from "./nav_bar/nav_bar";
 import SearchPage from "./products/search_page";
 
 const App = () => (
-  <>
+  <div style={{ display: "flex", flexDirection: "column" }}>
     <Modal />
     <NavBar />
     <Switch>
@@ -28,7 +28,7 @@ const App = () => (
       <Route exact path="/search" component={SearchPage}></Route>
       <ProtectedRoute exact path="/checkout/:userId" component={Checkout} />
     </Switch>
-  </>
+  </div>
 );
 
 export default App;
