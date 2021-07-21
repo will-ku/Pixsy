@@ -24,18 +24,18 @@ class ProductShow extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.product.id !== this.props.product.id) {
-      Promise.all([
-        this.props.fetchProduct(this.props.match.params.productId),
-        this.props.fetchAllReviews(this.props.match.params.productId),
-      ]);
-    }
+    if (prevProps.product)
+      if (prevProps.product.id !== this.props.product.id) {
+        Promise.all([
+          this.props.fetchProduct(this.props.match.params.productId),
+          this.props.fetchAllReviews(this.props.match.params.productId),
+        ]);
+      }
   }
 
   render() {
     // if (this.state.loading === true) return null;
     if (this.props.product === undefined) return null;
-
     const { product } = this.props;
 
     return (
