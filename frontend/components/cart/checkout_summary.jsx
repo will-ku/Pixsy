@@ -87,7 +87,10 @@ export default function CheckoutSummary(props) {
           <p className="monies-description">Shipping</p>
           <p>{formattedPrice(11.95)}</p>
         </div>
-        <div className="monies" style={{ paddingTop: "5px" }}>
+        <div
+          className="monies"
+          style={{ paddingTop: "5px", marginTop: "10px" }}
+        >
           <p className="monies-description" style={{ fontWeight: "400" }}>
             Subtotal
           </p>

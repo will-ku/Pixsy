@@ -43,15 +43,15 @@ $mont700: "Montserrat", sans-serif;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  border-radius: 12px;
+  border-radius: 10px;
   position: absolute;
   background-color: rgb(255, 255, 255);
   width: 160px;
-  right: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
   padding-top: 17px;
   padding-bottom: 17px;
+  transition: all 0.1s ease 0s;
 }
 
 .user-drop-content button {
