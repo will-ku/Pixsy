@@ -32,8 +32,9 @@ export default function Checkout() {
             <h1>{itemOrItems()}</h1>
 
             <button className="cart-buttons" id="keep-shopping">
-              Keep shopping
-              <Link to="/"></Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Keep shopping
+              </Link>
             </button>
           </div>
           <div className="checkout-content-container">

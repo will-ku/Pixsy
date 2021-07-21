@@ -73,9 +73,26 @@ export default function CheckoutSummary(props) {
           </li>
         </a>
       </ul>
-      <div className="subtotal">
-        <p className="subtotal-description">Item(s) total</p>
-        <p>{formattedPrice(props.subtotal)}</p>
+      <div className="monies-container">
+        <div className="monies">
+          <p className="monies-description">Item(s) total</p>
+          <p>{formattedPrice(props.subtotal)}</p>
+        </div>
+        <div
+          className="monies"
+          style={{
+            borderBottom: "0.3px solid lightgray",
+          }}
+        >
+          <p className="monies-description">Shipping</p>
+          <p>{formattedPrice(11.95)}</p>
+        </div>
+        <div className="monies" style={{ paddingTop: "5px" }}>
+          <p className="monies-description" style={{ fontWeight: "400" }}>
+            Subtotal
+          </p>
+          <p>{formattedPrice(props.subtotal + 11.95)}</p>
+        </div>
       </div>
       <button onClick={handlePlaceOrder} className="place-order">
         Place Order

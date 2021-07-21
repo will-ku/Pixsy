@@ -169,12 +169,21 @@
   font-weight: 600;
 }
 
-.subtotal {
+.monies-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 20px;
 }
 
-.subtotal-description {
+.monies {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.monies-description {
   font-weight: 600;
 }
 
