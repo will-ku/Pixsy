@@ -6,10 +6,15 @@ import SplashFooter from "../misc/splash_footer";
 class Splash extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      doneRendering: false,
+    };
   }
 
   componentDidMount() {
-    this.props.fetchAllProducts();
+    this.props
+      .fetchAllProducts()
+      .done(() => this.setState({ doneRendering: true }));
   }
 
   render() {
