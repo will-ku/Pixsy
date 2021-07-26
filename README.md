@@ -1,24 +1,13 @@
-# README
+Pixsy is a clone of the popular e-commerce site, Etsy. Check out the [live demo](https://pixsy-fullstack.herokuapp.com/#/)!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### [](https://github.com/will-ku/Pixsy#frontend)Frontend
 
-Things you may want to cover:
+-   React
+-   Redux 
+-   Webpack
 
-* Ruby version
 
-* System dependencies
+### [](https://github.com/will-ku/Pixsy#backend)Backend
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-   PostgreSQL - relational database required to store data
+-   Ruby on Rails - view [database schema](https://github.com/will-ku/Pixsy/wiki/Database-Schema)
