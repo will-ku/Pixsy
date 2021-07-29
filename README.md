@@ -24,4 +24,3 @@ The splash page, which includes featured products, is the main page on the Pixsy
 
 The application includes a navigation bar which is always accessible at the top of the page, wherever you are in the application. The navigation bar includes a search bar, product category links, button to login/logout, and the cart. 
 
-![alt text](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/splash.png)
