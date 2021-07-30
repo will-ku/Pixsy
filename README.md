@@ -1,24 +1,26 @@
-# README
+# Pixsy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pixsy is an online marketplace for all your photography gear and accessory needs. Pixsy is a clone of popular e-commerce website, Etsy. Check out the live demo [here](https://pixsy-fullstack.herokuapp.com/#/)!
 
-Things you may want to cover:
 
-* Ruby version
+![alt text](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/splash.png)
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+-   React
+-   Redux
+-   Ruby on Rails
+-   PostgreSQL
+-   Webpack
+-   AWS Simple Cloud Storage (S3)
 
-* Database creation
+## Features
 
-* Database initialization
+### Splash Page
 
-* How to run the test suite
+The splash page, which includes featured products, is the main page on the Pixsy application.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Navigation Bar
 
-* Deployment instructions
+The application includes a navigation bar which is always accessible at the top of the page, wherever you are in the application. The navigation bar includes a search bar, product category links, button to login/logout, and the cart. 
 
-* ...
