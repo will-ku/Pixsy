@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 export default function ProductPhotos(props) {
-  const [currPhotoIdx, setPhotoIdx] = useState(0);
   const { product } = props;
+  const [currPhotoIdx, setPhotoIdx] = useState(0);
 
   const changePhoto = (change) => {
     const newPhotoIdx =

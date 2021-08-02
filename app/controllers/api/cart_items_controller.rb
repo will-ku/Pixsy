@@ -17,9 +17,7 @@ class Api::CartItemsController < ApplicationController
 
     @cart_item.user_id = current_user.id
 
-    if @cart_item.save
-      
-      
+    if @cart_item.save      
       render :show
     else
       render json: ["Cannot add quantity of zero to cart."], status: 404
