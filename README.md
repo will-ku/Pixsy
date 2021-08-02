@@ -104,6 +104,29 @@ The search bar allows users to search for all products in the database by name. 
 
 ## Shopping Cart
 
-When a user adds an item to cart from a product page, a `cart_item` record is created on the backend. To avoid issues with incorrectly rendering a user's cart items, especially upon logging in and logging out, cart items are bootstrapped to the window.
+When a user adds a new product to their cart, a `cart_item` record is created on the backend. From the checkout page, users can do the following actions and the total price will update accordingly:
+* Update the quanitity of a product
+* Remove products from their cart
 
-<kbd>![Shopping Cart](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/checkout.png)</kbd>
+<kbd>![Shopping Cart](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/checkoutpage.png)</kbd>
+
+Cart items are linked to users and a user's cart items will persist through various user sessions. When a user logs into the application, their associated cart items with additional product information will sent to the Redux store. This is accomplished by building a JSON structure using Jbuilder at login.
+
+```ruby
+json.user do
+  json.partial! "api/users/user", user: @user
+end
+
+json.cart_items do 
+  @user.cart_items.each do |cart_item|
+    json.set! cart_item.product_id do
+      json.extract! cart_item, :id, :product_id, :quantity, :user_id
+      json.product_name cart_item.product.name
+      json.product_price cart_item.product.price
+      json.seller_name cart_item.product.seller.first_name
+      json.product_description cart_item.product.description
+      json.photoUrl cart_item.product.photos.map { |file| url_for(file)}
+    end
+  end
+end
+```
