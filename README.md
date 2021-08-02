@@ -21,12 +21,22 @@ Pixsy is an online marketplace for all your photography needs, from cameras and 
 
 Functionalities of the product page include:
 * Product details
-* Product photos
-* Reviews including review form
-* 'Add To Cart' button
+* Photo carousel
+* Reviews
+* "Add To Cart" button
 
+The **photo carousel** is a separate functional component that leverages the `useState` React hook to keep track of the index of the current photo via local state. The image files are hosted on AWS S3.
 
+```javascript
+  const [currPhotoIdx, setPhotoIdx] = useState(0);
 
+  const changePhoto = (change) => {
+    const newPhotoIdx =
+      (change + currPhotoIdx + product.photoUrl.length) %
+      product.photoUrl.length;
+    setPhotoIdx(newPhotoIdx);
+  };  
+```
 
 ## Reviews
 
@@ -55,7 +65,7 @@ componentDidMount() {
 
 Pixsy features a navigation bar which is accessible from anywhere in the application. Functionalities of the navigation bar include a search bar, user authentication (login/logout buttons), link to shopping cart and product category links.
 
-<kbd>![Search](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/search.png)</kbd>
+<kbd>![Navbar](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/navbar.png)</kbd>
 
 The following functionalities are available from the navigation bar:
 * Link to homepage
@@ -64,9 +74,11 @@ The following functionalities are available from the navigation bar:
 * Cart
 * Product category links 
 
-The **search bar** allows users to search for all products in the database by name.
+## Search
 
-On the backend, the following Rails controller and model methods, respectively, were implemented to retrieve products from the database based on the query string sent from the frontend.
+<kbd>![Search](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/search.png)</kbd>
+
+The search bar allows users to search for all products in the database by name. On the backend, the following Rails controller and model methods, respectively, were implemented to retrieve products from the database based on the query string sent from the frontend.
 
 ```ruby
   def search_products
@@ -92,4 +104,29 @@ On the backend, the following Rails controller and model methods, respectively, 
 
 ## Shopping Cart
 
-<kbd>![Shopping Cart](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/checkout.png)</kbd>
+When a user adds a new product to their cart, a `cart_item` record is created on the backend. From the checkout page, users can do the following actions and the total price will update accordingly:
+* Update the quanitity of a product
+* Remove products from their cart
+
+<kbd>![Shopping Cart](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/checkoutpage.png)</kbd>
+
+Cart items are linked to users and a user's cart items will persist through various user sessions. When a user logs into the application, their associated cart items with additional product information will sent to the Redux store. This is accomplished by building a JSON structure using Jbuilder at login.
+
+```ruby
+json.user do
+  json.partial! "api/users/user", user: @user
+end
+
+json.cart_items do 
+  @user.cart_items.each do |cart_item|
+    json.set! cart_item.product_id do
+      json.extract! cart_item, :id, :product_id, :quantity, :user_id
+      json.product_name cart_item.product.name
+      json.product_price cart_item.product.price
+      json.seller_name cart_item.product.seller.first_name
+      json.product_description cart_item.product.description
+      json.photoUrl cart_item.product.photos.map { |file| url_for(file)}
+    end
+  end
+end
+```
