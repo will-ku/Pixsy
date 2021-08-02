@@ -11,7 +11,6 @@ Pixsy is an online marketplace for all your photography gear and accessory needs
 -   Redux
 -   Ruby on Rails
 -   PostgreSQL
--   Webpack
 -   AWS Simple Cloud Storage (S3)
 
 ## Features
