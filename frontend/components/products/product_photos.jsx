@@ -1,69 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-class ProductPhotos extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currPhotoIdx: 0,
-    };
-    this.changePhoto = this.changePhoto.bind(this);
-    this.clickPhoto = this.clickPhoto.bind(this);
-  }
+export default function ProductPhotos(props) {
+  const [currPhotoIdx, setPhotoIdx] = useState(0);
+  const { product } = props;
 
-  changePhoto(change) {
-    const { product } = this.props;
+  const changePhoto = (change) => {
     const newPhotoIdx =
-      (change + this.state.currPhotoIdx + product.photoUrl.length) %
+      (change + currPhotoIdx + product.photoUrl.length) %
       product.photoUrl.length;
-    this.setState({ currPhotoIdx: newPhotoIdx });
-  }
+    setPhotoIdx(newPhotoIdx);
+  };
 
-  clickPhoto(idx) {
-    this.setState({ currPhotoIdx: idx });
-  }
+  const clickPhoto = (idx) => {
+    setPhotoIdx(idx);
+  };
 
-  render() {
-    const { product } = this.props;
-    return (
-      <>
-        <div className="product-show-carousel">
-          <ul>
-            {product.photoUrl.map((photo, idx) => {
-              return (
-                <li key={idx}>
-                  <img
-                    className="product-show-carousel-photo"
-                    src={product.photoUrl[idx]}
-                    onClick={() => this.clickPhoto(idx)}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+  return (
+    <>
+      <div className="product-show-carousel">
+        <ul>
+          {product.photoUrl.map((photo, idx) => {
+            return (
+              <li key={idx}>
+                <img
+                  className="product-show-carousel-photo"
+                  src={product.photoUrl[idx]}
+                  onClick={() => clickPhoto(idx)}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
 
-        <div className="product-show-main-photo-container">
-          <button
-            className="main-photo-arrow"
-            onClick={() => this.changePhoto(-1)}
-          >
-            <MdKeyboardArrowLeft />
-          </button>
-          <img
-            className="product-show-main-photo"
-            src={product.photoUrl[this.state.currPhotoIdx]}
-          />
-          <button
-            className="main-photo-arrow"
-            onClick={() => this.changePhoto(1)}
-          >
-            <MdKeyboardArrowRight />
-          </button>
-        </div>
-      </>
-    );
-  }
+      <div className="product-show-main-photo-container">
+        <button className="main-photo-arrow" onClick={() => changePhoto(-1)}>
+          <MdKeyboardArrowLeft />
+        </button>
+        <img
+          className="product-show-main-photo"
+          src={product.photoUrl[currPhotoIdx]}
+        />
+        <button className="main-photo-arrow" onClick={() => changePhoto(1)}>
+          <MdKeyboardArrowRight />
+        </button>
+      </div>
+    </>
+  );
 }
-
-export default ProductPhotos;

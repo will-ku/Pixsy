@@ -9,9 +9,6 @@ import { formattedPrice } from "../../util/product_format_util";
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   loading: true,
-    // };
   }
 
   componentDidMount() {
@@ -19,8 +16,6 @@ class ProductShow extends React.Component {
       this.props.fetchProduct(this.props.match.params.productId),
       this.props.fetchAllReviews(this.props.match.params.productId),
     ]);
-    //   .then(() => this.setState({ loading: false }));
-    // this.setState({ loading: false });
   }
 
   componentDidUpdate(prevProps) {
@@ -34,7 +29,6 @@ class ProductShow extends React.Component {
   }
 
   render() {
-    // if (this.state.loading === true) return null;
     if (this.props.product === undefined) return null;
     const { product } = this.props;
 

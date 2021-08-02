@@ -26,7 +26,7 @@ class Api::ProductsController < ApplicationController
 
   def search_products
     @products = Product.search(params[:search])
-    
+  
     if @products   
       render :index
     else
