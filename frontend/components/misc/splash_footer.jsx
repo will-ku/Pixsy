@@ -1,6 +1,4 @@
 import React from "react";
-// import pixsyFavicon from "../../../app/assets/images/pixsy-logo-png.png";
-// import pixsyFavicon from "../pixsy-figma-orange-favicon.svg";
 import PixsyFavicon from "../svg/PixsyFavicon";
 import LinkedIn from "../svg/LinkedIn";
 import Github from "../svg/Github";
@@ -47,7 +45,7 @@ export default function SplashFooter() {
           }}
         />
       </div>
-      <div className="footer-links-container">
+      <div className="footer-links-grid-container">
         <div className="footer-links">
           <div className="footer-links-column">
             <h2>Shop</h2>
@@ -78,7 +76,7 @@ export default function SplashFooter() {
             <a href="https://www.linkedin.com/in/willku/" target="_blank">
               <p>LinkedIn</p>
             </a>
-            <a href="https://github.com/will-ku" target="_blank">
+            <a href="https://github.com/will-ku/Pixsy" target="_blank">
               <p>Github</p>
             </a>
             <a href="https://angel.co/u/will-ku" target="_blank">

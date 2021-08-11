@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ProductSplashItem from "./product_splash_item";
 import SplashFooter from "../misc/splash_footer";
+import WhatIsPixsy from "../misc/what_is_pixsy";
 
 class Splash extends React.Component {
   constructor(props) {
@@ -83,6 +84,7 @@ class Splash extends React.Component {
           </section>
         </div>
         <div className="grid-right-whitespace"></div>
+        <WhatIsPixsy />
         <SplashFooter />
       </div>
     );
