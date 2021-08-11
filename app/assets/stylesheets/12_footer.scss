@@ -122,10 +122,17 @@
 
 .footer-links-social {
   display: flex;
+  margin: 5px 5px 5px -8px;
 }
 
 .footer-links-social > * {
+  border-radius: 10px;
   padding: 10px;
+}
+
+.footer-links-social > *:hover {
+  background-color: rgb(84, 106, 149);
+  transition: all 0.2s ease 0s;
 }
 
 // what is pixsy banner
