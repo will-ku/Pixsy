@@ -82,6 +82,18 @@ class Splash extends React.Component {
               </ul>
             </div>
           </section>
+          <section className="splash-row-container">
+            <div className="splash-row-section">
+              <h3>Best for weddings</h3>
+              <ul className="splash-row-content">
+                {this.props.products.slice(12, 18).map((product) => {
+                  return (
+                    <ProductSplashItem key={product.id} product={product} />
+                  );
+                })}
+              </ul>
+            </div>
+          </section>
         </div>
         <div className="grid-right-whitespace"></div>
         <WhatIsPixsy />
