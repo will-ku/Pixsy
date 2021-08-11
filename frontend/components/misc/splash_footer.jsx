@@ -1,4 +1,10 @@
 import React from "react";
+// import pixsyFavicon from "../../../app/assets/images/pixsy-logo-png.png";
+// import pixsyFavicon from "../pixsy-figma-orange-favicon.svg";
+import PixsyFavicon from "../svg/PixsyFavicon";
+import LinkedIn from "../svg/LinkedIn";
+import Github from "../svg/Github";
+import AngelList from "../svg/AngelList";
 
 export default function SplashFooter() {
   return (
@@ -41,7 +47,77 @@ export default function SplashFooter() {
           }}
         />
       </div>
-      <div className="footer-links"></div>
+      <div className="footer-links-container">
+        <div className="footer-links">
+          <div className="footer-links-column">
+            <h2>Shop</h2>
+            <p>Gift cards</p>
+            <p>Pixsy blog</p>
+          </div>
+          <div className="footer-links-column">
+            <h2>Sell</h2>
+            <p>Sell on Pixsy</p>
+            <p>Teams</p>
+            <p>Forums</p>
+            <p>Affiliates</p>
+          </div>
+          <div className="footer-links-column">
+            <h2>About</h2>
+            <p>Pixsy, Inc.</p>
+            <p>Policies</p>
+            <p>Investors</p>
+            <p>Careers</p>
+            <p>Press</p>
+            <p>Impact</p>
+          </div>
+          <div className="footer-links-column">
+            <h2>Contact</h2>
+            <a href="http://www.will-ku.com" target="_blank">
+              <p>Portfolio</p>
+            </a>
+            <a href="https://www.linkedin.com/in/willku/" target="_blank">
+              <p>LinkedIn</p>
+            </a>
+            <a href="https://github.com/will-ku" target="_blank">
+              <p>Github</p>
+            </a>
+            <a href="https://angel.co/u/will-ku" target="_blank">
+              <p>AngelList</p>
+            </a>
+            <div className="footer-links-column-icons">
+              <button id="dl-pixsy">
+                <PixsyFavicon />
+                <span style={{ marginLeft: "5px" }}>
+                  Download the Pixsy App
+                </span>
+              </button>
+              <div className="footer-links-social">
+                <a
+                  href="https://www.linkedin.com/in/willku/"
+                  alt="LinkedIn"
+                  target="_blank"
+                >
+                  <LinkedIn />
+                </a>
+                <a
+                  href="https://github.com/will-ku"
+                  alt="Github"
+                  target="_blank"
+                >
+                  <Github />
+                </a>
+                <a
+                  href="https://angel.co/u/will-ku"
+                  alt="AngelList"
+                  target="_blank"
+                >
+                  <AngelList />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="footer-bottom-container">
         <div className="footer-bottom">
           <div className="footer-bottom-currency">
