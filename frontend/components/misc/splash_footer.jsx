@@ -40,8 +40,10 @@ export default function SplashFooter() {
           style={{
             margin: "10px",
             height: "25px",
-            borderRadius: "15px",
-            paddingLeft: "10px",
+            borderRadius: "20px",
+            width: "370px",
+            padding: "5px 5px 5px 20px",
+            border: "1px solid lightgray",
           }}
         />
       </div>
