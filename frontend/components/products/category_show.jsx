@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllProductsInCat } from "../../actions/product_actions";
 import ProductSplashItem from "./product_splash_item";
+import Loading from "../misc/loading";
 
 export default function CategoryShow(props) {
   const products = useSelector((state) => state.entities.products);
@@ -10,8 +11,10 @@ export default function CategoryShow(props) {
 
   useEffect(() => {
     setRendered(false);
+    console.log("line14", rendered);
     dispatch(fetchAllProductsInCat(props.match.params.categoryId));
     setRendered(true);
+    console.log("line17", rendered);
   }, [props.match.params]);
 
   const noProductsInState = Object.keys(products).length === 0;
@@ -23,6 +26,7 @@ export default function CategoryShow(props) {
       ? null
       : (categoryName = Object.values(products)[0].categoryName);
 
+  console.log("line29", rendered);
   return (
     <div>
       {rendered ? (

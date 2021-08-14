@@ -20,7 +20,8 @@ export default function ProductSplashItem(props) {
           />
           {!imageLoaded && (
             <div className="smooth-preloader">
-              <span className="loader" />
+              {/* <span className="loader" /> */}
+              <span />
             </div>
           )}
         </div>
