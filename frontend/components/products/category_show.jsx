@@ -11,10 +11,8 @@ export default function CategoryShow(props) {
 
   useEffect(() => {
     setRendered(false);
-    console.log("line14", rendered);
     dispatch(fetchAllProductsInCat(props.match.params.categoryId));
     setRendered(true);
-    console.log("line17", rendered);
   }, [props.match.params]);
 
   const noProductsInState = Object.keys(products).length === 0;
