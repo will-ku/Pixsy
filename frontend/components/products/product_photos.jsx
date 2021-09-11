@@ -16,6 +16,7 @@ export default function ProductPhotos(props) {
     setPhotoIdx(idx);
   };
 
+  
   return (
     <>
       <div className="product-show-carousel">
