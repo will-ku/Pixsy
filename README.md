@@ -2,8 +2,6 @@
 
 Pixsy is an online marketplace for all your photography needs, from cameras and lenses to tripods and specialty bags. Pixsy is a clone of popular e-commerce website, Etsy. 
 
-### [Check out the live demo here!](https://pixsy-fullstack.herokuapp.com/#/)
-
 
 <kbd>![Pixsy Homepage](https://pixsy-dev.s3.us-east-2.amazonaws.com/github/splash.png)</kbd>
 
